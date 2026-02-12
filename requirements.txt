@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+google-genai
+chromadb
+pypdf
+beautifulsoup4
+requests
+pandas
+pyarrow
+python-dotenv
