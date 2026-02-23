@@ -6,7 +6,7 @@ graph TD
     Frontend <--> Backend[FastAPI Server]
     Backend -- Search Query --> VectorDB[(ChromaDB)]
     VectorDB -- Relevant Context --> Backend
-    Backend -- Augment Prompt --> LLM[Gemini 2.0 Flash]
+    Backend -- Augment Prompt --> LLM[Gemini 2.5 Flash]
     LLM -- Generated Response --> Backend
     
     Data[WHO, PDF, CSV] --> Ingest[build_db.py]
