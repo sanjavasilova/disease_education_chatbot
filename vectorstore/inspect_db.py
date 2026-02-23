@@ -22,7 +22,6 @@ def inspect_db():
         print("The database is currently empty.")
         return
 
-    # Create a DataFrame for nice tabular display
     data = {
         'ID': results['ids'],
         'Source': [m.get('source', 'Unknown') for m in results['metadatas']],
@@ -37,13 +36,12 @@ def inspect_db():
     print(df['Source'].value_counts().to_string())
     
     print("\n--- Detailed View (Top 50 entries) ---")
-    # Configure pandas to show more columns and rows if needed
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', 1000)
     pd.set_option('display.max_colwidth', 50)
     
     print(df.head(50).to_string(index=False))
-    df.to_csv(r'/home/s/Desktop/disease_chatbot/database.csv', index=False)
+    # df.to_csv(r'/home/s/Desktop/disease_chatbot/database.csv', index=False)
     print("\nTip: Use `df.to_csv()` or similar if you want to export the whole database.")
 
 if __name__ == "__main__":

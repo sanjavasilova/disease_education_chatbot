@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Bot, User, Loader2, Sparkles, AlertCircle } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -93,10 +94,24 @@ const App = () => {
                                 <div className={cn(
                                     "px-4 py-3 rounded-2xl text-sm leading-relaxed shadow-sm",
                                     message.role === 'bot'
-                                        ? "glass text-slate-800"
+                                        ? "glass text-slate-800 prose prose-slate prose-sm max-w-none"
                                         : "medical-gradient text-white"
                                 )}>
-                                    {message.content}
+                                    {message.role === 'bot' ? (
+                                        <ReactMarkdown
+                                            components={{
+                                                ul: ({ node, ...props }) => <ul className="list-disc ml-4 space-y-1 my-2" {...props} />,
+                                                ol: ({ node, ...props }) => <ol className="list-decimal ml-4 space-y-1 my-2" {...props} />,
+                                                li: ({ node, ...props }) => <li className="marker:text-medical-500" {...props} />,
+                                                p: ({ node, ...props }) => <p className="mb-2 last:mb-0" {...props} />,
+                                                strong: ({ node, ...props }) => <strong className="font-bold text-medical-900" {...props} />
+                                            }}
+                                        >
+                                            {message.content}
+                                        </ReactMarkdown>
+                                    ) : (
+                                        message.content
+                                    )}
                                 </div>
                             </motion.div>
                         ))}
