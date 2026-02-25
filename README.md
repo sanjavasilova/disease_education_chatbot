@@ -85,7 +85,7 @@ npm run dev
 2.  **Storage**: Embeddings and metadata are stored in a local ChromaDB instance (`chroma_db/`).
 3.  **Retrieval**: When a user asks a question, the server embeds the query and searches ChromaDB for the most relevant context chunks.
 4.  **Augmentation**: The context is injected into a specialized `SYSTEM_PROMPT` that enforces medical safety and calm reassurance.
-5.  **Generation**: Gemini 2.0 Flash generates a response grounded strictly in the provided context.
+5.  **Generation**: Gemini 2.5 Flash generates a response grounded strictly in the provided context.
 6.  **Formatting**: The frontend renders the response as Markdown for a clean, professional look.
 
 ## 🛡️ Medical Disclaimer

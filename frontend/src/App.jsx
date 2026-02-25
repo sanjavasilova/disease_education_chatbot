@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Bot, User, Loader2, Sparkles, AlertCircle } from 'lucide-react';
+import { Send, Bot, User, Loader2, Sparkles, AlertCircle, Trash2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -10,9 +10,12 @@ function cn(...inputs) {
 }
 
 const App = () => {
-    const [messages, setMessages] = useState([
-        { id: 1, role: 'bot', content: "Hello! I'm MediChat, your disease information assistant. How can I help you today?" }
-    ]);
+    const [messages, setMessages] = useState(() => {
+        const saved = localStorage.getItem('medichat_history');
+        return saved ? JSON.parse(saved) : [
+            { id: 1, role: 'bot', content: "Hello! I'm MediChat, your disease information assistant. How can I help you today?" }
+        ];
+    });
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -20,6 +23,18 @@ const App = () => {
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        localStorage.setItem('medichat_history', JSON.stringify(messages));
+    }, [messages]);
+
+    const clearHistory = () => {
+        const initialMessage = [
+            { id: 1, role: 'bot', content: "Hello! I'm MediChat, your disease information assistant. How can I help you today?" }
+        ];
+        setMessages(initialMessage);
+        localStorage.setItem('medichat_history', JSON.stringify(initialMessage));
     };
 
     useEffect(() => {
@@ -36,9 +51,21 @@ const App = () => {
         setIsLoading(true);
         setError(null);
 
+        const history = messages.slice(1).map(msg => ({
+            role: msg.role === 'bot' ? 'model' : 'user',
+            content: msg.content
+        }));
+
         try {
-            const response = await fetch('http://localhost:8000/ask?question=' + encodeURIComponent(input), {
+            const response = await fetch('http://localhost:8000/ask', {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    question: input,
+                    history: history
+                })
             });
 
             if (!response.ok) {
@@ -66,9 +93,18 @@ const App = () => {
                         <p className="text-xs text-medical-600 font-medium">Smart Health Assistant</p>
                     </div>
                 </div>
-                <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                    <span className="text-sm font-medium text-slate-500">System Online</span>
+                <div className="flex items-center gap-4">
+                    <button
+                        onClick={clearHistory}
+                        className="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                        title="Clear conversation"
+                    >
+                        <Trash2 size={20} />
+                    </button>
+                    <div className="flex items-center gap-2 border-l pl-4 border-slate-200">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <span className="text-sm font-medium text-slate-500">System Online</span>
+                    </div>
                 </div>
             </header>
 

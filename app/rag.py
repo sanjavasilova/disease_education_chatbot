@@ -17,7 +17,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 chroma = get_chroma_client()
 collection = chroma.get_collection(name="medical_docs")
 
-def retrieve(query, k=3):
+def retrieve(query, k=10):
     result = client.models.embed_content(
         model="gemini-embedding-001",
         contents=query,
@@ -28,6 +28,9 @@ def retrieve(query, k=3):
         query_embeddings=[emb],
         n_results=k
     )
-    print(f"Results: {results}")
+    
+    sources = results.get("metadatas", [[]])[0]
+    source_ids = [s.get("source", "unknown") for s in sources]
+    print(f"Retrieved from: {source_ids}")
 
     return results["documents"][0]

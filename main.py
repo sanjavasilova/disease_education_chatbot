@@ -1,6 +1,8 @@
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List, Optional
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -26,17 +28,32 @@ app.add_middleware(
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 
+class ChatMessage(BaseModel):
+    role: str
+    content: str
+
+class ChatRequest(BaseModel):
+    question: str
+    history: Optional[List[ChatMessage]] = []
 
 @app.post("/ask")
-def ask(question: str):
+def ask(request: ChatRequest):
+    question = request.question
+    history = request.history
     context_chunks = retrieve(question)
     context = "\n".join(context_chunks)
     user_content = f"Context:\n{context}\n\nQuestion:\n{question}"
 
+    contents = []
+    for msg in history:
+        contents.append(types.Content(role=msg.role, parts=[types.Part(text=msg.content)]))
+    
+    contents.append(types.Content(role="user", parts=[types.Part(text=user_content)]))
+
     try:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
-            contents=user_content,
+            contents=contents,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
             ),
