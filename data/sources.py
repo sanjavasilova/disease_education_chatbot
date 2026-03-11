@@ -1188,10 +1188,5 @@ SOURCES = [
         "id": "zoonoses",
         "type": "html",
         "url": "https://www.who.int/news-room/fact-sheets/detail/zoonoses"
-    },
-    {
-        "id": "mimic_diagnoses",
-        "type": "csv",
-        "path": "data/raw/physionet.org/files/mimiciii-demo/1.4/D_ICD_DIAGNOSES.csv"
     }
 ]
