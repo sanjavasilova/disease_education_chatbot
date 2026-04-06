@@ -1,0 +1,1202 @@
+[
+  {
+    "question": "What are the main symptoms of asthma?",
+    "ground_truth": "Common symptoms of asthma include wheezing, shortness of breath, chest tightness, and coughing. Symptoms can vary in severity and may worsen at night or during exercise.",
+    "expected_sources": [
+      "asthma"
+    ],
+    "retrieved_sources": [
+      "asthma",
+      "mendeley_diseases",
+      "asthma",
+      "mendeley_diseases",
+      "asthma",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "asthma",
+      "mendeley_diseases",
+      "chronic_obstructive_pulmonary_disease_(copd)"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "What causes diabetes?",
+    "ground_truth": "Type 1 diabetes is caused by an autoimmune reaction that destroys insulin-producing beta cells in the pancreas. Type 2 diabetes is caused by the body's ineffective use of insulin, often linked to excess body weight, physical inactivity, and genetic factors.",
+    "expected_sources": [
+      "diabetes"
+    ],
+    "retrieved_sources": [
+      "diabetes",
+      "diabetes",
+      "mendeley_diseases",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "polycystic_ovary_syndrome"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How is hypertension diagnosed?",
+    "ground_truth": "Hypertension is diagnosed by measuring blood pressure. A person is diagnosed with hypertension when their systolic blood pressure is 140 mmHg or higher and/or their diastolic blood pressure is 90 mmHg or higher on two different days.",
+    "expected_sources": [
+      "hypertension"
+    ],
+    "retrieved_sources": [
+      "hypertension",
+      "hypertension",
+      "hypertension",
+      "hypertension",
+      "hypertension",
+      "mendeley_diseases",
+      "hypertension",
+      "pre_eclampsia",
+      "mendeley_diseases",
+      "hypertension"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "What are the risk factors for lung cancer?",
+    "ground_truth": "The main risk factors for lung cancer include tobacco smoking, exposure to secondhand smoke, occupational exposure to carcinogens like asbestos and radon, air pollution, and a family history of lung cancer.",
+    "expected_sources": [
+      "lung_cancer"
+    ],
+    "retrieved_sources": [
+      "lung_cancer",
+      "lung_cancer",
+      "mendeley_diseases",
+      "radon_and_health",
+      "lung_cancer",
+      "cancer",
+      "lung_cancer",
+      "cancer",
+      "radon_and_health",
+      "colorectal_cancer"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "What is avascular necrosis?",
+    "ground_truth": "Avascular necrosis (osteonecrosis) is a condition where bone tissue dies due to a lack of blood supply. It can lead to tiny breaks in the bone and eventual collapse. It most commonly affects the hip joint.",
+    "expected_sources": [
+      "avascular_necrosis"
+    ],
+    "retrieved_sources": [
+      "mendeley_diseases",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "How can malaria be prevented?",
+    "ground_truth": "Malaria can be prevented through insecticide-treated mosquito nets, indoor residual spraying, antimalarial medications for travellers, and preventive chemotherapy for high-risk groups.",
+    "expected_sources": [
+      "malaria"
+    ],
+    "retrieved_sources": [
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "west_nile_virus",
+      "malaria",
+      "anaemia"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the symptoms of depression?",
+    "ground_truth": "Symptoms of depression include persistent sad or empty mood, loss of interest in activities, changes in appetite and sleep, fatigue, difficulty concentrating, feelings of worthlessness, and thoughts of death or suicide.",
+    "expected_sources": [
+      "depression"
+    ],
+    "retrieved_sources": [
+      "depression",
+      "mental_disorders",
+      "depression",
+      "mendeley_diseases",
+      "bipolar_disorder",
+      "depression",
+      "mental_disorders",
+      "mendeley_diseases",
+      "depression",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "How is tuberculosis transmitted?",
+    "ground_truth": "Tuberculosis is spread person to person through the air when people with active pulmonary TB cough, sneeze, speak, or spit, propelling bacteria into the air.",
+    "expected_sources": [
+      "tuberculosis"
+    ],
+    "retrieved_sources": [
+      "tuberculosis",
+      "tuberculosis",
+      "tuberculosis",
+      "mendeley_diseases",
+      "tuberculosis",
+      "coronavirus_disease_(covid_19)",
+      "tuberculosis",
+      "leprosy",
+      "tuberculosis",
+      "hepatitis_b"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What treatments are available for HIV/AIDS?",
+    "ground_truth": "HIV is treated with antiretroviral therapy (ART), a combination of HIV medicines taken daily. ART does not cure HIV but helps people live longer, healthier lives and reduces transmission risk.",
+    "expected_sources": [
+      "hiv_aids"
+    ],
+    "retrieved_sources": [
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 1.0
+    }
+  },
+  {
+    "question": "What is the recommended diet for someone with cardiovascular disease?",
+    "ground_truth": "A heart-healthy diet includes fruits, vegetables, whole grains, lean proteins, and healthy fats, while limiting salt, sugar, saturated fat, and trans fat intake.",
+    "expected_sources": [
+      "cardiovascular_diseases_(cvds)"
+    ],
+    "retrieved_sources": [
+      "trans_fat",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "trans_fat",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "sodium_reduction",
+      "healthy_diet"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of cholera?",
+    "ground_truth": "Cholera can cause profuse watery diarrhoea (rice-water stools), vomiting, and rapid dehydration. Severe cases can lead to death within hours if untreated.",
+    "expected_sources": [
+      "cholera"
+    ],
+    "retrieved_sources": [
+      "cholera",
+      "cholera",
+      "cholera",
+      "food_safety",
+      "cholera",
+      "malaria",
+      "hepatitis_a",
+      "hepatitis_c",
+      "yellow_fever",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "How is dengue fever transmitted?",
+    "ground_truth": "Dengue is transmitted through the bites of infected female Aedes mosquitoes, primarily Aedes aegypti. The mosquitoes become infected when they bite a person with dengue virus in their blood.",
+    "expected_sources": [
+      "dengue_and_severe_dengue"
+    ],
+    "retrieved_sources": [
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "chikungunya",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What is COPD and what causes it?",
+    "ground_truth": "Chronic obstructive pulmonary disease (COPD) is a chronic lung disease that causes obstructed airflow. The main cause is tobacco smoking, with other risk factors including air pollution and occupational dusts.",
+    "expected_sources": [
+      "chronic_obstructive_pulmonary_disease_(copd)"
+    ],
+    "retrieved_sources": [
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "mendeley_diseases",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "asthma",
+      "household_air_pollution_and_health"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "What are the warning signs of a stroke?",
+    "ground_truth": "Warning signs of stroke include sudden numbness or weakness of the face, arm, or leg (especially on one side), confusion, trouble speaking, vision problems, difficulty walking, and severe headache.",
+    "expected_sources": [
+      "stroke"
+    ],
+    "retrieved_sources": [
+      "cardiovascular_diseases_(cvds)",
+      "mendeley_diseases",
+      "stroke",
+      "stroke",
+      "stroke",
+      "mendeley_diseases",
+      "stroke",
+      "stroke",
+      "mendeley_diseases",
+      "stroke"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.3333333333333333,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "How is hepatitis B transmitted?",
+    "ground_truth": "Hepatitis B is transmitted through contact with infected blood and body fluids, including from mother to child at birth, through unsafe injections, sexual contact, and needle sharing.",
+    "expected_sources": [
+      "hepatitis_b"
+    ],
+    "retrieved_sources": [
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_d",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_c",
+      "hepatitis_b"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the symptoms of measles?",
+    "ground_truth": "Measles symptoms include high fever, cough, runny nose, red watery eyes, and a rash of flat red spots that appears on the face and spreads to the rest of the body.",
+    "expected_sources": [
+      "measles"
+    ],
+    "retrieved_sources": [
+      "measles",
+      "measles",
+      "measles",
+      "measles",
+      "measles",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "rubella",
+      "mendeley_diseases",
+      "mpox"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "How can obesity be prevented?",
+    "ground_truth": "Obesity can be prevented by limiting energy intake from fats and sugars, increasing consumption of fruits, vegetables, and whole grains, and engaging in regular physical activity.",
+    "expected_sources": [
+      "obesity_and_overweight"
+    ],
+    "retrieved_sources": [
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "diabetes",
+      "obesity_and_overweight",
+      "hypertension"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What is epilepsy and how is it treated?",
+    "ground_truth": "Epilepsy is a chronic brain disorder characterized by recurrent seizures. It can be treated with anti-seizure medications, and up to 70% of people with epilepsy could become seizure-free with appropriate treatment.",
+    "expected_sources": [
+      "epilepsy"
+    ],
+    "retrieved_sources": [
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "mendeley_diseases",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What causes rabies and how can it be prevented?",
+    "ground_truth": "Rabies is caused by a virus transmitted through the saliva of infected animals, usually via bites. It can be prevented through vaccination of dogs and post-exposure prophylaxis after animal bites.",
+    "expected_sources": [
+      "rabies"
+    ],
+    "retrieved_sources": [
+      "rabies",
+      "rabies",
+      "rabies",
+      "rabies",
+      "animal_bites",
+      "rabies",
+      "rabies",
+      "rabies",
+      "rabies",
+      "rabies"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What is dementia and what are its early signs?",
+    "ground_truth": "Dementia is a syndrome involving deterioration of memory, thinking, behaviour, and the ability to perform everyday activities. Early signs include forgetfulness, losing track of time, and becoming lost in familiar places.",
+    "expected_sources": [
+      "dementia"
+    ],
+    "retrieved_sources": [
+      "dementia",
+      "dementia",
+      "dementia",
+      "dementia",
+      "mendeley_diseases",
+      "dementia",
+      "dementia",
+      "dementia",
+      "dementia",
+      "dementia"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "How does influenza spread?",
+    "ground_truth": "Seasonal influenza spreads easily through respiratory droplets and small particles when infected people cough, sneeze, or talk. It can also spread by touching contaminated surfaces.",
+    "expected_sources": [
+      "influenza_(seasonal)"
+    ],
+    "retrieved_sources": [
+      "influenza_(seasonal)",
+      "influenza_(seasonal)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(seasonal)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(seasonal)",
+      "influenza_(seasonal)",
+      "coronavirus_disease_(covid_19)"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What are the health effects of lead poisoning?",
+    "ground_truth": "Lead poisoning can affect nearly every organ system. In children it causes developmental delays, learning difficulties, and behavioural problems. In adults it can cause hypertension, kidney damage, and reproductive problems.",
+    "expected_sources": [
+      "lead_poisoning_and_health"
+    ],
+    "retrieved_sources": [
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "mercury_and_health",
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "electronic_waste_(e_waste)",
+      "arsenic",
+      "lead_poisoning_and_health"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "What is cervical cancer and how can it be prevented?",
+    "ground_truth": "Cervical cancer develops in the cervix and is almost always caused by human papillomavirus (HPV) infection. It can be prevented through HPV vaccination, regular screening, and treatment of pre-cancerous lesions.",
+    "expected_sources": [
+      "cervical_cancer"
+    ],
+    "retrieved_sources": [
+      "human_papilloma_virus_and_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
+      "human_papilloma_virus_and_cancer",
+      "cervical_cancer",
+      "human_papilloma_virus_and_cancer",
+      "cervical_cancer",
+      "human_papilloma_virus_and_cancer"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of hepatitis C?",
+    "ground_truth": "Most people with hepatitis C are asymptomatic for years. When symptoms appear they may include fever, fatigue, decreased appetite, nausea, abdominal pain, dark urine, and jaundice.",
+    "expected_sources": [
+      "hepatitis_c"
+    ],
+    "retrieved_sources": [
+      "hepatitis_c",
+      "hepatitis_c",
+      "hepatitis_e",
+      "hepatitis_a",
+      "hepatitis_c",
+      "hepatitis_c",
+      "hepatitis_d",
+      "yellow_fever",
+      "hepatitis_b",
+      "hepatitis_c"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "How is meningitis treated?",
+    "ground_truth": "Bacterial meningitis is treated with antibiotics, which should be started as soon as possible. Supportive care and corticosteroids may also be used. Viral meningitis is usually self-limiting.",
+    "expected_sources": [
+      "meningitis"
+    ],
+    "retrieved_sources": [
+      "meningitis",
+      "meningitis",
+      "meningitis",
+      "meningitis",
+      "meningitis",
+      "mendeley_diseases",
+      "meningitis",
+      "listeriosis",
+      "meningitis",
+      "meningitis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What is schizophrenia?",
+    "ground_truth": "Schizophrenia is a severe mental disorder affecting thinking, perception, emotions, language, sense of self, and behaviour. Common symptoms include hallucinations, delusions, and disorganized thinking.",
+    "expected_sources": [
+      "schizophrenia"
+    ],
+    "retrieved_sources": [
+      "schizophrenia",
+      "schizophrenia",
+      "schizophrenia",
+      "schizophrenia",
+      "mendeley_diseases",
+      "schizophrenia",
+      "schizophrenia",
+      "mental_disorders",
+      "schizophrenia",
+      "schizophrenia"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the complications of diabetes?",
+    "ground_truth": "Diabetes complications include cardiovascular disease, nerve damage (neuropathy), kidney damage (nephropathy), eye damage (retinopathy), foot damage, and increased risk of infections.",
+    "expected_sources": [
+      "diabetes"
+    ],
+    "retrieved_sources": [
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "syphilis",
+      "mendeley_diseases",
+      "diabetes"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How is tetanus prevented?",
+    "ground_truth": "Tetanus is prevented through vaccination with tetanus toxoid-containing vaccines. Proper wound care and cleaning also reduces the risk of tetanus infection.",
+    "expected_sources": [
+      "tetanus"
+    ],
+    "retrieved_sources": [
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "diphtheria",
+      "tetanus",
+      "tetanus",
+      "botulism"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the effects of air pollution on health?",
+    "ground_truth": "Air pollution increases the risk of respiratory infections, heart disease, stroke, lung cancer, and COPD. Fine particulate matter (PM2.5) penetrates deep into the lungs and bloodstream.",
+    "expected_sources": [
+      "ambient_(outdoor)_air_quality_and_health"
+    ],
+    "retrieved_sources": [
+      "ambient_(outdoor)_air_quality_and_health",
+      "sand_and_dust_storms",
+      "household_air_pollution_and_health",
+      "household_air_pollution_and_health",
+      "household_air_pollution_and_health",
+      "ambient_(outdoor)_air_quality_and_health",
+      "ambient_(outdoor)_air_quality_and_health",
+      "ambient_(outdoor)_air_quality_and_health",
+      "el_nino_southern_oscillation_(enso)",
+      "ambient_(outdoor)_air_quality_and_health"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is bipolar disorder?",
+    "ground_truth": "Bipolar disorder is a mental health condition characterized by extreme mood swings including emotional highs (mania or hypomania) and lows (depression). Episodes can affect sleep, energy, activity, and judgement.",
+    "expected_sources": [
+      "bipolar_disorder"
+    ],
+    "retrieved_sources": [
+      "bipolar_disorder",
+      "bipolar_disorder",
+      "mental_disorders",
+      "mental_disorders",
+      "bipolar_disorder",
+      "depression",
+      "bipolar_disorder",
+      "bipolar_disorder",
+      "bipolar_disorder",
+      "bipolar_disorder"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "How can drowning be prevented?",
+    "ground_truth": "Drowning prevention strategies include installing barriers to control access to water, teaching swimming and water safety, providing safe places for children, and training bystanders in rescue and resuscitation.",
+    "expected_sources": [
+      "drowning"
+    ],
+    "retrieved_sources": [
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 1.0
+    }
+  },
+  {
+    "question": "What are the risk factors for breast cancer?",
+    "ground_truth": "Risk factors for breast cancer include increasing age, family history, genetic mutations (BRCA1/BRCA2), early menarche, late menopause, obesity, alcohol consumption, and hormone replacement therapy.",
+    "expected_sources": [
+      "breast_cancer"
+    ],
+    "retrieved_sources": [
+      "breast_cancer",
+      "breast_cancer",
+      "breast_cancer",
+      "breast_cancer",
+      "breast_cancer",
+      "mendeley_diseases",
+      "cancer",
+      "cancer",
+      "colorectal_cancer",
+      "lung_cancer"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is sepsis and what causes it?",
+    "ground_truth": "Sepsis is a life-threatening organ dysfunction caused by a dysregulated host response to infection. It can be caused by bacterial, viral, fungal, or parasitic infections and requires urgent medical treatment.",
+    "expected_sources": [
+      "sepsis"
+    ],
+    "retrieved_sources": [
+      "sepsis",
+      "sepsis",
+      "sepsis",
+      "sepsis",
+      "mendeley_diseases",
+      "sepsis",
+      "sepsis",
+      "sepsis",
+      "patient_safety",
+      "sepsis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How is polio transmitted?",
+    "ground_truth": "Polio (poliomyelitis) is transmitted person to person mainly through the faecal-oral route or, less frequently, through contaminated water or food. The virus multiplies in the intestine.",
+    "expected_sources": [
+      "poliomyelitis"
+    ],
+    "retrieved_sources": [
+      "poliomyelitis",
+      "poliomyelitis",
+      "poliomyelitis",
+      "poliomyelitis",
+      "poliomyelitis",
+      "hepatitis_a",
+      "lassa_fever",
+      "hepatitis_b",
+      "poliomyelitis",
+      "oropouche_virus_disease"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of Parkinson disease?",
+    "ground_truth": "Parkinson disease symptoms include tremor, slowness of movement (bradykinesia), limb rigidity, and gait and balance problems. Non-motor symptoms include cognitive impairment, sleep disorders, and depression.",
+    "expected_sources": [
+      "parkinson_disease"
+    ],
+    "retrieved_sources": [
+      "mendeley_diseases",
+      "parkinson_disease",
+      "parkinson_disease",
+      "parkinson_disease",
+      "parkinson_disease",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "What is endometriosis?",
+    "ground_truth": "Endometriosis is a condition where tissue similar to the uterine lining grows outside the uterus. It causes chronic pelvic pain, painful periods, pain during intercourse, and can lead to infertility.",
+    "expected_sources": [
+      "endometriosis"
+    ],
+    "retrieved_sources": [
+      "endometriosis",
+      "endometriosis",
+      "mendeley_diseases",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "How do snakebites affect the body?",
+    "ground_truth": "Venomous snakebites can cause paralysis, bleeding disorders, kidney failure, tissue destruction, and death. Effects depend on the species and amount of venom injected.",
+    "expected_sources": [
+      "snakebite_envenoming"
+    ],
+    "retrieved_sources": [
+      "snakebite_envenoming",
+      "animal_bites",
+      "animal_bites",
+      "animal_bites",
+      "snakebite_envenoming",
+      "mendeley_diseases",
+      "snakebite_envenoming",
+      "snakebite_envenoming",
+      "snakebite_envenoming",
+      "animal_bites"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is leishmaniasis?",
+    "ground_truth": "Leishmaniasis is a parasitic disease transmitted by the bite of infected sandflies. The three main forms are visceral (kala-azar), cutaneous, and mucocutaneous leishmaniasis.",
+    "expected_sources": [
+      "leishmaniasis"
+    ],
+    "retrieved_sources": [
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leprosy"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What causes food poisoning from salmonella?",
+    "ground_truth": "Salmonella food poisoning is caused by eating food contaminated with Salmonella bacteria, commonly found in raw eggs, undercooked poultry, meat, and unpasteurized milk.",
+    "expected_sources": [
+      "salmonella_(non_typhoidal)"
+    ],
+    "retrieved_sources": [
+      "salmonella_(non_typhoidal)",
+      "salmonella_(non_typhoidal)",
+      "salmonella_(non_typhoidal)",
+      "salmonella_(non_typhoidal)",
+      "food_safety",
+      "salmonella_(non_typhoidal)",
+      "food_safety",
+      "typhoid",
+      "typhoid",
+      "listeriosis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is the treatment for leprosy?",
+    "ground_truth": "Leprosy is treated with multidrug therapy (MDT), a combination of dapsone, rifampicin, and clofazimine. MDT cures the disease and prevents disability when started early.",
+    "expected_sources": [
+      "leprosy"
+    ],
+    "retrieved_sources": [
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leishmaniasis",
+      "buruli_ulcer_(mycobacterium_ulcerans_infection)",
+      "yaws",
+      "buruli_ulcer_(mycobacterium_ulcerans_infection)"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the health risks of tobacco use?",
+    "ground_truth": "Tobacco use causes lung cancer, COPD, cardiovascular disease, stroke, and many other cancers. It is one of the leading preventable causes of death worldwide.",
+    "expected_sources": [
+      "tobacco"
+    ],
+    "retrieved_sources": [
+      "oral_health",
+      "tobacco",
+      "mendeley_diseases",
+      "adolescents_health_risks_and_solutions",
+      "tobacco",
+      "cancer",
+      "stroke",
+      "arsenic",
+      "tobacco",
+      "noncommunicable_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.3
+    }
+  },
+  {
+    "question": "What is preterm birth and what are its risk factors?",
+    "ground_truth": "Preterm birth is birth before 37 completed weeks of gestation. Risk factors include previous preterm birth, multiple pregnancies, infections, chronic conditions like diabetes and hypertension, and maternal age.",
+    "expected_sources": [
+      "preterm_birth"
+    ],
+    "retrieved_sources": [
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "newborn_mortality",
+      "newborns_reducing_mortality",
+      "pre_eclampsia",
+      "newborns_reducing_mortality"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "How is yellow fever prevented?",
+    "ground_truth": "Yellow fever is prevented by vaccination. A single dose of the yellow fever vaccine provides lifelong immunity. Mosquito control measures also help reduce transmission.",
+    "expected_sources": [
+      "yellow_fever"
+    ],
+    "retrieved_sources": [
+      "yellow_fever",
+      "japanese_encephalitis",
+      "yellow_fever",
+      "yellow_fever",
+      "yellow_fever",
+      "yellow_fever",
+      "dengue_and_severe_dengue",
+      "yellow_fever",
+      "west_nile_virus",
+      "yellow_fever"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "What is osteoarthritis?",
+    "ground_truth": "Osteoarthritis is the most common form of arthritis, causing joint pain, stiffness, and reduced mobility. It occurs when the protective cartilage that cushions the ends of bones wears down over time.",
+    "expected_sources": [
+      "osteoarthritis"
+    ],
+    "retrieved_sources": [
+      "osteoarthritis",
+      "osteoarthritis",
+      "mendeley_diseases",
+      "osteoarthritis",
+      "osteoarthritis",
+      "osteoarthritis",
+      "osteoarthritis",
+      "mendeley_diseases",
+      "rheumatoid_arthritis",
+      "rheumatoid_arthritis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of Ebola?",
+    "ground_truth": "Ebola symptoms include sudden onset of fever, fatigue, muscle pain, headache, and sore throat, followed by vomiting, diarrhoea, rash, and in some cases internal and external bleeding.",
+    "expected_sources": [
+      "ebola_disease"
+    ],
+    "retrieved_sources": [
+      "ebola_disease",
+      "ebola_disease",
+      "marburg_virus_disease",
+      "yellow_fever",
+      "ebola_disease",
+      "lassa_fever",
+      "crimean_congo_haemorrhagic_fever",
+      "ebola_disease",
+      "hepatitis_c",
+      "malaria"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "What is the impact of alcohol on health?",
+    "ground_truth": "Harmful alcohol use causes liver disease, cardiovascular disease, cancers, mental health problems, and injuries. It is a leading risk factor for premature death and disability worldwide.",
+    "expected_sources": [
+      "alcohol"
+    ],
+    "retrieved_sources": [
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "violence_against_women",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How does schistosomiasis spread?",
+    "ground_truth": "Schistosomiasis is spread through contact with freshwater contaminated with parasitic worms. People become infected when larval forms of the parasite penetrate the skin during contact with infested water.",
+    "expected_sources": [
+      "schistosomiasis"
+    ],
+    "retrieved_sources": [
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "soil_transmitted_helminth_infections",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What are the signs of anxiety disorders?",
+    "ground_truth": "Anxiety disorders involve excessive fear and worry that is out of proportion to the situation. Symptoms include restlessness, fatigue, difficulty concentrating, irritability, muscle tension, and sleep problems.",
+    "expected_sources": [
+      "anxiety_disorders"
+    ],
+    "retrieved_sources": [
+      "anxiety_disorders",
+      "anxiety_disorders",
+      "anxiety_disorders",
+      "anxiety_disorders",
+      "mendeley_diseases",
+      "mental_disorders",
+      "anxiety_disorders",
+      "mental_disorders",
+      "anxiety_disorders",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What is palliative care?",
+    "ground_truth": "Palliative care is an approach that improves quality of life of patients and families facing life-threatening illness, through prevention and relief of suffering by means of early identification, assessment, and treatment of pain and other problems.",
+    "expected_sources": [
+      "palliative_care"
+    ],
+    "retrieved_sources": [
+      "palliative_care",
+      "cancer",
+      "palliative_care",
+      "palliative_care",
+      "cancer_in_children",
+      "palliative_care",
+      "palliative_care",
+      "palliative_care",
+      "palliative_care",
+      "palliative_care"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How are burns treated?",
+    "ground_truth": "Burns treatment depends on severity. First aid includes cooling the burn with running water. Severe burns require medical care including wound cleaning, dressings, pain management, fluid resuscitation, and sometimes skin grafting.",
+    "expected_sources": [
+      "burns"
+    ],
+    "retrieved_sources": [
+      "burns",
+      "burns",
+      "burns",
+      "burns",
+      "burns",
+      "burns",
+      "white_phosphorus",
+      "burns",
+      "burns",
+      "white_phosphorus"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  }
+]
