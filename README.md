@@ -88,5 +88,36 @@ npm run dev
 5.  **Generation**: Gemini 2.5 Flash generates a response grounded strictly in the provided context.
 6.  **Formatting**: The frontend renders the response as Markdown for a clean, professional look.
 
+## 📊 Evaluation
+
+The RAG pipeline is evaluated using retrieval quality metrics over a test dataset of 50 medical questions covering diseases, mental health, injuries, and more.
+
+### Running the Evaluation
+```bash
+# Retrieval metrics only (no API cost beyond embeddings)
+python -m evaluation.evaluate --retrieval-only
+
+# Full evaluation with LLM-as-judge scoring (uses Gemini API quota)
+python -m evaluation.evaluate --limit 5
+```
+
+### Retrieval Metrics
+
+| Metric | Score | Description |
+|---|---|---|
+| **Hit Rate** | 1.00 | Retrieval always returns at least one chunk from the correct source |
+| **MRR** | 0.94 | Mean Reciprocal Rank — correct source is ranked 1st almost every time |
+| **Source Precision** | 0.68 | 68% of retrieved chunks come from the expected source |
+| **Overall** | 0.87 | Average across all retrieval metrics |
+
+### LLM-as-Judge Metrics (optional, requires API calls)
+
+| Metric | Description |
+|---|---|
+| **Faithfulness** | Is the answer grounded in the retrieved context (no hallucination)? |
+| **Answer Relevance** | Does the answer address the user's question? |
+| **Context Relevance** | Are the retrieved chunks relevant to the question? |
+| **Correctness** | Is the answer factually consistent with the ground truth? |
+
 ## 🛡️ Medical Disclaimer
 This application is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment.
