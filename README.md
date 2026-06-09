@@ -70,7 +70,7 @@ python3 vectorstore/build_db.py
 
 If you want to use Groq instead of Gemini write this command:
 ```bash
-python3 vectorstore/build_db_grok.py
+python3 vectorstore/build_db_groq.py
 ```
 *Note: You can adjust `SAMPLE_SIZE` in `build_db.py` to limit the number of new chunks ingested per run.*
 

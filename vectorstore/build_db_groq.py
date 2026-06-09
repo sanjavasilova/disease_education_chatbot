@@ -26,7 +26,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
         logging.StreamHandler(sys.stdout),
-        logging.FileHandler("build_db_grok.log"),
+        logging.FileHandler("build_db_groq.log"),
     ],
 )
 log = logging.getLogger(__name__)
