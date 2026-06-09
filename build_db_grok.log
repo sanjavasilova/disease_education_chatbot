@@ -1,0 +1,925 @@
+2026-06-09 19:24:44,112 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-06-09 19:24:44,195 [INFO] Processing asthma ...
+2026-06-09 19:24:45,994 [INFO] asthma: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 19:24:46,012 [ERROR] ERROR processing asthma — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.models.embed_content(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Models' object has no attribute 'embed_content'
+2026-06-09 19:24:53,013 [INFO] Processing diabetes ...
+2026-06-09 19:24:53,445 [INFO] diabetes: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 19:24:53,445 [ERROR] ERROR processing diabetes — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.models.embed_content(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Models' object has no attribute 'embed_content'
+2026-06-09 19:25:00,446 [INFO] Processing hypertension ...
+2026-06-09 19:25:00,885 [INFO] hypertension: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 19:25:00,886 [ERROR] ERROR processing hypertension — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.models.embed_content(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Models' object has no attribute 'embed_content'
+2026-06-09 19:33:09,545 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-06-09 19:33:09,615 [INFO] Processing asthma ...
+2026-06-09 19:33:10,949 [INFO] asthma: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 19:33:11,460 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
+2026-06-09 19:33:11,461 [ERROR] ERROR processing asthma — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.embeddings.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-embed-text-v1_5` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 98, in _embed_with_retry
+    if e.code == 429:
+       ^^^^^^
+AttributeError: 'NotFoundError' object has no attribute 'code'
+2026-06-09 19:33:18,463 [INFO] Processing diabetes ...
+2026-06-09 19:33:18,727 [INFO] diabetes: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 19:33:19,140 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
+2026-06-09 19:33:19,141 [ERROR] ERROR processing diabetes — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.embeddings.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-embed-text-v1_5` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 98, in _embed_with_retry
+    if e.code == 429:
+       ^^^^^^
+AttributeError: 'NotFoundError' object has no attribute 'code'
+2026-06-09 19:33:22,432 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-06-09 19:33:22,502 [INFO] Processing asthma ...
+2026-06-09 19:33:23,030 [INFO] asthma: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 19:33:23,885 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
+2026-06-09 19:33:23,886 [ERROR] ERROR processing asthma — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.embeddings.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-embed-text-v1_5` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-06-09 19:34:12,359 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-06-09 19:34:12,428 [INFO] Processing asthma ...
+2026-06-09 19:34:12,675 [INFO] asthma: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 19:34:13,014 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
+2026-06-09 19:34:13,015 [ERROR] ERROR processing asthma — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.embeddings.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-embed-text-v1.5` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-06-09 19:34:20,018 [INFO] Processing diabetes ...
+2026-06-09 19:34:20,297 [INFO] diabetes: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 19:34:20,609 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
+2026-06-09 19:34:20,610 [ERROR] ERROR processing diabetes — continuing with remaining sources.
+Traceback (most recent call last):
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+    embeddings = _embed_with_retry(client, texts_to_embed, src_id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+    result = client.embeddings.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-embed-text-v1.5` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-06-09 20:16:49,440 [INFO] No device provided, using cuda:0
+2026-06-09 20:16:50,068 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:16:50,233 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:50,409 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:50,586 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:16:50,587 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-06-09 20:16:50,720 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:50,881 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:50,883 [INFO] Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-09 20:16:51,059 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:16:51,186 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:51,358 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:16:51,498 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-06-09 20:16:51,652 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-06-09 20:16:51,836 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:16:51,966 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:52,135 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:16:52,510 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:52,566 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:52,766 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-09 20:16:52,947 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:16:53,009 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:53,076 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-09 20:16:53,321 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-06-09 20:16:53,561 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/xet-read-token/1110a243fdf4706b3f48f1d95db1a4f5529b4d41 "HTTP/1.1 200 OK"
+2026-06-09 20:17:29,074 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-09 20:17:29,281 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-09 20:17:29,465 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-09 20:17:29,641 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-09 20:17:29,836 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:29,895 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:29,957 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:30,122 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:30,182 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:30,432 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:30,483 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:30,659 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:30,713 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:30,898 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-09 20:17:31,064 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-09 20:17:31,241 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:31,309 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/vocab.txt "HTTP/1.1 200 OK"
+2026-06-09 20:17:31,369 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/vocab.txt "HTTP/1.1 200 OK"
+2026-06-09 20:17:31,723 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:31,776 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:31,850 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:32,106 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-06-09 20:17:32,280 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:32,350 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:32,408 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:32,586 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-06-09 20:17:32,839 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-09 20:17:32,897 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:32,962 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-09 20:17:33,140 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-06-09 20:17:33,276 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-06-09 20:17:33,349 [INFO] Processing asthma ...
+2026-06-09 20:17:33,623 [INFO] asthma: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:17:33,877 [INFO] asthma: done.
+2026-06-09 20:17:33,877 [INFO] Processing diabetes ...
+2026-06-09 20:17:34,104 [INFO] diabetes: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:17:34,143 [INFO] diabetes: done.
+2026-06-09 20:17:34,143 [INFO] Processing hypertension ...
+2026-06-09 20:17:34,392 [INFO] hypertension: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:17:34,431 [INFO] hypertension: done.
+2026-06-09 20:17:34,432 [INFO] Processing lung_cancer ...
+2026-06-09 20:17:34,836 [INFO] lung_cancer: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:17:34,868 [INFO] lung_cancer: done.
+2026-06-09 20:17:34,868 [INFO] Processing avascular_necrosis ...
+2026-06-09 20:17:35,158 [INFO] avascular_necrosis: 32 chunks produced, 0 already stored, 32 to embed
+2026-06-09 20:17:35,281 [INFO] avascular_necrosis: done.
+2026-06-09 20:17:35,281 [INFO] Processing mendeley_diseases ...
+2026-06-09 20:17:44,289 [INFO]   csv_special: 773 diseases processed with 20% frequency threshold
+2026-06-09 20:17:44,298 [INFO] mendeley_diseases: 773 chunks produced, 0 already stored, 773 to embed
+2026-06-09 20:17:45,306 [INFO] mendeley_diseases: done.
+2026-06-09 20:17:45,306 [INFO] Processing abortion ...
+2026-06-09 20:17:45,592 [INFO] abortion: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:17:45,664 [INFO] abortion: done.
+2026-06-09 20:17:45,664 [INFO] Processing abuse_of_older_people ...
+2026-06-09 20:17:46,169 [INFO] abuse_of_older_people: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:17:46,221 [INFO] abuse_of_older_people: done.
+2026-06-09 20:17:46,221 [INFO] Processing adolescents_health_risks_and_solutions ...
+2026-06-09 20:17:46,693 [INFO] adolescents_health_risks_and_solutions: 15 chunks produced, 0 already stored, 15 to embed
+2026-06-09 20:17:46,774 [INFO] adolescents_health_risks_and_solutions: done.
+2026-06-09 20:17:46,774 [INFO] Processing adolescent_pregnancy ...
+2026-06-09 20:17:47,122 [INFO] adolescent_pregnancy: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:17:47,203 [INFO] adolescent_pregnancy: done.
+2026-06-09 20:17:47,203 [INFO] Processing ageing_and_health ...
+2026-06-09 20:17:47,598 [INFO] ageing_and_health: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:17:47,663 [INFO] ageing_and_health: done.
+2026-06-09 20:17:47,663 [INFO] Processing alcohol ...
+2026-06-09 20:17:48,019 [INFO] alcohol: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:17:48,090 [INFO] alcohol: done.
+2026-06-09 20:17:48,090 [INFO] Processing ambient_(outdoor)_air_quality_and_health ...
+2026-06-09 20:17:48,425 [INFO] ambient_(outdoor)_air_quality_and_health: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:17:48,501 [INFO] ambient_(outdoor)_air_quality_and_health: done.
+2026-06-09 20:17:48,501 [INFO] Processing anaemia ...
+2026-06-09 20:17:48,902 [INFO] anaemia: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:17:48,955 [INFO] anaemia: done.
+2026-06-09 20:17:48,956 [INFO] Processing animal_bites ...
+2026-06-09 20:17:49,272 [INFO] animal_bites: 15 chunks produced, 0 already stored, 15 to embed
+2026-06-09 20:17:49,346 [INFO] animal_bites: done.
+2026-06-09 20:17:49,346 [INFO] Processing antimicrobial_resistance ...
+2026-06-09 20:17:49,675 [INFO] antimicrobial_resistance: 22 chunks produced, 0 already stored, 22 to embed
+2026-06-09 20:17:49,771 [INFO] antimicrobial_resistance: done.
+2026-06-09 20:17:49,771 [INFO] Processing anxiety_disorders ...
+2026-06-09 20:17:50,176 [INFO] anxiety_disorders: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:17:50,249 [INFO] anxiety_disorders: done.
+2026-06-09 20:17:50,250 [INFO] Processing arsenic ...
+2026-06-09 20:17:50,639 [INFO] arsenic: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:17:50,714 [INFO] arsenic: done.
+2026-06-09 20:17:50,714 [INFO] Processing asbestos ...
+2026-06-09 20:17:51,056 [INFO] asbestos: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:17:51,113 [INFO] asbestos: done.
+2026-06-09 20:17:51,113 [INFO] Processing assistive_technology ...
+2026-06-09 20:17:51,444 [INFO] assistive_technology: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:17:51,570 [INFO] assistive_technology: done.
+2026-06-09 20:17:51,571 [INFO] Processing autism_spectrum_disorders ...
+2026-06-09 20:17:52,004 [INFO] autism_spectrum_disorders: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:17:52,050 [INFO] autism_spectrum_disorders: done.
+2026-06-09 20:17:52,050 [INFO] Processing bacterial_vaginosis ...
+2026-06-09 20:17:52,375 [INFO] bacterial_vaginosis: 5 chunks produced, 0 already stored, 5 to embed
+2026-06-09 20:17:52,439 [INFO] bacterial_vaginosis: done.
+2026-06-09 20:17:52,440 [INFO] Processing biodiversity ...
+2026-06-09 20:17:52,781 [INFO] biodiversity: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:17:52,856 [INFO] biodiversity: done.
+2026-06-09 20:17:52,856 [INFO] Processing bipolar_disorder ...
+2026-06-09 20:17:53,181 [INFO] bipolar_disorder: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:17:53,268 [INFO] bipolar_disorder: done.
+2026-06-09 20:17:53,268 [INFO] Processing blindness_and_visual_impairment ...
+2026-06-09 20:17:53,622 [INFO] blindness_and_visual_impairment: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:17:53,703 [INFO] blindness_and_visual_impairment: done.
+2026-06-09 20:17:53,703 [INFO] Processing blood_safety_and_availability ...
+2026-06-09 20:17:54,026 [INFO] blood_safety_and_availability: 15 chunks produced, 0 already stored, 15 to embed
+2026-06-09 20:17:54,129 [INFO] blood_safety_and_availability: done.
+2026-06-09 20:17:54,129 [INFO] Processing botulism ...
+2026-06-09 20:17:54,468 [INFO] botulism: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:17:54,558 [INFO] botulism: done.
+2026-06-09 20:17:54,558 [INFO] Processing breast_cancer ...
+2026-06-09 20:17:55,041 [INFO] breast_cancer: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:17:55,136 [INFO] breast_cancer: done.
+2026-06-09 20:17:55,136 [INFO] Processing brucellosis ...
+2026-06-09 20:17:55,643 [INFO] brucellosis: 5 chunks produced, 0 already stored, 5 to embed
+2026-06-09 20:17:55,708 [INFO] brucellosis: done.
+2026-06-09 20:17:55,708 [INFO] Processing burns ...
+2026-06-09 20:17:56,100 [INFO] burns: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:17:56,183 [INFO] burns: done.
+2026-06-09 20:17:56,183 [INFO] Processing buruli_ulcer_(mycobacterium_ulcerans_infection) ...
+2026-06-09 20:17:56,538 [INFO] buruli_ulcer_(mycobacterium_ulcerans_infection): 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:17:56,605 [INFO] buruli_ulcer_(mycobacterium_ulcerans_infection): done.
+2026-06-09 20:17:56,605 [INFO] Processing campylobacter ...
+2026-06-09 20:17:57,301 [INFO] campylobacter: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:17:57,373 [INFO] campylobacter: done.
+2026-06-09 20:17:57,373 [INFO] Processing cancer ...
+2026-06-09 20:17:57,913 [INFO] cancer: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:17:58,010 [INFO] cancer: done.
+2026-06-09 20:17:58,011 [INFO] Processing candidiasis_(yeast_infection) ...
+2026-06-09 20:17:58,618 [INFO] candidiasis_(yeast_infection): 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:17:58,698 [INFO] candidiasis_(yeast_infection): done.
+2026-06-09 20:17:58,698 [INFO] Processing cardiovascular_diseases_(cvds) ...
+2026-06-09 20:17:59,281 [INFO] cardiovascular_diseases_(cvds): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:17:59,332 [INFO] cardiovascular_diseases_(cvds): done.
+2026-06-09 20:17:59,332 [INFO] Processing cervical_cancer ...
+2026-06-09 20:18:00,538 [INFO] cervical_cancer: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:00,591 [INFO] cervical_cancer: done.
+2026-06-09 20:18:00,592 [INFO] Processing chagas_disease_(american_trypanosomiasis) ...
+2026-06-09 20:18:00,984 [INFO] chagas_disease_(american_trypanosomiasis): 15 chunks produced, 0 already stored, 15 to embed
+2026-06-09 20:18:01,045 [INFO] chagas_disease_(american_trypanosomiasis): done.
+2026-06-09 20:18:01,046 [INFO] Processing chikungunya ...
+2026-06-09 20:18:01,573 [INFO] chikungunya: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:01,632 [INFO] chikungunya: done.
+2026-06-09 20:18:01,632 [INFO] Processing child_maltreatment ...
+2026-06-09 20:18:01,948 [INFO] child_maltreatment: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:02,005 [INFO] child_maltreatment: done.
+2026-06-09 20:18:02,005 [INFO] Processing child_mortality_under_5_years ...
+2026-06-09 20:18:02,307 [INFO] child_mortality_under_5_years: 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:18:02,342 [INFO] child_mortality_under_5_years: done.
+2026-06-09 20:18:02,343 [INFO] Processing cancer_in_children ...
+2026-06-09 20:18:02,667 [INFO] cancer_in_children: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:02,726 [INFO] cancer_in_children: done.
+2026-06-09 20:18:02,727 [INFO] Processing chlamydia ...
+2026-06-09 20:18:03,125 [INFO] chlamydia: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:03,180 [INFO] chlamydia: done.
+2026-06-09 20:18:03,180 [INFO] Processing cholera ...
+2026-06-09 20:18:03,539 [INFO] cholera: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:03,607 [INFO] cholera: done.
+2026-06-09 20:18:03,607 [INFO] Processing chromoblastomycosis ...
+2026-06-09 20:18:03,922 [INFO] chromoblastomycosis: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:18:03,958 [INFO] chromoblastomycosis: done.
+2026-06-09 20:18:03,958 [INFO] Processing chronic_obstructive_pulmonary_disease_(copd) ...
+2026-06-09 20:18:04,342 [INFO] chronic_obstructive_pulmonary_disease_(copd): 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:04,391 [INFO] chronic_obstructive_pulmonary_disease_(copd): done.
+2026-06-09 20:18:04,391 [INFO] Processing civil_registration_and_vital_statistics ...
+2026-06-09 20:18:04,739 [INFO] civil_registration_and_vital_statistics: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:04,783 [INFO] civil_registration_and_vital_statistics: done.
+2026-06-09 20:18:04,783 [INFO] Processing climate_change_and_health ...
+2026-06-09 20:18:05,146 [INFO] climate_change_and_health: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:05,201 [INFO] climate_change_and_health: done.
+2026-06-09 20:18:05,201 [INFO] Processing colorectal_cancer ...
+2026-06-09 20:18:05,581 [INFO] colorectal_cancer: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:05,621 [INFO] colorectal_cancer: done.
+2026-06-09 20:18:05,621 [INFO] Processing commercial_determinants_of_health ...
+2026-06-09 20:18:05,979 [INFO] commercial_determinants_of_health: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:06,039 [INFO] commercial_determinants_of_health: done.
+2026-06-09 20:18:06,039 [INFO] Processing community_based_health_insurance_cbhi ...
+2026-06-09 20:18:06,429 [INFO] community_based_health_insurance_cbhi: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:18:06,473 [INFO] community_based_health_insurance_cbhi: done.
+2026-06-09 20:18:06,473 [INFO] Processing condoms ...
+2026-06-09 20:18:06,916 [INFO] condoms: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:18:06,961 [INFO] condoms: done.
+2026-06-09 20:18:06,961 [INFO] Processing birth_defects ...
+2026-06-09 20:18:07,297 [INFO] birth_defects: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:07,350 [INFO] birth_defects: done.
+2026-06-09 20:18:07,350 [INFO] Processing coronavirus_disease_(covid_19) ...
+2026-06-09 20:18:07,703 [INFO] coronavirus_disease_(covid_19): 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:07,768 [INFO] coronavirus_disease_(covid_19): done.
+2026-06-09 20:18:07,768 [INFO] Processing corporal_punishment_and_health ...
+2026-06-09 20:18:08,136 [INFO] corporal_punishment_and_health: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:08,192 [INFO] corporal_punishment_and_health: done.
+2026-06-09 20:18:08,193 [INFO] Processing crimean_congo_haemorrhagic_fever ...
+2026-06-09 20:18:08,577 [INFO] crimean_congo_haemorrhagic_fever: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:08,630 [INFO] crimean_congo_haemorrhagic_fever: done.
+2026-06-09 20:18:08,630 [INFO] Processing deafness_and_hearing_loss ...
+2026-06-09 20:18:10,862 [INFO] deafness_and_hearing_loss: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:10,912 [INFO] deafness_and_hearing_loss: done.
+2026-06-09 20:18:10,912 [INFO] Processing deliberate_events ...
+2026-06-09 20:18:11,312 [INFO] deliberate_events: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:11,349 [INFO] deliberate_events: done.
+2026-06-09 20:18:11,349 [INFO] Processing dementia ...
+2026-06-09 20:18:11,768 [INFO] dementia: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:11,823 [INFO] dementia: done.
+2026-06-09 20:18:11,823 [INFO] Processing dengue_and_severe_dengue ...
+2026-06-09 20:18:12,146 [INFO] dengue_and_severe_dengue: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:18:12,215 [INFO] dengue_and_severe_dengue: done.
+2026-06-09 20:18:12,215 [INFO] Processing depression ...
+2026-06-09 20:18:12,576 [INFO] depression: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:12,634 [INFO] depression: done.
+2026-06-09 20:18:12,634 [INFO] Processing diarrhoeal_disease ...
+2026-06-09 20:18:12,966 [INFO] diarrhoeal_disease: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:13,012 [INFO] diarrhoeal_disease: done.
+2026-06-09 20:18:13,012 [INFO] Processing dioxins_and_their_effects_on_human_health ...
+2026-06-09 20:18:13,349 [INFO] dioxins_and_their_effects_on_human_health: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:13,412 [INFO] dioxins_and_their_effects_on_human_health: done.
+2026-06-09 20:18:13,412 [INFO] Processing diphtheria ...
+2026-06-09 20:18:13,777 [INFO] diphtheria: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:13,832 [INFO] diphtheria: done.
+2026-06-09 20:18:13,832 [INFO] Processing disability_and_health ...
+2026-06-09 20:18:14,103 [INFO] disability_and_health: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:14,153 [INFO] disability_and_health: done.
+2026-06-09 20:18:14,153 [INFO] Processing dracunculiasis_(guinea_worm_disease) ...
+2026-06-09 20:18:14,543 [INFO] dracunculiasis_(guinea_worm_disease): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:14,596 [INFO] dracunculiasis_(guinea_worm_disease): done.
+2026-06-09 20:18:14,596 [INFO] Processing drinking_water ...
+2026-06-09 20:18:14,930 [INFO] drinking_water: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:14,981 [INFO] drinking_water: done.
+2026-06-09 20:18:14,981 [INFO] Processing drowning ...
+2026-06-09 20:18:15,363 [INFO] drowning: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:15,418 [INFO] drowning: done.
+2026-06-09 20:18:15,418 [INFO] Processing e_coli ...
+2026-06-09 20:18:15,665 [INFO] e_coli: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:15,759 [INFO] e_coli: done.
+2026-06-09 20:18:15,760 [INFO] Processing ebola_disease ...
+2026-06-09 20:18:16,117 [INFO] ebola_disease: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:16,188 [INFO] ebola_disease: done.
+2026-06-09 20:18:16,188 [INFO] Processing echinococcosis ...
+2026-06-09 20:18:16,557 [INFO] echinococcosis: 19 chunks produced, 0 already stored, 19 to embed
+2026-06-09 20:18:16,689 [INFO] echinococcosis: done.
+2026-06-09 20:18:16,689 [INFO] Processing el_nino_southern_oscillation_(enso) ...
+2026-06-09 20:18:16,990 [INFO] el_nino_southern_oscillation_(enso): 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:17,055 [INFO] el_nino_southern_oscillation_(enso): done.
+2026-06-09 20:18:17,056 [INFO] Processing electricity_in_health_care_facilities ...
+2026-06-09 20:18:17,515 [INFO] electricity_in_health_care_facilities: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:17,571 [INFO] electricity_in_health_care_facilities: done.
+2026-06-09 20:18:17,571 [INFO] Processing electronic_waste_(e_waste) ...
+2026-06-09 20:18:17,907 [INFO] electronic_waste_(e_waste): 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:17,981 [INFO] electronic_waste_(e_waste): done.
+2026-06-09 20:18:17,981 [INFO] Processing emergency_contraception ...
+2026-06-09 20:18:18,404 [INFO] emergency_contraception: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:18,469 [INFO] emergency_contraception: done.
+2026-06-09 20:18:18,469 [INFO] Processing endometriosis ...
+2026-06-09 20:18:18,999 [INFO] endometriosis: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:19,054 [INFO] endometriosis: done.
+2026-06-09 20:18:19,054 [INFO] Processing epilepsy ...
+2026-06-09 20:18:19,467 [INFO] epilepsy: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:19,530 [INFO] epilepsy: done.
+2026-06-09 20:18:19,530 [INFO] Processing essential_medicines ...
+2026-06-09 20:18:19,850 [INFO] essential_medicines: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:19,917 [INFO] essential_medicines: done.
+2026-06-09 20:18:19,917 [INFO] Processing falls ...
+2026-06-09 20:18:20,296 [INFO] falls: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:20,347 [INFO] falls: done.
+2026-06-09 20:18:20,347 [INFO] Processing family_planning_contraception ...
+2026-06-09 20:18:20,874 [INFO] family_planning_contraception: 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:18:20,919 [INFO] family_planning_contraception: done.
+2026-06-09 20:18:20,919 [INFO] Processing female_genital_mutilation ...
+2026-06-09 20:18:21,479 [INFO] female_genital_mutilation: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:21,537 [INFO] female_genital_mutilation: done.
+2026-06-09 20:18:21,537 [INFO] Processing food_additives ...
+2026-06-09 20:18:21,842 [INFO] food_additives: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:21,894 [INFO] food_additives: done.
+2026-06-09 20:18:21,895 [INFO] Processing food_safety ...
+2026-06-09 20:18:22,255 [INFO] food_safety: 15 chunks produced, 0 already stored, 15 to embed
+2026-06-09 20:18:22,333 [INFO] food_safety: done.
+2026-06-09 20:18:22,333 [INFO] Processing foodborne_trematode_infections ...
+2026-06-09 20:18:22,735 [INFO] foodborne_trematode_infections: 15 chunks produced, 0 already stored, 15 to embed
+2026-06-09 20:18:22,813 [INFO] foodborne_trematode_infections: done.
+2026-06-09 20:18:22,813 [INFO] Processing fragility_fractures ...
+2026-06-09 20:18:23,162 [INFO] fragility_fractures: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:23,234 [INFO] fragility_fractures: done.
+2026-06-09 20:18:23,234 [INFO] Processing free_health_care_policies ...
+2026-06-09 20:18:23,676 [INFO] free_health_care_policies: 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:18:23,725 [INFO] free_health_care_policies: done.
+2026-06-09 20:18:23,726 [INFO] Processing gambling ...
+2026-06-09 20:18:25,103 [INFO] gambling: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:25,192 [INFO] gambling: done.
+2026-06-09 20:18:25,193 [INFO] Processing gonorrhoea_(neisseria_gonorrhoeae_infection) ...
+2026-06-09 20:18:25,545 [INFO] gonorrhoea_(neisseria_gonorrhoeae_infection): 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:25,610 [INFO] gonorrhoea_(neisseria_gonorrhoeae_infection): done.
+2026-06-09 20:18:25,610 [INFO] Processing guillain_barré_syndrome ...
+2026-06-09 20:18:25,995 [INFO] guillain_barré_syndrome: 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:18:26,037 [INFO] guillain_barré_syndrome: done.
+2026-06-09 20:18:26,037 [INFO] Processing health_literacy ...
+2026-06-09 20:18:26,350 [INFO] health_literacy: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:26,395 [INFO] health_literacy: done.
+2026-06-09 20:18:26,395 [INFO] Processing health_care_waste ...
+2026-06-09 20:18:26,710 [INFO] health_care_waste: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:18:26,796 [INFO] health_care_waste: done.
+2026-06-09 20:18:26,796 [INFO] Processing healthy_diet ...
+2026-06-09 20:18:27,221 [INFO] healthy_diet: 21 chunks produced, 0 already stored, 21 to embed
+2026-06-09 20:18:27,361 [INFO] healthy_diet: done.
+2026-06-09 20:18:27,362 [INFO] Processing climate_change_heat_and_health ...
+2026-06-09 20:18:27,728 [INFO] climate_change_heat_and_health: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:27,803 [INFO] climate_change_heat_and_health: done.
+2026-06-09 20:18:27,803 [INFO] Processing hepatitis_a ...
+2026-06-09 20:18:28,201 [INFO] hepatitis_a: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:28,271 [INFO] hepatitis_a: done.
+2026-06-09 20:18:28,271 [INFO] Processing hepatitis_b ...
+2026-06-09 20:18:28,578 [INFO] hepatitis_b: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:28,645 [INFO] hepatitis_b: done.
+2026-06-09 20:18:28,645 [INFO] Processing hepatitis_c ...
+2026-06-09 20:18:29,026 [INFO] hepatitis_c: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:29,110 [INFO] hepatitis_c: done.
+2026-06-09 20:18:29,111 [INFO] Processing hepatitis_d ...
+2026-06-09 20:18:29,425 [INFO] hepatitis_d: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:29,486 [INFO] hepatitis_d: done.
+2026-06-09 20:18:29,486 [INFO] Processing hepatitis_e ...
+2026-06-09 20:18:29,802 [INFO] hepatitis_e: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:29,879 [INFO] hepatitis_e: done.
+2026-06-09 20:18:29,879 [INFO] Processing herpes_simplex_virus ...
+2026-06-09 20:18:30,289 [INFO] herpes_simplex_virus: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:30,353 [INFO] herpes_simplex_virus: done.
+2026-06-09 20:18:30,353 [INFO] Processing hiv_aids ...
+2026-06-09 20:18:30,679 [INFO] hiv_aids: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:30,759 [INFO] hiv_aids: done.
+2026-06-09 20:18:30,760 [INFO] Processing hiv_drug_resistance ...
+2026-06-09 20:18:31,423 [INFO] hiv_drug_resistance: 16 chunks produced, 0 already stored, 16 to embed
+2026-06-09 20:18:31,515 [INFO] hiv_drug_resistance: done.
+2026-06-09 20:18:31,516 [INFO] Processing household_air_pollution_and_health ...
+2026-06-09 20:18:32,092 [INFO] household_air_pollution_and_health: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:32,169 [INFO] household_air_pollution_and_health: done.
+2026-06-09 20:18:32,169 [INFO] Processing human_papilloma_virus_and_cancer ...
+2026-06-09 20:18:32,788 [INFO] human_papilloma_virus_and_cancer: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:32,868 [INFO] human_papilloma_virus_and_cancer: done.
+2026-06-09 20:18:32,868 [INFO] Processing human_rights_and_health ...
+2026-06-09 20:18:33,433 [INFO] human_rights_and_health: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:33,503 [INFO] human_rights_and_health: done.
+2026-06-09 20:18:33,503 [INFO] Processing human_t_lymphotropic_virus_type_1 ...
+2026-06-09 20:18:34,080 [INFO] human_t_lymphotropic_virus_type_1: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:34,153 [INFO] human_t_lymphotropic_virus_type_1: done.
+2026-06-09 20:18:34,154 [INFO] Processing icd_11 ...
+2026-06-09 20:18:34,849 [INFO] icd_11: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:34,921 [INFO] icd_11: done.
+2026-06-09 20:18:34,921 [INFO] Processing immunization_coverage ...
+2026-06-09 20:18:35,365 [INFO] immunization_coverage: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:35,452 [INFO] immunization_coverage: done.
+2026-06-09 20:18:35,452 [INFO] Processing infant_and_young_child_feeding ...
+2026-06-09 20:18:35,809 [INFO] infant_and_young_child_feeding: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:35,892 [INFO] infant_and_young_child_feeding: done.
+2026-06-09 20:18:35,892 [INFO] Processing infertility ...
+2026-06-09 20:18:36,309 [INFO] infertility: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:36,368 [INFO] infertility: done.
+2026-06-09 20:18:36,369 [INFO] Processing influenza_(avian_and_other_zoonotic) ...
+2026-06-09 20:18:36,735 [INFO] influenza_(avian_and_other_zoonotic): 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:18:36,826 [INFO] influenza_(avian_and_other_zoonotic): done.
+2026-06-09 20:18:36,826 [INFO] Processing influenza_(seasonal) ...
+2026-06-09 20:18:37,240 [INFO] influenza_(seasonal): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:37,321 [INFO] influenza_(seasonal): done.
+2026-06-09 20:18:37,322 [INFO] Processing injuries_and_violence ...
+2026-06-09 20:18:37,740 [INFO] injuries_and_violence: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:37,816 [INFO] injuries_and_violence: done.
+2026-06-09 20:18:37,816 [INFO] Processing intrauterine_devices ...
+2026-06-09 20:18:38,358 [INFO] intrauterine_devices: 5 chunks produced, 0 already stored, 5 to embed
+2026-06-09 20:18:38,410 [INFO] intrauterine_devices: done.
+2026-06-09 20:18:38,411 [INFO] Processing ionizing_radiation_and_health_effects ...
+2026-06-09 20:18:38,733 [INFO] ionizing_radiation_and_health_effects: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:38,836 [INFO] ionizing_radiation_and_health_effects: done.
+2026-06-09 20:18:38,836 [INFO] Processing japanese_encephalitis ...
+2026-06-09 20:18:39,220 [INFO] japanese_encephalitis: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:39,269 [INFO] japanese_encephalitis: done.
+2026-06-09 20:18:39,269 [INFO] Processing lassa_fever ...
+2026-06-09 20:18:39,598 [INFO] lassa_fever: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:39,647 [INFO] lassa_fever: done.
+2026-06-09 20:18:39,647 [INFO] Processing lead_poisoning_and_health ...
+2026-06-09 20:18:39,939 [INFO] lead_poisoning_and_health: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:18:40,003 [INFO] lead_poisoning_and_health: done.
+2026-06-09 20:18:40,003 [INFO] Processing legionellosis ...
+2026-06-09 20:18:40,331 [INFO] legionellosis: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:40,374 [INFO] legionellosis: done.
+2026-06-09 20:18:40,375 [INFO] Processing leishmaniasis ...
+2026-06-09 20:18:40,937 [INFO] leishmaniasis: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:40,991 [INFO] leishmaniasis: done.
+2026-06-09 20:18:40,992 [INFO] Processing leprosy ...
+2026-06-09 20:18:41,374 [INFO] leprosy: 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:18:41,410 [INFO] leprosy: done.
+2026-06-09 20:18:41,410 [INFO] Processing listeriosis ...
+2026-06-09 20:18:41,749 [INFO] listeriosis: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:41,793 [INFO] listeriosis: done.
+2026-06-09 20:18:41,793 [INFO] Processing low_back_pain ...
+2026-06-09 20:18:42,127 [INFO] low_back_pain: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:42,170 [INFO] low_back_pain: done.
+2026-06-09 20:18:42,170 [INFO] Processing lymphatic_filariasis ...
+2026-06-09 20:18:42,542 [INFO] lymphatic_filariasis: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:42,600 [INFO] lymphatic_filariasis: done.
+2026-06-09 20:18:42,600 [INFO] Processing malaria ...
+2026-06-09 20:18:42,940 [INFO] malaria: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:18:43,011 [INFO] malaria: done.
+2026-06-09 20:18:43,011 [INFO] Processing malnutrition ...
+2026-06-09 20:18:43,397 [INFO] malnutrition: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:43,445 [INFO] malnutrition: done.
+2026-06-09 20:18:43,445 [INFO] Processing marburg_virus_disease ...
+2026-06-09 20:18:43,858 [INFO] marburg_virus_disease: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:18:43,920 [INFO] marburg_virus_disease: done.
+2026-06-09 20:18:43,920 [INFO] Processing maternal_mortality ...
+2026-06-09 20:18:44,172 [INFO] maternal_mortality: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:44,228 [INFO] maternal_mortality: done.
+2026-06-09 20:18:44,229 [INFO] Processing measles ...
+2026-06-09 20:18:44,591 [INFO] measles: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:44,640 [INFO] measles: done.
+2026-06-09 20:18:44,640 [INFO] Processing meningitis ...
+2026-06-09 20:18:45,007 [INFO] meningitis: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:45,073 [INFO] meningitis: done.
+2026-06-09 20:18:45,073 [INFO] Processing menopause ...
+2026-06-09 20:18:45,516 [INFO] menopause: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:45,580 [INFO] menopause: done.
+2026-06-09 20:18:45,580 [INFO] Processing mental_disorders ...
+2026-06-09 20:18:45,820 [INFO] mental_disorders: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:18:45,889 [INFO] mental_disorders: done.
+2026-06-09 20:18:45,889 [INFO] Processing mental_health_strengthening_our_response ...
+2026-06-09 20:18:46,245 [INFO] mental_health_strengthening_our_response: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:46,290 [INFO] mental_health_strengthening_our_response: done.
+2026-06-09 20:18:46,290 [INFO] Processing mental_health_at_work ...
+2026-06-09 20:18:46,905 [INFO] mental_health_at_work: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:46,964 [INFO] mental_health_at_work: done.
+2026-06-09 20:18:46,965 [INFO] Processing mental_health_in_emergencies ...
+2026-06-09 20:18:47,257 [INFO] mental_health_in_emergencies: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:47,306 [INFO] mental_health_in_emergencies: done.
+2026-06-09 20:18:47,306 [INFO] Processing adolescent_mental_health ...
+2026-06-09 20:18:47,537 [INFO] adolescent_mental_health: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:47,600 [INFO] adolescent_mental_health: done.
+2026-06-09 20:18:47,600 [INFO] Processing mental_health_of_older_adults ...
+2026-06-09 20:18:47,901 [INFO] mental_health_of_older_adults: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:47,955 [INFO] mental_health_of_older_adults: done.
+2026-06-09 20:18:47,955 [INFO] Processing mercury_and_health ...
+2026-06-09 20:18:48,358 [INFO] mercury_and_health: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:48,406 [INFO] mercury_and_health: done.
+2026-06-09 20:18:48,406 [INFO] Processing middle_east_respiratory_syndrome_coronavirus_(mers_cov) ...
+2026-06-09 20:18:48,759 [INFO] middle_east_respiratory_syndrome_coronavirus_(mers_cov): 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:18:48,818 [INFO] middle_east_respiratory_syndrome_coronavirus_(mers_cov): done.
+2026-06-09 20:18:48,818 [INFO] Processing headache_disorders ...
+2026-06-09 20:18:49,192 [INFO] headache_disorders: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:49,247 [INFO] headache_disorders: done.
+2026-06-09 20:18:49,247 [INFO] Processing millennium_development_goals_(mdgs) ...
+2026-06-09 20:18:49,603 [INFO] millennium_development_goals_(mdgs): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:49,662 [INFO] millennium_development_goals_(mdgs): done.
+2026-06-09 20:18:49,662 [INFO] Processing mpox ...
+2026-06-09 20:18:50,147 [INFO] mpox: 16 chunks produced, 0 already stored, 16 to embed
+2026-06-09 20:18:50,224 [INFO] mpox: done.
+2026-06-09 20:18:50,224 [INFO] Processing multi_drug_resistant_gonorrhoea ...
+2026-06-09 20:18:50,556 [INFO] multi_drug_resistant_gonorrhoea: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:50,612 [INFO] multi_drug_resistant_gonorrhoea: done.
+2026-06-09 20:18:50,612 [INFO] Processing multiple_sclerosis ...
+2026-06-09 20:18:50,842 [INFO] multiple_sclerosis: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:50,889 [INFO] multiple_sclerosis: done.
+2026-06-09 20:18:50,889 [INFO] Processing musculoskeletal_conditions ...
+2026-06-09 20:18:51,172 [INFO] musculoskeletal_conditions: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:51,230 [INFO] musculoskeletal_conditions: done.
+2026-06-09 20:18:51,231 [INFO] Processing mycetoma ...
+2026-06-09 20:18:51,616 [INFO] mycetoma: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:51,662 [INFO] mycetoma: done.
+2026-06-09 20:18:51,662 [INFO] Processing mycotoxins ...
+2026-06-09 20:18:52,009 [INFO] mycotoxins: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:52,058 [INFO] mycotoxins: done.
+2026-06-09 20:18:52,058 [INFO] Processing natural_toxins_in_food ...
+2026-06-09 20:18:52,410 [INFO] natural_toxins_in_food: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:18:52,482 [INFO] natural_toxins_in_food: done.
+2026-06-09 20:18:52,482 [INFO] Processing newborn_mortality ...
+2026-06-09 20:18:52,896 [INFO] newborn_mortality: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:52,949 [INFO] newborn_mortality: done.
+2026-06-09 20:18:52,949 [INFO] Processing newborns_reducing_mortality ...
+2026-06-09 20:18:53,425 [INFO] newborns_reducing_mortality: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:53,485 [INFO] newborns_reducing_mortality: done.
+2026-06-09 20:18:53,485 [INFO] Processing nipah_virus ...
+2026-06-09 20:18:53,905 [INFO] nipah_virus: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:53,961 [INFO] nipah_virus: done.
+2026-06-09 20:18:53,961 [INFO] Processing noma ...
+2026-06-09 20:18:54,516 [INFO] noma: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:54,570 [INFO] noma: done.
+2026-06-09 20:18:54,570 [INFO] Processing noncommunicable_diseases ...
+2026-06-09 20:18:54,925 [INFO] noncommunicable_diseases: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:54,977 [INFO] noncommunicable_diseases: done.
+2026-06-09 20:18:54,978 [INFO] Processing nursing_and_midwifery ...
+2026-06-09 20:18:55,426 [INFO] nursing_and_midwifery: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:18:55,464 [INFO] nursing_and_midwifery: done.
+2026-06-09 20:18:55,464 [INFO] Processing obesity_and_overweight ...
+2026-06-09 20:18:55,756 [INFO] obesity_and_overweight: 16 chunks produced, 0 already stored, 16 to embed
+2026-06-09 20:18:55,842 [INFO] obesity_and_overweight: done.
+2026-06-09 20:18:55,842 [INFO] Processing occupational_health__health_workers ...
+2026-06-09 20:18:56,230 [INFO] occupational_health__health_workers: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:56,266 [INFO] occupational_health__health_workers: done.
+2026-06-09 20:18:56,266 [INFO] Processing older_children_and_young_adolescent_mortality_(5_to_14_years) ...
+2026-06-09 20:18:56,620 [INFO] older_children_and_young_adolescent_mortality_(5_to_14_years): 4 chunks produced, 0 already stored, 4 to embed
+2026-06-09 20:18:56,653 [INFO] older_children_and_young_adolescent_mortality_(5_to_14_years): done.
+2026-06-09 20:18:56,653 [INFO] Processing onchocerciasis ...
+2026-06-09 20:18:57,033 [INFO] onchocerciasis: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:57,085 [INFO] onchocerciasis: done.
+2026-06-09 20:18:57,085 [INFO] Processing one_health ...
+2026-06-09 20:18:57,407 [INFO] one_health: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:18:57,458 [INFO] one_health: done.
+2026-06-09 20:18:57,458 [INFO] Processing opioid_overdose ...
+2026-06-09 20:18:57,793 [INFO] opioid_overdose: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:18:57,869 [INFO] opioid_overdose: done.
+2026-06-09 20:18:57,869 [INFO] Processing oral_contraceptives ...
+2026-06-09 20:18:58,182 [INFO] oral_contraceptives: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:18:58,226 [INFO] oral_contraceptives: done.
+2026-06-09 20:18:58,226 [INFO] Processing oral_health ...
+2026-06-09 20:18:58,624 [INFO] oral_health: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:58,680 [INFO] oral_health: done.
+2026-06-09 20:18:58,680 [INFO] Processing oropouche_virus_disease ...
+2026-06-09 20:18:58,987 [INFO] oropouche_virus_disease: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:18:59,048 [INFO] oropouche_virus_disease: done.
+2026-06-09 20:18:59,049 [INFO] Processing osteoarthritis ...
+2026-06-09 20:18:59,408 [INFO] osteoarthritis: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:18:59,462 [INFO] osteoarthritis: done.
+2026-06-09 20:18:59,462 [INFO] Processing palliative_care ...
+2026-06-09 20:18:59,782 [INFO] palliative_care: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:18:59,848 [INFO] palliative_care: done.
+2026-06-09 20:18:59,848 [INFO] Processing parkinson_disease ...
+2026-06-09 20:19:00,274 [INFO] parkinson_disease: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:00,323 [INFO] parkinson_disease: done.
+2026-06-09 20:19:00,323 [INFO] Processing patient_safety ...
+2026-06-09 20:19:00,715 [INFO] patient_safety: 16 chunks produced, 0 already stored, 16 to embed
+2026-06-09 20:19:00,795 [INFO] patient_safety: done.
+2026-06-09 20:19:00,795 [INFO] Processing pesticide_residues_in_food ...
+2026-06-09 20:19:01,210 [INFO] pesticide_residues_in_food: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:01,267 [INFO] pesticide_residues_in_food: done.
+2026-06-09 20:19:01,267 [INFO] Processing physical_activity ...
+2026-06-09 20:19:01,594 [INFO] physical_activity: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:01,696 [INFO] physical_activity: done.
+2026-06-09 20:19:01,696 [INFO] Processing plague ...
+2026-06-09 20:19:02,107 [INFO] plague: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:02,168 [INFO] plague: done.
+2026-06-09 20:19:02,168 [INFO] Processing pneumonia ...
+2026-06-09 20:19:02,578 [INFO] pneumonia: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:02,625 [INFO] pneumonia: done.
+2026-06-09 20:19:02,625 [INFO] Processing podoconiosis_(non_filarial_lymphoedema) ...
+2026-06-09 20:19:02,996 [INFO] podoconiosis_(non_filarial_lymphoedema): 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:03,053 [INFO] podoconiosis_(non_filarial_lymphoedema): done.
+2026-06-09 20:19:03,053 [INFO] Processing poliomyelitis ...
+2026-06-09 20:19:03,350 [INFO] poliomyelitis: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:03,432 [INFO] poliomyelitis: done.
+2026-06-09 20:19:03,432 [INFO] Processing polycystic_ovary_syndrome ...
+2026-06-09 20:19:03,741 [INFO] polycystic_ovary_syndrome: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:03,801 [INFO] polycystic_ovary_syndrome: done.
+2026-06-09 20:19:03,801 [INFO] Processing post_covid_19_condition_(long_covid) ...
+2026-06-09 20:19:04,224 [INFO] post_covid_19_condition_(long_covid): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:04,296 [INFO] post_covid_19_condition_(long_covid): done.
+2026-06-09 20:19:04,296 [INFO] Processing post_traumatic_stress_disorder ...
+2026-06-09 20:19:04,663 [INFO] post_traumatic_stress_disorder: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:04,757 [INFO] post_traumatic_stress_disorder: done.
+2026-06-09 20:19:04,757 [INFO] Processing pre_eclampsia ...
+2026-06-09 20:19:05,622 [INFO] pre_eclampsia: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:05,677 [INFO] pre_eclampsia: done.
+2026-06-09 20:19:05,677 [INFO] Processing prequalification_of_medicines_by_who ...
+2026-06-09 20:19:06,256 [INFO] prequalification_of_medicines_by_who: 16 chunks produced, 0 already stored, 16 to embed
+2026-06-09 20:19:06,323 [INFO] prequalification_of_medicines_by_who: done.
+2026-06-09 20:19:06,323 [INFO] Processing preterm_birth ...
+2026-06-09 20:19:07,920 [INFO] preterm_birth: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:07,982 [INFO] preterm_birth: done.
+2026-06-09 20:19:07,982 [INFO] Processing primary_health_care ...
+2026-06-09 20:19:08,550 [INFO] primary_health_care: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:08,606 [INFO] primary_health_care: done.
+2026-06-09 20:19:08,607 [INFO] Processing protecting_workers'_health ...
+2026-06-09 20:19:09,139 [INFO] protecting_workers'_health: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:09,198 [INFO] protecting_workers'_health: done.
+2026-06-09 20:19:09,198 [INFO] Processing quality_health_services ...
+2026-06-09 20:19:09,581 [INFO] quality_health_services: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:09,652 [INFO] quality_health_services: done.
+2026-06-09 20:19:09,652 [INFO] Processing rabies ...
+2026-06-09 20:19:10,021 [INFO] rabies: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:19:10,093 [INFO] rabies: done.
+2026-06-09 20:19:10,093 [INFO] Processing radon_and_health ...
+2026-06-09 20:19:10,434 [INFO] radon_and_health: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:10,500 [INFO] radon_and_health: done.
+2026-06-09 20:19:10,500 [INFO] Processing refugee_and_migrant_health ...
+2026-06-09 20:19:10,853 [INFO] refugee_and_migrant_health: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:19:10,929 [INFO] refugee_and_migrant_health: done.
+2026-06-09 20:19:10,929 [INFO] Processing refugee_and_migrant_mental_health ...
+2026-06-09 20:19:11,301 [INFO] refugee_and_migrant_mental_health: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:11,357 [INFO] refugee_and_migrant_mental_health: done.
+2026-06-09 20:19:11,357 [INFO] Processing rehabilitation ...
+2026-06-09 20:19:11,730 [INFO] rehabilitation: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:11,799 [INFO] rehabilitation: done.
+2026-06-09 20:19:11,799 [INFO] Processing respiratory_syncytial_virus_(rsv) ...
+2026-06-09 20:19:12,260 [INFO] respiratory_syncytial_virus_(rsv): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:12,335 [INFO] respiratory_syncytial_virus_(rsv): done.
+2026-06-09 20:19:12,335 [INFO] Processing rheumatic_heart_disease ...
+2026-06-09 20:19:12,690 [INFO] rheumatic_heart_disease: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:12,764 [INFO] rheumatic_heart_disease: done.
+2026-06-09 20:19:12,765 [INFO] Processing rheumatoid_arthritis ...
+2026-06-09 20:19:13,204 [INFO] rheumatoid_arthritis: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:13,255 [INFO] rheumatoid_arthritis: done.
+2026-06-09 20:19:13,255 [INFO] Processing rift_valley_fever ...
+2026-06-09 20:19:13,796 [INFO] rift_valley_fever: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:19:13,865 [INFO] rift_valley_fever: done.
+2026-06-09 20:19:13,865 [INFO] Processing ringworm_(tinea) ...
+2026-06-09 20:19:14,212 [INFO] ringworm_(tinea): 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:14,272 [INFO] ringworm_(tinea): done.
+2026-06-09 20:19:14,272 [INFO] Processing road_traffic_injuries ...
+2026-06-09 20:19:14,677 [INFO] road_traffic_injuries: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:14,740 [INFO] road_traffic_injuries: done.
+2026-06-09 20:19:14,740 [INFO] Processing rubella ...
+2026-06-09 20:19:15,057 [INFO] rubella: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:15,106 [INFO] rubella: done.
+2026-06-09 20:19:15,106 [INFO] Processing salmonella_(non_typhoidal) ...
+2026-06-09 20:19:15,424 [INFO] salmonella_(non_typhoidal): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:15,484 [INFO] salmonella_(non_typhoidal): done.
+2026-06-09 20:19:15,484 [INFO] Processing sand_and_dust_storms ...
+2026-06-09 20:19:15,860 [INFO] sand_and_dust_storms: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:15,935 [INFO] sand_and_dust_storms: done.
+2026-06-09 20:19:15,935 [INFO] Processing sanitation ...
+2026-06-09 20:19:16,292 [INFO] sanitation: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:16,342 [INFO] sanitation: done.
+2026-06-09 20:19:16,342 [INFO] Processing scabies ...
+2026-06-09 20:19:16,656 [INFO] scabies: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:19:16,725 [INFO] scabies: done.
+2026-06-09 20:19:16,725 [INFO] Processing schistosomiasis ...
+2026-06-09 20:19:17,070 [INFO] schistosomiasis: 14 chunks produced, 0 already stored, 14 to embed
+2026-06-09 20:19:17,158 [INFO] schistosomiasis: done.
+2026-06-09 20:19:17,159 [INFO] Processing schizophrenia ...
+2026-06-09 20:19:17,494 [INFO] schizophrenia: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:17,568 [INFO] schizophrenia: done.
+2026-06-09 20:19:17,568 [INFO] Processing self_care_health_interventions ...
+2026-06-09 20:19:17,988 [INFO] self_care_health_interventions: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:18,033 [INFO] self_care_health_interventions: done.
+2026-06-09 20:19:18,033 [INFO] Processing sepsis ...
+2026-06-09 20:19:18,443 [INFO] sepsis: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:18,516 [INFO] sepsis: done.
+2026-06-09 20:19:18,516 [INFO] Processing sexually_transmitted_infections_(stis) ...
+2026-06-09 20:19:18,943 [INFO] sexually_transmitted_infections_(stis): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:19,021 [INFO] sexually_transmitted_infections_(stis): done.
+2026-06-09 20:19:19,022 [INFO] Processing shingles_(herpes_zoster) ...
+2026-06-09 20:19:19,427 [INFO] shingles_(herpes_zoster): 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:19,499 [INFO] shingles_(herpes_zoster): done.
+2026-06-09 20:19:19,499 [INFO] Processing sickle_cell_disease ...
+2026-06-09 20:19:19,861 [INFO] sickle_cell_disease: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:19,935 [INFO] sickle_cell_disease: done.
+2026-06-09 20:19:19,935 [INFO] Processing snakebite_envenoming ...
+2026-06-09 20:19:20,270 [INFO] snakebite_envenoming: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:19:20,355 [INFO] snakebite_envenoming: done.
+2026-06-09 20:19:20,355 [INFO] Processing social_determinants_of_health ...
+2026-06-09 20:19:20,744 [INFO] social_determinants_of_health: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:20,822 [INFO] social_determinants_of_health: done.
+2026-06-09 20:19:20,822 [INFO] Processing sodium_reduction ...
+2026-06-09 20:19:21,168 [INFO] sodium_reduction: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:21,226 [INFO] sodium_reduction: done.
+2026-06-09 20:19:21,226 [INFO] Processing soil_transmitted_helminth_infections ...
+2026-06-09 20:19:21,562 [INFO] soil_transmitted_helminth_infections: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:21,624 [INFO] soil_transmitted_helminth_infections: done.
+2026-06-09 20:19:21,624 [INFO] Processing spinal_cord_injury ...
+2026-06-09 20:19:22,797 [INFO] spinal_cord_injury: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:19:22,880 [INFO] spinal_cord_injury: done.
+2026-06-09 20:19:22,881 [INFO] Processing sporotrichosis ...
+2026-06-09 20:19:23,221 [INFO] sporotrichosis: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:23,284 [INFO] sporotrichosis: done.
+2026-06-09 20:19:23,284 [INFO] Processing stroke ...
+2026-06-09 20:19:23,625 [INFO] stroke: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:23,724 [INFO] stroke: done.
+2026-06-09 20:19:23,724 [INFO] Processing substandard_and_falsified_medical_products ...
+2026-06-09 20:19:24,103 [INFO] substandard_and_falsified_medical_products: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:24,147 [INFO] substandard_and_falsified_medical_products: done.
+2026-06-09 20:19:24,147 [INFO] Processing sugars_and_dental_caries ...
+2026-06-09 20:19:24,499 [INFO] sugars_and_dental_caries: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:24,549 [INFO] sugars_and_dental_caries: done.
+2026-06-09 20:19:24,549 [INFO] Processing suicide ...
+2026-06-09 20:19:24,869 [INFO] suicide: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:24,913 [INFO] suicide: done.
+2026-06-09 20:19:24,913 [INFO] Processing syphilis ...
+2026-06-09 20:19:25,255 [INFO] syphilis: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:25,297 [INFO] syphilis: done.
+2026-06-09 20:19:25,297 [INFO] Processing taeniasis_cysticercosis ...
+2026-06-09 20:19:25,591 [INFO] taeniasis_cysticercosis: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:19:25,645 [INFO] taeniasis_cysticercosis: done.
+2026-06-09 20:19:25,645 [INFO] Processing tetanus ...
+2026-06-09 20:19:25,987 [INFO] tetanus: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:26,032 [INFO] tetanus: done.
+2026-06-09 20:19:26,033 [INFO] Processing the_top_10_causes_of_death ...
+2026-06-09 20:19:26,453 [INFO] the_top_10_causes_of_death: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:26,505 [INFO] the_top_10_causes_of_death: done.
+2026-06-09 20:19:26,505 [INFO] Processing tobacco ...
+2026-06-09 20:19:26,877 [INFO] tobacco: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:19:26,927 [INFO] tobacco: done.
+2026-06-09 20:19:26,927 [INFO] Processing trachoma ...
+2026-06-09 20:19:27,377 [INFO] trachoma: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:27,418 [INFO] trachoma: done.
+2026-06-09 20:19:27,418 [INFO] Processing trans_fat ...
+2026-06-09 20:19:27,756 [INFO] trans_fat: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:27,820 [INFO] trans_fat: done.
+2026-06-09 20:19:27,820 [INFO] Processing trichomoniasis ...
+2026-06-09 20:19:28,286 [INFO] trichomoniasis: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:28,324 [INFO] trichomoniasis: done.
+2026-06-09 20:19:28,324 [INFO] Processing trypanosomiasis_human_african_(sleeping_sickness) ...
+2026-06-09 20:19:28,545 [INFO] trypanosomiasis_human_african_(sleeping_sickness): 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:28,602 [INFO] trypanosomiasis_human_african_(sleeping_sickness): done.
+2026-06-09 20:19:28,602 [INFO] Processing tuberculosis ...
+2026-06-09 20:19:28,959 [INFO] tuberculosis: 12 chunks produced, 0 already stored, 12 to embed
+2026-06-09 20:19:29,018 [INFO] tuberculosis: done.
+2026-06-09 20:19:29,018 [INFO] Processing tungiasis ...
+2026-06-09 20:19:29,388 [INFO] tungiasis: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:29,431 [INFO] tungiasis: done.
+2026-06-09 20:19:29,431 [INFO] Processing typhoid ...
+2026-06-09 20:19:29,760 [INFO] typhoid: 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:19:29,794 [INFO] typhoid: done.
+2026-06-09 20:19:29,794 [INFO] Processing ultraviolet_radiation ...
+2026-06-09 20:19:30,528 [INFO] ultraviolet_radiation: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:30,574 [INFO] ultraviolet_radiation: done.
+2026-06-09 20:19:30,574 [INFO] Processing universal_health_coverage_(uhc) ...
+2026-06-09 20:19:30,911 [INFO] universal_health_coverage_(uhc): 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:19:30,947 [INFO] universal_health_coverage_(uhc): done.
+2026-06-09 20:19:30,947 [INFO] Processing urban_health ...
+2026-06-09 20:19:31,345 [INFO] urban_health: 6 chunks produced, 0 already stored, 6 to embed
+2026-06-09 20:19:31,380 [INFO] urban_health: done.
+2026-06-09 20:19:31,381 [INFO] Processing vector_borne_diseases ...
+2026-06-09 20:19:31,823 [INFO] vector_borne_diseases: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:31,869 [INFO] vector_borne_diseases: done.
+2026-06-09 20:19:31,869 [INFO] Processing violence_against_children ...
+2026-06-09 20:19:32,249 [INFO] violence_against_children: 11 chunks produced, 0 already stored, 11 to embed
+2026-06-09 20:19:32,300 [INFO] violence_against_children: done.
+2026-06-09 20:19:32,300 [INFO] Processing violence_against_women ...
+2026-06-09 20:19:32,645 [INFO] violence_against_women: 15 chunks produced, 0 already stored, 15 to embed
+2026-06-09 20:19:32,700 [INFO] violence_against_women: done.
+2026-06-09 20:19:32,700 [INFO] Processing west_nile_virus ...
+2026-06-09 20:19:33,154 [INFO] west_nile_virus: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:33,203 [INFO] west_nile_virus: done.
+2026-06-09 20:19:33,203 [INFO] Processing white_phosphorus ...
+2026-06-09 20:19:33,498 [INFO] white_phosphorus: 9 chunks produced, 0 already stored, 9 to embed
+2026-06-09 20:19:33,547 [INFO] white_phosphorus: done.
+2026-06-09 20:19:33,547 [INFO] Processing yaws ...
+2026-06-09 20:19:33,869 [INFO] yaws: 10 chunks produced, 0 already stored, 10 to embed
+2026-06-09 20:19:33,918 [INFO] yaws: done.
+2026-06-09 20:19:33,919 [INFO] Processing yellow_fever ...
+2026-06-09 20:19:34,314 [INFO] yellow_fever: 7 chunks produced, 0 already stored, 7 to embed
+2026-06-09 20:19:34,362 [INFO] yellow_fever: done.
+2026-06-09 20:19:34,362 [INFO] Processing youth_violence ...
+2026-06-09 20:19:34,708 [INFO] youth_violence: 8 chunks produced, 0 already stored, 8 to embed
+2026-06-09 20:19:34,747 [INFO] youth_violence: done.
+2026-06-09 20:19:34,747 [INFO] Processing zika_virus ...
+2026-06-09 20:19:35,096 [INFO] zika_virus: 13 chunks produced, 0 already stored, 13 to embed
+2026-06-09 20:19:35,156 [INFO] zika_virus: done.
+2026-06-09 20:19:35,156 [INFO] Processing zoonoses ...
+2026-06-09 20:19:35,559 [INFO] zoonoses: 5 chunks produced, 0 already stored, 5 to embed
+2026-06-09 20:19:35,600 [INFO] zoonoses: done.
+2026-06-09 20:19:35,600 [INFO] Pipeline completed successfully.
