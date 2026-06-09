@@ -35,7 +35,7 @@ load_dotenv(_root / ".env", override=True)
 
 from groq import Groq
 from groq import APIStatusError
-from app.rag import retrieve_with_metadata
+from app.rag_groq import retrieve_with_metadata
 from app.prompts import SYSTEM_PROMPT
 from evaluation.test_dataset import TEST_QUESTIONS
 

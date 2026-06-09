@@ -7,28 +7,24 @@ _root = Path(__file__).resolve().parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
-from groq import Groq
+from sentence_transformers import SentenceTransformer
 from vectorstore.chroma_client_groq import get_chroma_client
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 chroma = get_chroma_client()
 collection = chroma.get_collection(name="medical_docs")
 
 def retrieve(query, k=10):
-    result = client.embeddings.create(
-        model="nomic-embed-text-v1_5",
-        input=query,
-    )
-    emb = result.data[0].embedding
+    emb = embed_model.encode(query, normalize_embeddings=True).tolist()
 
     results = collection.query(
         query_embeddings=[emb],
         n_results=k
     )
-    
+
     sources = results.get("metadatas", [[]])[0]
     source_ids = [s.get("source", "unknown") for s in sources]
     print(f"Retrieved from: {source_ids}")
@@ -37,12 +33,7 @@ def retrieve(query, k=10):
 
 
 def retrieve_with_metadata(query, k=10):
-    """Same as retrieve but also returns source IDs and distances."""
-    result = client.models.embed_content(
-        model="gemini-embedding-001",
-        contents=query,
-    )
-    emb = result.embeddings[0].values
+    emb = embed_model.encode(query, normalize_embeddings=True).tolist()
 
     results = collection.query(
         query_embeddings=[emb],
