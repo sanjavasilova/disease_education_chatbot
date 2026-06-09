@@ -3,10 +3,10 @@
 2026-06-09 19:24:45,994 [INFO] asthma: 8 chunks produced, 0 already stored, 8 to embed
 2026-06-09 19:24:46,012 [ERROR] ERROR processing asthma — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.models.embed_content(
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'Models' object has no attribute 'embed_content'
@@ -14,10 +14,10 @@ AttributeError: 'Models' object has no attribute 'embed_content'
 2026-06-09 19:24:53,445 [INFO] diabetes: 9 chunks produced, 0 already stored, 9 to embed
 2026-06-09 19:24:53,445 [ERROR] ERROR processing diabetes — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.models.embed_content(
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'Models' object has no attribute 'embed_content'
@@ -25,10 +25,10 @@ AttributeError: 'Models' object has no attribute 'embed_content'
 2026-06-09 19:25:00,885 [INFO] hypertension: 10 chunks produced, 0 already stored, 10 to embed
 2026-06-09 19:25:00,886 [ERROR] ERROR processing hypertension — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.models.embed_content(
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'Models' object has no attribute 'embed_content'
@@ -38,7 +38,7 @@ AttributeError: 'Models' object has no attribute 'embed_content'
 2026-06-09 19:33:11,460 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
 2026-06-09 19:33:11,461 [ERROR] ERROR processing asthma — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.embeddings.create(
              ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
@@ -54,10 +54,10 @@ groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-em
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 98, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 98, in _embed_with_retry
     if e.code == 429:
        ^^^^^^
 AttributeError: 'NotFoundError' object has no attribute 'code'
@@ -66,7 +66,7 @@ AttributeError: 'NotFoundError' object has no attribute 'code'
 2026-06-09 19:33:19,140 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
 2026-06-09 19:33:19,141 [ERROR] ERROR processing diabetes — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.embeddings.create(
              ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
@@ -82,10 +82,10 @@ groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-em
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 98, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 98, in _embed_with_retry
     if e.code == 429:
        ^^^^^^
 AttributeError: 'NotFoundError' object has no attribute 'code'
@@ -95,10 +95,10 @@ AttributeError: 'NotFoundError' object has no attribute 'code'
 2026-06-09 19:33:23,885 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
 2026-06-09 19:33:23,886 [ERROR] ERROR processing asthma — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.embeddings.create(
              ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
@@ -116,10 +116,10 @@ groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-em
 2026-06-09 19:34:13,014 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
 2026-06-09 19:34:13,015 [ERROR] ERROR processing asthma — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.embeddings.create(
              ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
@@ -136,10 +136,10 @@ groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `nomic-em
 2026-06-09 19:34:20,609 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/embeddings "HTTP/1.1 404 Not Found"
 2026-06-09 19:34:20,610 [ERROR] ERROR processing diabetes — continuing with remaining sources.
 Traceback (most recent call last):
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 194, in build_db
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 194, in build_db
     embeddings = _embed_with_retry(client, texts_to_embed, src_id)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_grok.py", line 92, in _embed_with_retry
+  File "/home/s/Desktop/disease_chatbot/vectorstore/build_db_groq.py", line 92, in _embed_with_retry
     result = client.embeddings.create(
              ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/s/Desktop/disease_chatbot/.venv/lib/python3.12/site-packages/groq/resources/embeddings.py", line 85, in create
