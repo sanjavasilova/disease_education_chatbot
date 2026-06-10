@@ -6,20 +6,20 @@
       "asthma"
     ],
     "retrieved_sources": [
-      "mendeley_diseases",
-      "asthma",
       "asthma",
       "mendeley_diseases",
       "asthma",
       "mendeley_diseases",
+      "asthma",
+      "mendeley_diseases",
       "mendeley_diseases",
       "asthma",
       "mendeley_diseases",
-      "mendeley_diseases"
+      "chronic_obstructive_pulmonary_disease_(copd)"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 0.5,
+      "mrr": 1.0,
       "source_precision": 0.4
     }
   },
@@ -35,16 +35,16 @@
       "mendeley_diseases",
       "diabetes",
       "diabetes",
-      "mendeley_diseases",
-      "mendeley_diseases",
       "diabetes",
-      "mendeley_diseases",
-      "mendeley_diseases"
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "polycystic_ovary_syndrome"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.5
+      "source_precision": 0.8
     }
   },
   {
@@ -56,19 +56,19 @@
     "retrieved_sources": [
       "hypertension",
       "hypertension",
-      "mendeley_diseases",
-      "mendeley_diseases",
+      "hypertension",
+      "hypertension",
       "hypertension",
       "mendeley_diseases",
       "hypertension",
-      "hypertension",
+      "pre_eclampsia",
       "mendeley_diseases",
       "hypertension"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.6
+      "source_precision": 0.7
     }
   },
   {
@@ -80,14 +80,14 @@
     "retrieved_sources": [
       "lung_cancer",
       "lung_cancer",
-      "cancer",
       "mendeley_diseases",
-      "lung_cancer",
-      "asbestos",
+      "radon_and_health",
       "lung_cancer",
       "cancer",
+      "lung_cancer",
       "cancer",
-      "cancer"
+      "radon_and_health",
+      "colorectal_cancer"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -104,19 +104,19 @@
     "retrieved_sources": [
       "mendeley_diseases",
       "avascular_necrosis",
-      "mendeley_diseases",
       "avascular_necrosis",
       "avascular_necrosis",
       "avascular_necrosis",
       "avascular_necrosis",
       "avascular_necrosis",
-      "buruli_ulcer_(mycobacterium_ulcerans_infection)",
-      "mycetoma"
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 0.5,
-      "source_precision": 0.6
+      "source_precision": 0.9
     }
   },
   {
@@ -133,14 +133,14 @@
       "malaria",
       "malaria",
       "malaria",
+      "west_nile_virus",
       "malaria",
-      "malaria",
-      "malaria"
+      "anaemia"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 1.0
+      "source_precision": 0.8
     }
   },
   {
@@ -150,21 +150,21 @@
       "depression"
     ],
     "retrieved_sources": [
-      "mendeley_diseases",
       "depression",
-      "mendeley_diseases",
+      "mental_disorders",
+      "depression",
       "mendeley_diseases",
       "bipolar_disorder",
+      "depression",
+      "mental_disorders",
       "mendeley_diseases",
       "depression",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "bipolar_disorder"
+      "mendeley_diseases"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 0.5,
-      "source_precision": 0.2
+      "mrr": 1.0,
+      "source_precision": 0.4
     }
   },
   {
@@ -176,19 +176,19 @@
     "retrieved_sources": [
       "tuberculosis",
       "tuberculosis",
+      "tuberculosis",
       "mendeley_diseases",
       "tuberculosis",
+      "coronavirus_disease_(covid_19)",
       "tuberculosis",
-      "adolescents_health_risks_and_solutions",
-      "hepatitis_b",
-      "antimicrobial_resistance",
+      "leprosy",
       "tuberculosis",
-      "millennium_development_goals_(mdgs)"
+      "hepatitis_b"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.5
+      "source_precision": 0.6
     }
   },
   {
@@ -201,18 +201,18 @@
       "hiv_aids",
       "hiv_aids",
       "hiv_aids",
-      "hiv_drug_resistance",
       "hiv_aids",
       "hiv_aids",
-      "infant_and_young_child_feeding",
-      "cancer",
-      "hiv_drug_resistance",
-      "hiv_drug_resistance"
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.5
+      "source_precision": 1.0
     }
   },
   {
@@ -222,21 +222,21 @@
       "cardiovascular_diseases_(cvds)"
     ],
     "retrieved_sources": [
+      "trans_fat",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "trans_fat",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
       "sodium_reduction",
-      "healthy_diet",
-      "healthy_diet",
-      "obesity_and_overweight",
-      "trans_fat",
-      "trans_fat",
-      "malnutrition",
-      "healthy_diet",
-      "stroke",
-      "cardiovascular_diseases_(cvds)"
+      "healthy_diet"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 0.1,
-      "source_precision": 0.1
+      "mrr": 0.5,
+      "source_precision": 0.6
     }
   },
   {
@@ -248,19 +248,19 @@
     "retrieved_sources": [
       "cholera",
       "cholera",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
+      "cholera",
       "food_safety",
-      "mendeley_diseases",
-      "mendeley_diseases",
+      "cholera",
+      "malaria",
+      "hepatitis_a",
+      "hepatitis_c",
+      "yellow_fever",
       "mendeley_diseases"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.2
+      "source_precision": 0.4
     }
   },
   {
@@ -273,18 +273,18 @@
       "dengue_and_severe_dengue",
       "dengue_and_severe_dengue",
       "dengue_and_severe_dengue",
-      "mendeley_diseases",
-      "dengue_and_severe_dengue",
-      "dengue_and_severe_dengue",
       "dengue_and_severe_dengue",
       "dengue_and_severe_dengue",
       "chikungunya",
-      "vector_borne_diseases"
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.7
+      "source_precision": 0.9
     }
   },
   {
@@ -295,15 +295,15 @@
     ],
     "retrieved_sources": [
       "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
       "mendeley_diseases",
       "chronic_obstructive_pulmonary_disease_(copd)",
-      "chronic_obstructive_pulmonary_disease_(copd)",
-      "chronic_obstructive_pulmonary_disease_(copd)",
-      "chronic_obstructive_pulmonary_disease_(copd)",
-      "chronic_obstructive_pulmonary_disease_(copd)",
-      "chronic_obstructive_pulmonary_disease_(copd)",
-      "mendeley_diseases",
-      "mendeley_diseases"
+      "asthma",
+      "household_air_pollution_and_health"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -322,17 +322,17 @@
       "mendeley_diseases",
       "stroke",
       "stroke",
-      "mendeley_diseases",
-      "mendeley_diseases",
       "stroke",
       "mendeley_diseases",
+      "stroke",
+      "stroke",
       "mendeley_diseases",
       "stroke"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 0.3333333333333333,
-      "source_precision": 0.4
+      "source_precision": 0.6
     }
   },
   {
@@ -345,10 +345,10 @@
       "hepatitis_b",
       "hepatitis_b",
       "hepatitis_b",
-      "hepatitis_a",
       "hepatitis_b",
-      "hepatitis_a",
       "hepatitis_d",
+      "hepatitis_b",
+      "hepatitis_b",
       "hepatitis_b",
       "hepatitis_c",
       "hepatitis_b"
@@ -356,7 +356,7 @@
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.6
+      "source_precision": 0.8
     }
   },
   {
@@ -368,19 +368,19 @@
     "retrieved_sources": [
       "measles",
       "measles",
+      "measles",
+      "measles",
+      "measles",
       "mendeley_diseases",
       "mendeley_diseases",
+      "rubella",
       "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases"
+      "mpox"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.2
+      "source_precision": 0.5
     }
   },
   {
@@ -397,9 +397,9 @@
       "obesity_and_overweight",
       "obesity_and_overweight",
       "obesity_and_overweight",
+      "diabetes",
       "obesity_and_overweight",
-      "malnutrition",
-      "malnutrition"
+      "hypertension"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -417,7 +417,7 @@
       "epilepsy",
       "epilepsy",
       "epilepsy",
-      "epilepsy",
+      "mendeley_diseases",
       "epilepsy",
       "epilepsy",
       "epilepsy",
@@ -428,7 +428,7 @@
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 1.0
+      "source_precision": 0.9
     }
   },
   {
@@ -441,18 +441,18 @@
       "rabies",
       "rabies",
       "rabies",
-      "animal_bites",
-      "animal_bites",
       "rabies",
       "animal_bites",
       "rabies",
       "rabies",
-      "animal_bites"
+      "rabies",
+      "rabies",
+      "rabies"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.6
+      "source_precision": 0.9
     }
   },
   {
@@ -462,21 +462,21 @@
       "dementia"
     ],
     "retrieved_sources": [
-      "mendeley_diseases",
+      "dementia",
+      "dementia",
+      "dementia",
       "dementia",
       "mendeley_diseases",
       "dementia",
       "dementia",
       "dementia",
-      "mendeley_diseases",
       "dementia",
-      "mendeley_diseases",
-      "mendeley_diseases"
+      "dementia"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 0.5,
-      "source_precision": 0.5
+      "mrr": 1.0,
+      "source_precision": 0.9
     }
   },
   {
@@ -487,15 +487,15 @@
     ],
     "retrieved_sources": [
       "influenza_(seasonal)",
-      "influenza_(avian_and_other_zoonotic)",
-      "influenza_(seasonal)",
-      "meningitis",
-      "influenza_(avian_and_other_zoonotic)",
       "influenza_(seasonal)",
       "influenza_(avian_and_other_zoonotic)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(seasonal)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(avian_and_other_zoonotic)",
       "influenza_(seasonal)",
       "influenza_(seasonal)",
-      "influenza_(avian_and_other_zoonotic)"
+      "coronavirus_disease_(covid_19)"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -514,12 +514,12 @@
       "lead_poisoning_and_health",
       "lead_poisoning_and_health",
       "lead_poisoning_and_health",
+      "mercury_and_health",
       "lead_poisoning_and_health",
-      "food_safety",
       "lead_poisoning_and_health",
-      "food_safety",
-      "lead_poisoning_and_health",
-      "arsenic"
+      "electronic_waste_(e_waste)",
+      "arsenic",
+      "lead_poisoning_and_health"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -534,21 +534,21 @@
       "cervical_cancer"
     ],
     "retrieved_sources": [
+      "human_papilloma_virus_and_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
       "cervical_cancer",
       "human_papilloma_virus_and_cancer",
       "cervical_cancer",
       "human_papilloma_virus_and_cancer",
-      "human_papilloma_virus_and_cancer",
       "cervical_cancer",
-      "cancer",
-      "human_papilloma_virus_and_cancer",
-      "human_papilloma_virus_and_cancer",
       "human_papilloma_virus_and_cancer"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 1.0,
-      "source_precision": 0.3
+      "mrr": 0.5,
+      "source_precision": 0.6
     }
   },
   {
@@ -558,20 +558,20 @@
       "hepatitis_c"
     ],
     "retrieved_sources": [
-      "mendeley_diseases",
       "hepatitis_c",
-      "mendeley_diseases",
+      "hepatitis_c",
       "hepatitis_e",
-      "hepatitis_c",
-      "mendeley_diseases",
-      "hepatitis_c",
-      "hepatitis_c",
       "hepatitis_a",
+      "hepatitis_c",
+      "hepatitis_c",
+      "hepatitis_d",
+      "yellow_fever",
+      "hepatitis_b",
       "hepatitis_c"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 0.5,
+      "mrr": 1.0,
       "source_precision": 0.5
     }
   },
@@ -587,16 +587,16 @@
       "meningitis",
       "meningitis",
       "meningitis",
-      "meningitis",
-      "meningitis",
-      "meningitis",
       "mendeley_diseases",
+      "meningitis",
+      "listeriosis",
+      "meningitis",
       "meningitis"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.9
+      "source_precision": 0.8
     }
   },
   {
@@ -606,21 +606,21 @@
       "schizophrenia"
     ],
     "retrieved_sources": [
+      "schizophrenia",
+      "schizophrenia",
+      "schizophrenia",
+      "schizophrenia",
+      "mendeley_diseases",
+      "schizophrenia",
+      "schizophrenia",
       "mental_disorders",
       "schizophrenia",
-      "mendeley_diseases",
-      "schizophrenia",
-      "schizophrenia",
-      "schizophrenia",
-      "mendeley_diseases",
-      "schizophrenia",
-      "adolescent_mental_health",
       "schizophrenia"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 0.5,
-      "source_precision": 0.6
+      "mrr": 1.0,
+      "source_precision": 0.8
     }
   },
   {
@@ -634,17 +634,17 @@
       "diabetes",
       "diabetes",
       "diabetes",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
       "diabetes",
+      "diabetes",
+      "diabetes",
+      "syphilis",
+      "mendeley_diseases",
       "diabetes"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.6
+      "source_precision": 0.8
     }
   },
   {
@@ -660,15 +660,15 @@
       "tetanus",
       "tetanus",
       "tetanus",
+      "diphtheria",
       "tetanus",
-      "animal_bites",
-      "tungiasis",
-      "immunization_coverage"
+      "tetanus",
+      "botulism"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.7
+      "source_precision": 0.8
     }
   },
   {
@@ -679,20 +679,20 @@
     ],
     "retrieved_sources": [
       "ambient_(outdoor)_air_quality_and_health",
+      "sand_and_dust_storms",
+      "household_air_pollution_and_health",
+      "household_air_pollution_and_health",
       "household_air_pollution_and_health",
       "ambient_(outdoor)_air_quality_and_health",
-      "household_air_pollution_and_health",
       "ambient_(outdoor)_air_quality_and_health",
-      "household_air_pollution_and_health",
       "ambient_(outdoor)_air_quality_and_health",
-      "household_air_pollution_and_health",
-      "household_air_pollution_and_health",
-      "asthma"
+      "el_nino_southern_oscillation_(enso)",
+      "ambient_(outdoor)_air_quality_and_health"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.4
+      "source_precision": 0.5
     }
   },
   {
@@ -702,12 +702,12 @@
       "bipolar_disorder"
     ],
     "retrieved_sources": [
-      "mendeley_diseases",
-      "mental_disorders",
       "bipolar_disorder",
       "bipolar_disorder",
       "mental_disorders",
+      "mental_disorders",
       "bipolar_disorder",
+      "depression",
       "bipolar_disorder",
       "bipolar_disorder",
       "bipolar_disorder",
@@ -715,7 +715,7 @@
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 0.3333333333333333,
+      "mrr": 1.0,
       "source_precision": 0.7
     }
   },
@@ -757,14 +757,14 @@
       "breast_cancer",
       "mendeley_diseases",
       "cancer",
-      "breast_cancer",
-      "breast_cancer",
-      "cancer"
+      "cancer",
+      "colorectal_cancer",
+      "lung_cancer"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.7
+      "source_precision": 0.5
     }
   },
   {
@@ -775,20 +775,20 @@
     ],
     "retrieved_sources": [
       "sepsis",
+      "sepsis",
+      "sepsis",
+      "sepsis",
       "mendeley_diseases",
       "sepsis",
       "sepsis",
       "sepsis",
       "patient_safety",
-      "sepsis",
-      "sepsis",
-      "sepsis",
-      "patient_safety"
+      "sepsis"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.7
+      "source_precision": 0.8
     }
   },
   {
@@ -801,13 +801,13 @@
       "poliomyelitis",
       "poliomyelitis",
       "poliomyelitis",
-      "immunization_coverage",
       "poliomyelitis",
       "poliomyelitis",
+      "hepatitis_a",
+      "lassa_fever",
+      "hepatitis_b",
       "poliomyelitis",
-      "influenza_(seasonal)",
-      "mpox",
-      "ebola_disease"
+      "oropouche_virus_disease"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -824,11 +824,11 @@
     "retrieved_sources": [
       "mendeley_diseases",
       "parkinson_disease",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
       "parkinson_disease",
+      "parkinson_disease",
+      "parkinson_disease",
+      "mendeley_diseases",
+      "mendeley_diseases",
       "mendeley_diseases",
       "mendeley_diseases",
       "mendeley_diseases"
@@ -836,7 +836,7 @@
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 0.5,
-      "source_precision": 0.2
+      "source_precision": 0.4
     }
   },
   {
@@ -848,19 +848,19 @@
     "retrieved_sources": [
       "endometriosis",
       "endometriosis",
-      "endometriosis",
-      "endometriosis",
       "mendeley_diseases",
       "endometriosis",
       "endometriosis",
-      "mendeley_diseases",
       "endometriosis",
-      "mendeley_diseases"
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.7
+      "source_precision": 0.9
     }
   },
   {
@@ -875,16 +875,16 @@
       "animal_bites",
       "animal_bites",
       "snakebite_envenoming",
-      "animal_bites",
+      "mendeley_diseases",
       "snakebite_envenoming",
       "snakebite_envenoming",
       "snakebite_envenoming",
-      "snakebite_envenoming"
+      "animal_bites"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.6
+      "source_precision": 0.5
     }
   },
   {
@@ -903,7 +903,7 @@
       "leishmaniasis",
       "leishmaniasis",
       "leishmaniasis",
-      "millennium_development_goals_(mdgs)"
+      "leprosy"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -921,18 +921,18 @@
       "salmonella_(non_typhoidal)",
       "salmonella_(non_typhoidal)",
       "salmonella_(non_typhoidal)",
-      "food_safety",
-      "food_safety",
-      "typhoid",
+      "salmonella_(non_typhoidal)",
       "food_safety",
       "salmonella_(non_typhoidal)",
-      "one_health",
+      "food_safety",
+      "typhoid",
+      "typhoid",
       "listeriosis"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.4
+      "source_precision": 0.5
     }
   },
   {
@@ -948,9 +948,9 @@
       "leprosy",
       "leprosy",
       "leprosy",
-      "antimicrobial_resistance",
+      "leishmaniasis",
       "buruli_ulcer_(mycobacterium_ulcerans_infection)",
-      "podoconiosis_(non_filarial_lymphoedema)",
+      "yaws",
       "buruli_ulcer_(mycobacterium_ulcerans_infection)"
     ],
     "retrieval_scores": {
@@ -966,21 +966,21 @@
       "tobacco"
     ],
     "retrieved_sources": [
-      "tobacco",
+      "oral_health",
       "tobacco",
       "mendeley_diseases",
+      "adolescents_health_risks_and_solutions",
       "tobacco",
+      "cancer",
+      "stroke",
+      "arsenic",
       "tobacco",
-      "noncommunicable_diseases",
-      "lung_cancer",
-      "tobacco",
-      "tobacco",
-      "adolescents_health_risks_and_solutions"
+      "noncommunicable_diseases"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
-      "mrr": 1.0,
-      "source_precision": 0.6
+      "mrr": 0.5,
+      "source_precision": 0.3
     }
   },
   {
@@ -993,13 +993,13 @@
       "preterm_birth",
       "preterm_birth",
       "preterm_birth",
-      "maternal_mortality",
-      "birth_defects",
       "preterm_birth",
       "preterm_birth",
       "preterm_birth",
-      "adolescent_pregnancy",
-      "adolescent_pregnancy"
+      "newborn_mortality",
+      "newborns_reducing_mortality",
+      "pre_eclampsia",
+      "newborns_reducing_mortality"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
@@ -1015,20 +1015,20 @@
     ],
     "retrieved_sources": [
       "yellow_fever",
-      "yellow_fever",
-      "yellow_fever",
-      "yellow_fever",
-      "yellow_fever",
-      "ebola_disease",
-      "immunization_coverage",
       "japanese_encephalitis",
-      "immunization_coverage",
-      "lassa_fever"
+      "yellow_fever",
+      "yellow_fever",
+      "yellow_fever",
+      "yellow_fever",
+      "dengue_and_severe_dengue",
+      "yellow_fever",
+      "west_nile_virus",
+      "yellow_fever"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.5
+      "source_precision": 0.7
     }
   },
   {
@@ -1039,20 +1039,20 @@
     ],
     "retrieved_sources": [
       "osteoarthritis",
-      "mendeley_diseases",
-      "osteoarthritis",
-      "osteoarthritis",
       "osteoarthritis",
       "mendeley_diseases",
-      "musculoskeletal_conditions",
+      "osteoarthritis",
+      "osteoarthritis",
+      "osteoarthritis",
+      "osteoarthritis",
+      "mendeley_diseases",
       "rheumatoid_arthritis",
-      "rheumatoid_arthritis",
-      "mendeley_diseases"
+      "rheumatoid_arthritis"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.4
+      "source_precision": 0.6
     }
   },
   {
@@ -1064,19 +1064,19 @@
     "retrieved_sources": [
       "ebola_disease",
       "ebola_disease",
+      "marburg_virus_disease",
+      "yellow_fever",
       "ebola_disease",
-      "mendeley_diseases",
-      "mendeley_diseases",
+      "lassa_fever",
+      "crimean_congo_haemorrhagic_fever",
       "ebola_disease",
-      "ebola_disease",
-      "ebola_disease",
-      "mendeley_diseases",
-      "mendeley_diseases"
+      "hepatitis_c",
+      "malaria"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.6
+      "source_precision": 0.4
     }
   },
   {
@@ -1094,13 +1094,13 @@
       "alcohol",
       "alcohol",
       "alcohol",
-      "mendeley_diseases",
-      "alcohol"
+      "violence_against_women",
+      "mendeley_diseases"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.9
+      "source_precision": 0.8
     }
   },
   {
@@ -1116,7 +1116,7 @@
       "schistosomiasis",
       "schistosomiasis",
       "schistosomiasis",
-      "schistosomiasis",
+      "soil_transmitted_helminth_infections",
       "schistosomiasis",
       "schistosomiasis",
       "schistosomiasis"
@@ -1124,7 +1124,7 @@
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 1.0
+      "source_precision": 0.9
     }
   },
   {
@@ -1135,20 +1135,20 @@
     ],
     "retrieved_sources": [
       "anxiety_disorders",
-      "mendeley_diseases",
+      "anxiety_disorders",
+      "anxiety_disorders",
       "anxiety_disorders",
       "mendeley_diseases",
-      "mendeley_diseases",
-      "mendeley_diseases",
+      "mental_disorders",
       "anxiety_disorders",
-      "mendeley_diseases",
+      "mental_disorders",
       "anxiety_disorders",
       "mendeley_diseases"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.4
+      "source_precision": 0.6
     }
   },
   {
@@ -1185,18 +1185,18 @@
       "burns",
       "burns",
       "burns",
-      "white_phosphorus",
-      "white_phosphorus",
+      "burns",
+      "burns",
       "burns",
       "white_phosphorus",
-      "mendeley_diseases",
       "burns",
-      "burns"
+      "burns",
+      "white_phosphorus"
     ],
     "retrieval_scores": {
       "hit_rate": 1.0,
       "mrr": 1.0,
-      "source_precision": 0.6
+      "source_precision": 0.8
     }
   }
 ]

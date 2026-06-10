@@ -129,13 +129,22 @@ python -m evaluation.evaluate_groq --limit 5
 | **Source Precision** | 0.68 | 68% of retrieved chunks come from the expected source |
 | **Overall** | 0.87 | Simple average of retrieval metrics (not a formal metric) |
 
-### Retrieval Metrics (Score for Groq)
+### Retrieval Metrics (Score for Groq(Llama 3.3 70B))
 
 | Metric | Score | Description |
 |---|---|---|
 | **Hit Rate** | 1.00 | Retrieval always returns at least one chunk from the correct source |
 | **MRR** | 0.89 | Mean Reciprocal Rank — correct source is ranked 1st almost every time |
 | **Source Precision** | 0.58 | 58% of retrieved chunks come from the expected source |
+| **Overall** | 0.82 | Simple average of retrieval metrics (not a formal metric) |
+
+### Retrieval Metrics (Score for OpenRouter)
+
+| Metric | Score | Description |
+|---|---|---|
+| **Hit Rate** | 1.00 | Retrieval always returns at least one chunk from the correct source |
+| **MRR** | 0.88 | Mean Reciprocal Rank — correct source is ranked 1st almost every time |
+| **Source Precision** | 0.59 | 59% of retrieved chunks come from the expected source |
 | **Overall** | 0.82 | Simple average of retrieval metrics (not a formal metric) |
 
 ### LLM-as-Judge Metrics (optional, requires API calls)
