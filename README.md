@@ -165,3 +165,11 @@ python -m evaluation.evaluate_open_router --limit 5
 
 ## 🛡️ Medical Disclaimer
 This application is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment.
+
+## 📸 Screenshots
+
+![MediChat UI](docs/example_question_1.png)
+
+![MediChat UI](docs/example_question_2.png)
+
+![MediChat UI](docs/example_question_3.png)
