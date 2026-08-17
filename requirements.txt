@@ -8,3 +8,5 @@ requests
 pandas
 pyarrow
 python-dotenv
+numpy
+scipy

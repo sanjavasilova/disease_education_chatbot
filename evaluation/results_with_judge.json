@@ -1,0 +1,1363 @@
+[
+  {
+    "question": "What are the main symptoms of asthma?",
+    "ground_truth": "Common symptoms of asthma include wheezing, shortness of breath, chest tightness, and coughing. Symptoms can vary in severity and may worsen at night or during exercise.",
+    "expected_sources": [
+      "asthma"
+    ],
+    "retrieved_sources": [
+      "asthma",
+      "mendeley_diseases",
+      "asthma",
+      "mendeley_diseases",
+      "asthma",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "asthma",
+      "mendeley_diseases",
+      "chronic_obstructive_pulmonary_disease_(copd)"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    },
+    "context_chunks": [
+      "In the most severe cases, asthma can lead to death. Symptoms\nSymptoms of asthma can vary from person to person. Symptoms sometimes get significantly worse. This is known as an asthma attack. Symptoms are often worse at night or during exercise. Common symptoms of asthma include:\na persistent cough, especially at night\nwheezing when exhaling and sometimes when inhaling\nshortness of breath or difficulty breathing, sometimes even when resting\nchest tightness, making it difficult to breathe deeply. Some people will have worse symptoms when they have a cold or during changes in the weather. Other triggers can include dust, smoke, fumes, grass and tree pollen, animal fur and feathers, strong soaps and perfume. Symptoms can be caused by other conditions as well. People with symptoms should talk to a healthcare provider. Causes\nMany factors have been linked to an increased risk of developing asthma, although it is often difficult to find a single, direct cause.",
+      "Disease: asthma. Common symptoms (present in ≥20% of cases): allergic reaction, chest tightness, coryza, cough, coughing up sputum, difficulty breathing, fever, nasal congestion, sharp chest pain, shortness of breath, wheezing.",
+      "Overview\nAsthma is a chronic lung disease affecting people of all ages. It is caused by inflammation and muscle tightening around the airways, which makes it harder to breathe. Symptoms can include coughing, wheezing, shortness of breath and chest tightness. These symptoms can be mild or severe and can come and go over time. Although asthma can be a serious condition, it can be managed with the right treatment. People with symptoms of asthma should speak to a health professional. Impact\nAsthma is often under-diagnosed and under-treated, particularly in low- and middle-income countries. People with under-treated asthma can suffer sleep disturbance, tiredness during the day, and poor concentration. Asthma sufferers and their families may miss school and work, with financial impact on the family and wider community. If symptoms are severe, people with asthma may need to receive emergency health care and they may be admitted to hospital for treatment and monitoring.",
+      "Disease: acute bronchospasm. Common symptoms (present in ≥20% of cases): chest tightness, coryza, cough, difficulty breathing, fever, nasal congestion, sharp chest pain, shortness of breath, sore throat, vomiting, wheezing.",
+      "Treatment\nAsthma cannot be cured but there are several treatments available. The most common treatment is to use an inhaler, which delivers medication directly to the lungs. Inhalers can help control the disease and enable people with asthma to enjoy a normal, active life. There are two main types of inhaler:\nbronchodilators (such      as salbutamol), that open the air passages and relieve symptoms; and\nsteroids (such as beclometasone)      that reduce inflammation in the air passages, which improves asthma      symptoms and reduces the risk of severe asthma attacks and death. People with asthma may need to use their inhaler every day. Their treatment will depend on the frequency of symptoms and the types of inhalers available. Using an inhaler can be difficult, especially for children and during emergency situations. Using a spacer device makes it easier to use an aerosol inhaler. This helps the medicine to reach the lungs more easily.",
+      "Disease: emphysema. Common symptoms (present in ≥20% of cases): cough, emotional symptoms, sharp chest pain, shortness of breath.",
+      "Disease: aspergillosis. Common symptoms (present in ≥20% of cases): knee lump or mass, shortness of breath.",
+      "A spacer is a plastic container with a mouthpiece or mask at one end and a hole for the inhaler in the other. A homemade spacer, made from a 500ml plastic bottle, can be as effective as commercially manufactured spacers. Access to inhalers is a problem in many countries. In 2021, bronchodilators were available in public primary health care facilities in half of low- and low-middle income countries, and steroid inhalers available in one third. It is also important to raise community awareness to reduce the myths and stigma associated with asthma in some settings. Self-care\nPeople with asthma and their families need education to understand more about their asthma. This includes their treatment options, triggers to avoid, and how to manage their symptoms at home. It is important for people with asthma to know how to increase their treatment when their symptoms are worsening to avoid a serious attack.",
+      "Disease: poisoning due to gas. Common symptoms (present in ≥20% of cases): cough, dizziness, drainage in throat, headache, sharp chest pain, shortness of breath, wheezing.",
+      "There may be a considerable financial burden due to limitation of workplace and home productivity, and costs of medical treatment. COPD is sometimes called emphysema or chronic bronchitis. Emphysema usually refers to destruction of the tiny air sacs at the end of the airways in the lungs. Chronic bronchitis refers to a chronic cough with the production of phlegm resulting from inflammation in the airways. COPD and asthma share common symptoms (cough, wheeze and difficulty breathing) and people may have both conditions. Causes\nSeveral processes can cause the airways to become narrow and lead to COPD. There may be destruction of parts of the lung, mucus blocking the airways, and inflammation and swelling of the airway lining."
+    ],
+    "answer": "It's understandable to want to know more about the symptoms of asthma. Asthma is a chronic lung disease, and its symptoms can vary from person to person and even in the same person over time.\n\nBased on the information provided, the common symptoms of asthma include:\n\n*   **A persistent cough**, especially at night.\n*   **Wheezing** when exhaling and sometimes when inhaling.\n*   **Shortness of breath or difficulty breathing**, which can sometimes occur even when resting.\n*   **Chest tightness**, making it difficult to breathe deeply.\n\nAdditionally, the context mentions other symptoms that can be present in a significant number of asthma cases, such as:\n\n*   Allergic reaction\n*   Coryza (inflammation of the mucous membrane in the nose)\n*   Coughing up sputum\n*   Fever\n*   Nasal congestion\n*   Sharp chest pain\n\nSymptoms can sometimes worsen significantly, which is known as an asthma attack. They are often worse at night or during exercise, and some people experience worse symptoms when they have a cold or during changes in the weather. Various triggers like dust, smoke, fumes, pollen, animal fur, and strong soaps or perfumes can also cause symptoms.\n\nIt's important to remember that these symptoms can also be caused by other conditions. If you or someone you know is experiencing these symptoms, speaking with a qualified healthcare professional is always the best step to get an accurate evaluation and appropriate guidance.",
+    "judge_scores": {
+      "context_relevance": {
+        "score": 0.9,
+        "reason": "Multiple chunks directly and comprehensively list the main symptoms of asthma, such as cough, wheezing, shortness of breath, and chest tightness. While some chunks are irrelevant or discuss other conditions/treatments, the core information to answer the question is very well covered."
+      },
+      "correctness": {
+        "score": 0.6,
+        "reason": "The generated answer correctly identifies all common symptoms (wheezing, shortness of breath, chest tightness, coughing) and conditions for worsening symptoms (at night, during exercise) mentioned in the ground truth. However, it introduces an 'additional symptoms' section that includes several items (e.g., fever, coryza, sharp chest pain, allergic reaction) which are not direct common symptoms of asthma but rather triggers, co-occurring conditions, or symptoms of other illnesses. This makes that section factually misleading and inconsistent with the ground truth's precise focus on common asthma symptoms."
+      }
+    }
+  },
+  {
+    "question": "What causes diabetes?",
+    "ground_truth": "Type 1 diabetes is caused by an autoimmune reaction that destroys insulin-producing beta cells in the pancreas. Type 2 diabetes is caused by the body's ineffective use of insulin, often linked to excess body weight, physical inactivity, and genetic factors.",
+    "expected_sources": [
+      "diabetes"
+    ],
+    "retrieved_sources": [
+      "diabetes",
+      "diabetes",
+      "mendeley_diseases",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "polycystic_ovary_syndrome"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How is hypertension diagnosed?",
+    "ground_truth": "Hypertension is diagnosed by measuring blood pressure. A person is diagnosed with hypertension when their systolic blood pressure is 140 mmHg or higher and/or their diastolic blood pressure is 90 mmHg or higher on two different days.",
+    "expected_sources": [
+      "hypertension"
+    ],
+    "retrieved_sources": [
+      "hypertension",
+      "hypertension",
+      "hypertension",
+      "hypertension",
+      "hypertension",
+      "mendeley_diseases",
+      "hypertension",
+      "pre_eclampsia",
+      "mendeley_diseases",
+      "hypertension"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    },
+    "context_chunks": [
+      "The only way to know is to get your blood pressure checked. Things that increase the risk of having high blood pressure include:\nolder age\ngenetics\nbeing overweight or obese\nnot being physically active\nhigh-salt diet\ndrinking too much alcohol\nLifestyle changes like eating a healthier diet, quitting tobacco and being more active can help lower blood pressure. Some people may still need to take medicines. Blood pressure is written as two numbers. The first (systolic) number represents the pressure in blood vessels when the heart contracts or beats. The second (diastolic) number represents the pressure in the vessels when the heart rests between beats. Hypertension is diagnosed if, when it is measured on two different days, the systolic blood pressure readings on both days is ≥140 mmHg and/or the diastolic blood pressure readings on both days is ≥90 mmHg.",
+      "People with very high blood pressure (usually 180/120 or higher) can experience symptoms including:\nsevere headaches\nchest pain\ndizziness\ndifficulty breathing\nnausea\nvomiting\nblurred vision or other vision changes\nanxiety\nconfusion\nbuzzing in the ears\nnosebleeds\nabnormal heart rhythm\nIf you are experiencing any of these symptoms and a high blood pressure, seek care immediately. The only way to detect hypertension is to have a health professional measure blood pressure. Having blood pressure measured is quick and painless. Although individuals can measure their own blood pressure using automated devices, an evaluation by a health professional is important for assessment of risk and associated conditions. Treatment\nLifestyle changes can help lower high blood pressure. These include:\neating a healthy, low-salt diet\nlosing weight\nbeing physically active\nquitting tobacco. If you have high blood pressure, your doctor may recommend one or more medicines.",
+      "Key facts\nAn estimated 1.4 billion adults aged 30–79\r\n            years worldwide had hypertension in 2024; this represents 33% of the popluation in this age range. Two-thirds of adults aged 30–79 years who have hypertension live in low- and\r\n            middle-income countries. An estimated 600 million adults with hypertension (44%) are unaware that they have the condition. Approximately 630 million adults with hypertension (44%) are diagnosed and treated. Approximately 320 million adults with hypertension (23%) have it under control. Hypertension is a major cause of premature death worldwide. One of the global targets for noncommunicable diseases is to reduce the prevalence of uncontrolled hypertension by 25% between 2010 and 2025. Overview\nHypertension (high blood pressure) is when the pressure in your blood vessels is too high (140/90 mmHg or higher). It is common but can be serious if not treated. People with high blood pressure may not feel symptoms.",
+      "Reduce the risks of hypertension by:\nreducing and managing stress\nregularly checking blood pressure\ntreating high blood pressure\nmanaging other medical conditions\nreducing exposure to polluted air. Complications of uncontrolled hypertension\nAmong other complications, hypertension can cause serious damage to the heart. Excessive pressure can harden arteries, decreasing the flow of blood and oxygen to the heart. This elevated pressure and reduced blood flow can cause:\nchest pain, also called angina;\nheart attack, which occurs when the blood supply to the heart is blocked and heart muscle cells die from lack of oxygen. The longer the blood flow is blocked, the greater the damage to the heart;\nheart failure, which occurs when the heart cannot pump enough blood and oxygen to other vital body organs; and\nirregular heart beat which can lead to a sudden death. Hypertension can also burst or block arteries that supply blood and oxygen to the brain, causing a stroke.",
+      "Risk factors\nModifiable risk factors include unhealthy diets (excessive salt consumption, a diet high in saturated fat and trans fats, low intake of fruits and vegetables), physical inactivity, consumption of tobacco and alcohol, and being overweight or obese. In addition, there are environmental risk factors for hypertension and associated diseases, where air pollution is the most significant. Non-modifiable risk factors include a family history of hypertension, age over 65 years and co-existing diseases such as diabetes or kidney disease. Symptoms\nMost people with hypertension don’t feel any symptoms. Very high blood pressures can cause headaches, blurred vision, chest pain and other symptoms. Checking your blood pressure is the best way to know if you have high blood pressure. If hypertension isn’t treated, it can cause other health conditions like kidney disease, heart disease and stroke.",
+      "Disease: high blood pressure. Common symptoms (present in ≥20% of cases): headache, sharp chest pain.",
+      "In addition, hypertension can cause kidney damage, leading to kidney failure. Prevalence of hypertension\nThe prevalence of hypertension varies across regions and country income groups. The WHO Eastern Mediterranean Region has the highest prevalence of hypertension (38%) while the WHO Western Pacific Region has the lowest prevalence of hypertension (29%). The number of adults with hypertension increased from 650 million in 1990 to 1.4 billion in 2024, with the increase seen largely in low- and middle-income countries. This increase is due mainly to a rise in the number of older adults in those countries. WHO response\nThe World Health Organization (WHO) supports countries to reduce hypertension as a public health problem. In 2021, WHO released a\nnew guideline for on the pharmacological treatment of hypertension\nin adults. The publication provides evidence-based recommendations for the initiation of treatment of hypertension, and recommended intervals for follow-up.",
+      "Diagnosis\nPre-eclampsia is diagnosed based on the onset of hypertension (blood pressure ≥140/90 mm Hg) proteinuria (protein in the urine) (≥0.3 g/24 hours) after 20 weeks of gestation. Severe pre-eclampsia may include symptoms such as severe headaches, visual disturbances and upper abdominal pain. Risk factors\nSeveral factors can increase the risk of developing pre-eclampsia during pregnancy. Understanding these risk factors is essential for proactive monitoring and management. Having a risk factor doesn't always mean pre-eclampsia will occur, but closer medical supervision beyond routine screening is recommended. Several factors can increase the risk of developing pre-eclampsia, including:\nfirst-time pregnancies\nmultiple pregnancies (twins, triplets, etc.)\nobesity\npre-existing conditions such as hypertension, diabetes, or kidney disease\nfamily history of pre-eclampsia. Symptoms\nSymptoms of pre-eclampsia can vary significantly among individuals.",
+      "Disease: hypertensive heart disease. Common symptoms (present in ≥20% of cases): chest tightness, difficulty breathing, fatigue, heartburn, insomnia, leg swelling, palpitations, recent pregnancy, sharp chest pain, shortness of breath, weakness.",
+      "Your recommended blood pressure goal may depend on what other health conditions you have. Blood pressure goal is less than 130/80 if you have:\ncardiovascular disease (heart disease or stroke)\ndiabetes (high blood sugar)\nchronic kidney disease\nhigh risk for cardiovascular disease. For most people, the goal is to have a blood pressure less than 140/90. There are several common blood pressure medicines:\nACE inhibitors including enalapril and lisinopril relax blood vessels and prevent kidney damage. Angiotensin-2 receptor blockers (ARBs) including losartan and telmisartan relax blood vessels and prevent kidney damage. Calcium channel blockers including amlodipine and felodipine relax blood vessels. Diuretics including hydrochlorothiazide and chlorthalidone eliminate extra water from the body, lowering blood pressure. Prevention\nLifestyle changes can help lower high blood pressure and can help anyone with hypertension. Many who make these changes will still need to take medicine."
+    ],
+    "answer": "Hypertension (high blood pressure) is diagnosed when blood pressure readings are consistently high. Specifically, it is diagnosed if, when measured on two different days, the systolic blood pressure readings on both days are 140 mmHg or higher, and/or the diastolic blood pressure readings on both days are 90 mmHg or higher.\n\nIt's important to have a health professional measure your blood pressure for an accurate diagnosis and assessment of any associated conditions. While you can measure your own blood pressure using automated devices, a professional evaluation is key.",
+    "judge_scores": {
+      "context_relevance": {
+        "score": 0.9,
+        "reason": "Multiple chunks directly address how hypertension is diagnosed, specifying that it requires blood pressure measurement, often on two different days, and providing the specific systolic and diastolic thresholds (e.g., ≥140/90 mmHg). Some chunks also mention that a health professional is needed for diagnosis. While some chunks discuss symptoms, risk factors, prevalence, or treatment, the core diagnostic information is well-covered and prominent."
+      },
+      "correctness": {
+        "score": 1.0,
+        "reason": "The generated answer accurately reflects all the diagnostic criteria mentioned in the ground truth, including the blood pressure thresholds and the requirement for measurements on two different days. It also adds relevant, factually correct information about professional diagnosis without contradicting the ground truth."
+      }
+    }
+  },
+  {
+    "question": "What are the risk factors for lung cancer?",
+    "ground_truth": "The main risk factors for lung cancer include tobacco smoking, exposure to secondhand smoke, occupational exposure to carcinogens like asbestos and radon, air pollution, and a family history of lung cancer.",
+    "expected_sources": [
+      "lung_cancer"
+    ],
+    "retrieved_sources": [
+      "lung_cancer",
+      "lung_cancer",
+      "mendeley_diseases",
+      "radon_and_health",
+      "lung_cancer",
+      "cancer",
+      "lung_cancer",
+      "cancer",
+      "radon_and_health",
+      "colorectal_cancer"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "What is avascular necrosis?",
+    "ground_truth": "Avascular necrosis (osteonecrosis) is a condition where bone tissue dies due to a lack of blood supply. It can lead to tiny breaks in the bone and eventual collapse. It most commonly affects the hip joint.",
+    "expected_sources": [
+      "avascular_necrosis"
+    ],
+    "retrieved_sources": [
+      "mendeley_diseases",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis",
+      "avascular_necrosis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.9
+    },
+    "context_chunks": [
+      "Disease: avascular necrosis. Common symptoms (present in ≥20% of cases): drug abuse, hip pain, knee pain, shoulder pain.",
+      "4 AVASCULAR NECROSIS \n        Surgical therapies include \nosteotomies of the upper end \nfemur, surface arthroplasties and \ntotal hip replacement if the disease \nprogresses to late stages of \nSteinberg et al 1995 (stage III, IV, \nV& VI ) (15,17,22). Core decompression is one line \nof the surgical treatment protocol in \nAVN. It is a less radical surgical \napproach with conservation of the \nfemoral head when done early in \nthe course of t he disease, before \ncollapse has begun. The theoretical \nadvantage of core decompression \nis based on the belief that the \nprocedure relieves intraosseous \npressure caused by venous cong-\nestion, thereby allowing improved \nvascularity and slowing of the prog-\nression of the disease. For core \ndecompression to be effective, \npatients must be identified early in \nthe course of the disease(20). That is why the aim of this \nwork was to identify and early \ndiagnose cases of AVN of the \nfemoral heads using MRI.",
+      "The remaining 3 hips that hav e been classified as type D showed \nradiographic progression to collapse and femoral head flattening .The net \nresult was 96% success rate in preventing femoral head collapse. MRI is the most accurate non-invasive  modality for early diagnosis of AVN. Early decompression of bone or coring pr ior to irreversible bone collapse may \nbreak the cycle of ischemia and avoid further radical surgical approach as \nosteotomies, or total hip replacement. 1 \n 2 AVASCULAR NECROSIS \nIntroduction \n           Ischemic necrosis of bone is \na progressive disease whereby \ncompromised blood supply to a \nsegment of bone results in damage \nand eventual death of that segment. Glucocorticoids therapy, alcoholism, \ncollagen vascular diseases, sickle \ncell anemia, Gaucher’s disease, \nirradiation, and dysbaric atmosph-\neric conditions all predis-pose to \nthis condition(13). The common pathway by which \nthe various conditions produce a \nsimilar disorder has not been \nclarified.",
+      "In non tr aumatic ischemic \nnecrosis, bone arterial microembo-\nlisation has been implicated as the \nprimary cause; nitrogen emboli in \ndysbaric atmospheric conditions; \nemboli from clumped sickled erythr-\nocytes in sickle disease; and fat \nemboli associated with alcoholism. In glucocorticoids related ischemic \nnecrosis of bone, it has not been \ndetermined whether the 1ry cause \nis due to lipocyte hypertrophy, \nsinusoidal microembolisation or \nboth(6). Different methods of \nstaging of such disease were used. Many of these systems did not \nmake benefit of the recent methods \nof diagnosis and evaluation. The \nSteinberg et al 1995 (19)  System for \nthe staging and evaluation of isch-\nemic necrosis of the femoral head \n(AVN) does not use older, invasive \ndiagnostic procedures, but it \nincorporates the newer techniques \nof bone scanning and MRI. In this \nsystem avascular necrosis of the \nfemoral head has been graded into \nseven stages as shown in table (I). Table I.",
+      "The band like hypo intense zone did not extend \nbeyond the zenith of the femoral head. TYPE \nB \nThe fat intensity area is intermediate between type (A) and (C). TYPE \nC \nThe fat intensity area occupying the proximal half of the femoral \nHead. The band like hypo intense zone traversed the middle portion \nof the femoral head horizontally on the mid coronal MR scan. Type \nD \nThe fat intensity area is larger than that of Type C \n \n \n    \n    Untreated bone necrosis will \noften lead to collapse of the femoral \nhead with subsequent disability. The sensitivity of MRI in early \ndiagnosis of AVN, when radiological \nchanges were not apparent, was \nestablished by many authors (9,16,21). This early detection of the disease \nmay allow surgeons to proceed to a \nhead-preserving surgical technique \nthat may stop pr ogression of the \ndisease.",
+      "Conclusion \n    When AVN is clinically suspected \nin the presence of associated risk \nfactors, MRI has proved to be the \nmost sensitive imaging modality for \nits early detection and staging. MRI \nis also helpful in differentiating AVN \nfrom other bone marrow altering \nprocesses like ITOH. Core decomp-\nression operation was found to be \nsuccessful when the femoral head \ninvolvement was less than 40% as \nin types A, B, C Takatori et al (1993) \n,as proven by follow up MR images,  \nthat showed either no signal of  \nAVN or decrease in the lesion size \nto type A Takatori et al (1993)  with-\nout progression to head collapse . This surgery is a reproducible, \nrelatively cost-effective procedure \nwith low morbidity rate and does not \nincrease the difficulty if subsequent \nhip replacement is necessary. 14 AVASCULAR NECROSIS \nReferences \n1.Arlet J, Ficat P : Core biopsy \nof the femoral head in primary \nosteonecrosis. Histopathological observation \nfor eight cases. Rev Rheum 31 \n: 257-258, 1964.",
+      "accumulatio\nn in head \n,neck and \ntrochanteric \narea \n \n 8 AVASCULAR NECROSIS \nCASE AGE \n(yr) SEX SIDE` Risk Factors \n \nAssociated \nConditions \nMRI \nPattern \nTc99m bone \nscan \n20. 57 M R Alcoholism Liver \ncirrhosis  \nA Incr. uptake \n21. 42 M R \nL \nPost-\nCorticosteroids \nBronchial \nAsthma \nB \nA \nIncr. Uptake \n \n22. 49 F R \nL \nPost-\nCorticosteroids \nBronchial \nAsthma \nA \nB \nIncr. uptake \n23. 54 M R Post-\nCorticosteroids \nRheumatoid  \nArthritis \nA Incr. uptake \n24. 40 F R \nL \nPost-\nCorticosteroids \nRheumatoid  \nArthritis \nB \nA \nIncr. uptake \n25. 42 F R \nL \nSLE Renal \nimpairment \nC \nB \nDecr. uptake \n Comparing the accuracy of different \nimaging studies to establish diagno-\nsis of early  ischemic necrosis of \nfemoral head (table IV), yielded to   \nMRI accuracy value of 92% in this \nstudy. Table IV. Comparison of the accuracy of different imaging studies in \nestablishing diagnosis of early ischemic necrosis of femoral head.",
+      "2.Beltran J, Knight CT, Zuel-\nzer WA : Core decompression \nfor avascular necrosis of the \nfemoral head: femoral head \ncorrelation between long term \nresults and preoperative MR \nstaging. Radiology 175:533-\n536,1990. 3.Castro FP , Barrak RL : Core \ndecompression  and conserv-\native treatment for avascular \nnecrosis of the femoral head: A \nmeta –analysis. Am J Orthop \n29:187-194, 2000. 4.Fairbank AC, Bhatia D, Jin-\nnah RH ,et al  :  Long term \nresults of  Core decompression \nfor ischaemic necrosis of the \nfemoral head . J Bone Joint \nSurg B 77:42-49,1995. 5.Ficat P: Idiopathic bone nec-\nrosis of the femoral head. Early \ndiagnosis and treatment.J Bone \nJoint Surg B 67: 3-9, 1985. 6.Glimcher MJ, Kenzora JE : \nThe biology of osteonecrosis of \nthe human femoral head and its \nclinical implications. Discussion \nof the etiology and genesis of \nthe pathological sequale :  \ncomments on treatment.Clin \nOrthop. 140: 273-312,1979.",
+      "Sci.Med. J. ESCME, Vol. 17, No. 2 , April 2005 \n \nAVASCULAR NECROSIS OF THE FEMORAL HEAD  \nCORRELATION OF EARLY DETECTION WITH MAGNETIC RESONANCE \nIMAGING AND RESULTS OF CORE DECOMPRESSION  \nBy \nDr. Amr Abdel Kader Hammad Abou El Ela  \nDr. Amany Emad El Din Rady     \nOrthopedic and Radiology Departments. Ain Shams University \n CAIRO-EGYPT \n \nAbstract. Early diagnosis of avascular necrosis of femoral head (AVN) is most \nimportant for successful treatment options. Symptomatology and physical \nexamination are not solidly dependable fo r early diagnosis of patients with \nhigh risk to develop AVN. To assess the effectiveness of nucl ear magnetic resonance imaging in the \nearly detection of osteonecrosis of femoral heads, we studied 25 patients, \nwith 34 hip affection (9 cases, bilate rally affected), in whom necrosis was \nsuspected on the basis of clinical pres entation.",
+      "20.Steinberg ME, Larcom PG, \nStrafford B,et al  : Core deco-\nmpression with bone grafting \nfor osteonecrosis of the femoral \nhead.\n\nClin Orthop.\n\n386: 71-78 , \n2001.\n\n16.Robinson HJ, Hartlenben \nPD, Lund G,et al: Evaluation of \nmagnetic resonance imaging in \nthe diagnosis of osteonecrosis \nof the femoral head.\n\nAccuracy \ncompared with radiographs, \ncore biopsy, and intraosseous \npressure measurement.\n\nJ Bone \nJoint Surg A 71: 650-63, 1989.\n\n21.Takatori Y, Kokubo T, Nin-\nomiya S: Avascular necrosis of \nthe femoral head.J Bone Joint \nSurg B 75 : 217-221, 1993.\n\n22.\n\nXenakis TA, Beris AE, \nMalizos KK ,et al : Total hip \nArthroplasty for avascular nec-\nrosis and degenerative osteo-\narthritis of the hip.\n\nClin Orthop \n341:62-68, 1997.\n\n17.Simank  HG, Brocai DR \n,Brill C, et al  .\n\nComparison of \nresults of core decompression \nand intertrochanteric osteotomy \nfor nontraumatic osteonecrosis \nof the  femoral head using Cox \nregression and survivorship \nanalysis .\n\nJ Arthroplasty 16:790- \n794,2001."
+    ],
+    "answer": "Avascular necrosis (AVN), also known as ischemic necrosis of bone, is a progressive condition where a segment of bone experiences damage and eventual death due to a compromised blood supply. This means that an inadequate flow of blood to a part of the bone can cause it to deteriorate.",
+    "judge_scores": {
+      "context_relevance": {
+        "score": 0.7,
+        "reason": "One chunk provides a clear and direct definition of avascular necrosis. Other chunks discuss symptoms, causes, diagnosis, and treatment, which are relevant to understanding the disease but do not directly answer 'what it is'."
+      },
+      "correctness": {
+        "score": 0.9,
+        "reason": "The generated answer accurately defines avascular necrosis and its cause, consistent with the ground truth. It correctly describes the progressive nature and bone deterioration. However, it omits the detail that it most commonly affects the hip joint, which was present in the ground truth."
+      }
+    }
+  },
+  {
+    "question": "How can malaria be prevented?",
+    "ground_truth": "Malaria can be prevented through insecticide-treated mosquito nets, indoor residual spraying, antimalarial medications for travellers, and preventive chemotherapy for high-risk groups.",
+    "expected_sources": [
+      "malaria"
+    ],
+    "retrieved_sources": [
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "malaria",
+      "west_nile_virus",
+      "malaria",
+      "anaemia"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the symptoms of depression?",
+    "ground_truth": "Symptoms of depression include persistent sad or empty mood, loss of interest in activities, changes in appetite and sleep, fatigue, difficulty concentrating, feelings of worthlessness, and thoughts of death or suicide.",
+    "expected_sources": [
+      "depression"
+    ],
+    "retrieved_sources": [
+      "depression",
+      "mental_disorders",
+      "depression",
+      "mendeley_diseases",
+      "bipolar_disorder",
+      "depression",
+      "mental_disorders",
+      "mendeley_diseases",
+      "depression",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    },
+    "context_chunks": [
+      "A depressive episode is different from regular mood fluctuations. They last most of the day, nearly every day, for at least two weeks. Other symptoms are also present, which may include:\npoor concentration\nfeelings of excessive guilt or low self-worth\nhopelessness about the future\nthoughts about dying or suicide\ndisrupted sleep\nchanges in appetite or weight\nfeeling very tired or low in energy. Depression can cause difficulties in all aspects of life, including in the community and at home, work and school. A depressive episode can be categorized as mild, moderate, or severe depending on the number and severity of symptoms, as well as the impact on the individual’s functioning.",
+      "During a depressive\r\n    episode, the person experiences depressed mood (feeling sad, irritable, empty) or a loss of pleasure or interest in activities, for most of the day, nearly every day, for at least two weeks. Several other symptoms are also present, which may include\r\n    poor concentration, feelings of excessive guilt or low self-worth, hopelessness about the future, thoughts about dying or suicide, disrupted sleep, changes in appetite or weight, and feeling especially tired or low in energy. People with depression\r\n    are at an increased risk of suicide. Yet, effective psychological treatment exists, and depending on the age and severity, medication may also be considered. Bipolar disorder\nIn 2021, 37 million people experienced bipolar disorder, including 3.8 milion adolescents aged 10–19 years (1). People with bipolar disorder experience alternating depressive episodes with periods of manic symptoms.",
+      "Key facts\nDepression is a common mental disorder. Globally, an estimated 5.7% of adults suffer from depression. More women are affected by depression than men. Depression can lead to suicide. There is effective treatment for mild, moderate and severe depression. Overview\nDepressive disorder (also known as depression) is a common mental disorder. It involves a depressed mood or loss of pleasure or interest in activities for long periods of time. Depression is different from regular mood changes and feelings about everyday life. It can affect all aspects of life, including relationships with family, friends and community. It can result from or lead to problems at school and at work. Depression can happen to anyone. People who have lived through abuse, severe losses or other stressful events are more likely to develop depression. Women are more likely to have depression than men.",
+      "Disease: depression. Common symptoms (present in ≥20% of cases): abusing alcohol, anxiety and nervousness, delusions or hallucinations, depression, depressive or psychotic symptoms, disturbance of memory, drug abuse, excessive anger, hostile behavior, insomnia, temper problems.",
+      "Other symptoms are also present, which may include:\npoor concentration\nfeelings of excessive guilt or low self-worth\nhopelessness about the future\nthoughts about dying or suicide\ndisrupted sleep\nchanges in appetite or weight\nfeeling very tired or low in energy. A depressive episode is different from mood fluctuations commonly experienced by most people, in that the symptoms last most of the day, nearly every day, for at least two weeks. Both manic and depressive episodes can cause significant difficulties in all aspects of life, including at home, work and school. They may require specialized care to prevent the person from doing harm to themselves or others. Some people with bipolar disorder may experience what are called hypomanic episodes. Hypomanic episodes involve similar symptoms to manic episodes, but the symptoms are less intense and do not typically disrupt the person’s ability to function to the same extent.",
+      "An estimated 4% of the population experience depression, including 5.7% of adults (4.6% among men and 6.9% among women), and 5.9% of adults aged 70 years and older. Approximately 332 million people in the world have depression\n(1)\n. Depression is about 1.5 times more common among women than among men. Worldwide, more than 10% of pregnant women and women who have just given birth experience depression\n(2)\n. In 2021, an estimated 727 000 people lost their lives to suicide. Suicide is the third leading cause of death in 15–29-year-olds. In high-income countries, only about one third of people with depression receive mental health treatment\n(3)\n. Barriers to effective care include a lack of investment in mental health care, lack of trained health-care providers and social stigma associated with mental disorders. Symptoms and patterns\nDuring a depressive episode, a person experiences a depressed mood (feeling sad, irritable, empty). They may feel a loss of pleasure or interest in activities.",
+      "During a depressive episode, the person experiences depressed mood (feeling\r\n    sad, irritable, empty) or a loss of pleasure or interest in activities, for most of the day, nearly every day. Manic symptoms may include euphoria or irritability, increased activity or energy, and other symptoms such as increased talkativeness,\r\n    racing thoughts, increased self-esteem, decreased need for sleep, distractibility, and impulsive reckless behaviour. People with bipolar disorder are at an increased risk of suicide. Yet effective treatment options exist including psychoeducation,\r\n    reduction of stress and strengthening of social functioning, and medication. Post-Traumatic Stress Disorder (PTSD)\nPTSD may develop following exposure to an extremely threatening or horrific event or series of events.",
+      "Disease: turner syndrome. Common symptoms (present in ≥20% of cases): depression, emotional symptoms.",
+      "There are different patterns of depressive episodes including:\nsingle episode depressive disorder, meaning the person’s first and only episode;\nrecurrent depressive disorder, meaning the person has a history of at least two depressive episodes; and\nbipolar disorder, meaning that depressive episodes alternate with periods of manic symptoms, which include euphoria or irritability, increased activity or energy, and other symptoms such as increased talkativeness, racing thoughts, increased self-esteem, decreased need for sleep, distractibility, and impulsive reckless behaviour. Contributing factors and prevention\nDepression results from a complex interaction of social, psychological, and biological factors. People who have gone through adverse life events (unemployment, bereavement, traumatic events) are more likely to develop depression. Depression can, in turn, lead to more stress and dysfunction and worsen the affected person’s life situation and the depression itself.",
+      "Disease: heart contusion. Common symptoms (present in ≥20% of cases): depression, elbow weakness."
+    ],
+    "answer": "It sounds like you're looking for information about the symptoms of depression. I can certainly share what the context provides on that topic.\n\nA depressive episode is characterized by a depressed mood, which can feel like being sad, irritable, or empty, or a loss of pleasure or interest in activities. These feelings need to last for most of the day, nearly every day, for at least two weeks to be considered a depressive episode.\n\nOther symptoms that may also be present include:\n*   Poor concentration\n*   Feelings of excessive guilt or low self-worth\n*   Hopelessness about the future\n*   Thoughts about dying or suicide\n*   Disrupted sleep\n*   Changes in appetite or weight\n*   Feeling very tired or low in energy\n\nThe context also mentions that common symptoms (present in 20% or more of cases) can include:\n*   Anxiety and nervousness\n*   Insomnia\n*   Emotional symptoms\n\nDepression can impact all aspects of life, including home, work, and school.\n\nIf you or someone you know is experiencing these symptoms, it's really important to speak with a qualified healthcare professional. They can offer personalized support and guidance. Effective treatments are available for mild, moderate, and severe depression.",
+    "judge_scores": {
+      "context_relevance": {
+        "score": 0.9,
+        "reason": "Most of the retrieved chunks directly list various symptoms of depression, such as poor concentration, feelings of guilt, hopelessness, suicidal thoughts, disrupted sleep, changes in appetite/weight, low energy, depressed mood, and loss of pleasure. A few chunks are less relevant, discussing depression as a symptom of other diseases or focusing on prevalence rather than symptoms, but the majority are highly relevant."
+      },
+      "correctness": {
+        "score": 1.0,
+        "reason": "The generated answer accurately includes all symptoms mentioned in the ground truth and provides additional, factually correct details and context about depression symptoms and diagnostic criteria."
+      }
+    }
+  },
+  {
+    "question": "How is tuberculosis transmitted?",
+    "ground_truth": "Tuberculosis is spread person to person through the air when people with active pulmonary TB cough, sneeze, speak, or spit, propelling bacteria into the air.",
+    "expected_sources": [
+      "tuberculosis"
+    ],
+    "retrieved_sources": [
+      "tuberculosis",
+      "tuberculosis",
+      "tuberculosis",
+      "mendeley_diseases",
+      "tuberculosis",
+      "coronavirus_disease_(covid_19)",
+      "tuberculosis",
+      "leprosy",
+      "tuberculosis",
+      "hepatitis_b"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What treatments are available for HIV/AIDS?",
+    "ground_truth": "HIV is treated with antiretroviral therapy (ART), a combination of HIV medicines taken daily. ART does not cure HIV but helps people live longer, healthier lives and reduces transmission risk.",
+    "expected_sources": [
+      "hiv_aids"
+    ],
+    "retrieved_sources": [
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids",
+      "hiv_aids"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 1.0
+    },
+    "context_chunks": [
+      "Newer HIV medicines and short course treatments for opportunistic infections like cryptococcal meningitis are being developed that may change the way people take ART and prevention medicines, including access to long-acting injectable formulations, such as lenacapavir which now has been approved by the FDA for HIV prevention. More information on HIV treatments\nWHO response\nGlobal health sector strategies on HIV, viral hepatitis, and sexually transmitted infections for the period 2022–2030 (\nGHSSs\n) guide strategic responses to achieve the goals of ending AIDS, viral hepatitis B and C, and sexually transmitted infections by 2030. WHO’s Global HIV, Hepatitis and STIs Programmes recommend shared and disease-specific country actions supported by WHO and partners. They consider the epidemiological, technological, and contextual shifts of previous years, foster learning, and create opportunities to leverage innovation and new knowledge.",
+      "Overview\nHuman immunodeficiency virus (HIV) is a virus that attacks the body’s immune system. Acquired immunodeficiency syndrome (AIDS) occurs at the most advanced stage of infection. HIV targets the body’s white blood cells, weakening the immune system. This makes it easier to get sick with diseases like tuberculosis, infections and some cancers. HIV is spread from the body fluids of an infected person, including blood, breast milk, semen and vaginal fluids. It is not spread by kisses, hugs or sharing food. It can also spread from a mother to her baby. HIV can be prevented and treated with antiretroviral therapy (ART). Untreated HIV can progress to AIDS, often after many years. WHO now defines Advanced HIV Disease (AHD) as CD4 cell count less than 200 cells/mm3 or WHO stage 3 or 4 event in adults and adolescents. All children younger than 5 years of age living with HIV are considered to have advanced HIV disease, regardless of clinical or immunological status.",
+      "WHO recommends the following PrEP methods :\noral tenofovir (TDF)-based PrEP\ndapivirine vaginal ring\nlong-acting injectable cabotegravir\nlong-acting injectable lenacapavir. ARVs can also be used to prevent mothers from passing HIV to their children. People taking antiretroviral therapy (ART) and who have no evidence of virus in the blood will not pass HIV to their sexual partners. Access to testing and ART is an important part of preventing HIV. Antiretroviral drugs given to people without HIV can prevent infection\nWhen given before possible exposures to HIV it is called pre-exposure prophylaxis (PrEP) and when given after an exposure it is called post-exposure prophylaxis (PEP). People can use PrEP or PEP when the risk of contracting HIV is high; people should seek advice from a clinician when thinking about using PrEP or PEP. Treatment\nThere is no cure for HIV infection. It is treated with antiretroviral drugs, which stop the virus from replicating in the body.",
+      "Current antiretroviral therapy (ART) does not cure HIV infection but allows a person’s immune system to get stronger. This helps them to fight other infections. Currently, ART must be taken every day for the rest of a person’s life. ART lowers the amount of the virus in a person’s body. This stops symptoms and allows people to live full and healthy lives. People living with HIV who are taking ART and who have no evidence of virus in the blood will not spread the virus to their sexual partners. Pregnant women with HIV should have access to, and take, ART as soon as possible. This protects the health of the mother and will help prevent HIV transmission to the fetus before birth, or through breast milk. Advanced HIV disease remains a persistent problem in the HIV response. WHO is supporting countries to implement the advanced HIV disease package of care to reduce illness and death.",
+      "While testing for adolescents and adults has been made simple and efficient, this is not the case for babies born to HIV-positive mothers. For children less than 18 months of age, rapid antibody testing is not sufficient to identify HIV infection – virological testing must be provided as early as birth or at 6 weeks of age. New technologies are now available to perform this test at the point of care and enable same-day results, which will accelerate appropriate linkage with treatment and care. Prevention\nHIV is a preventable disease. The risk of HIV infection can be reduced by:\nusing a male or female condom during sex\nbeing tested for HIV and other sexually transmitted infections\nbeing circumcised if you are a man\nusing harm reduction services if you inject and use drugs. Pre-exposure prophylaxis (PrEP) is an additional prevention option. It is an antiretroviral medication used by HIV-negative people to reduce the risk of HIV acquisition.",
+      "Key facts\nHIV remains a major global public health issue, having claimed an estimated 44.1 million lives to date. Transmission is ongoing in all countries globally. There were an estimated 40.8 million people living with HIV at the end of 2024, 65% of whom are in the WHO African Region. In 2024, an estimated 630 000 people died from HIV-related causes and an estimated 1.3 million people acquired HIV. There is no cure for HIV infection. However, with access to effective HIV prevention, diagnosis, treatment and care, including for opportunistic infections, HIV infection has become a manageable chronic health condition, enabling people living with HIV to lead long and healthy lives. WHO, the Global Fund and UNAIDS all have global HIV strategies that are aligned with the SDG target 3.3 of ending the HIV epidemic by 2030. In 2024, of all people living with HIV, 87% knew their status, 77% were receiving antiretroviral therapy and 73% had suppressed viral loads.",
+      "Risk factors\nBehaviours and conditions that put people at greater risk of contracting HIV include:\nhaving anal or vaginal sex without a condom;\nhaving another sexually transmitted infection (STI) such as syphilis, herpes, chlamydia, gonorrhoea and bacterial vaginosis;\nharmful use of alcohol or drugs in the context of sexual behaviour;\nsharing contaminated needles, syringes and other injecting equipment, or drug solutions when injecting drugs;\nreceiving unsafe injections, blood transfusions, or tissue transplantation; and\nmedical procedures that involve unsterile cutting or piercing; or accidental needle stick injuries, including among health workers. Diagnosis\nHIV can be diagnosed\nthrough rapid diagnostic tests that provide same-day results. This greatly facilitates early diagnosis and linkage with treatment and prevention. People can also use HIV self-tests to test themselves.",
+      "Signs and symptoms\nThe signs and symptoms of HIV vary depending on the stage of infection. HIV spreads more easily in the first few months after a person is infected, but many are unaware of their status until the later stages. In the first few weeks after being infected people may not experience symptoms. Others may have an influenza-like illness including:\nfever\nheadache\nrash\nsore throat. The infection progressively weakens the immune system. This can cause other signs and symptoms:\nswollen lymph nodes\nweight loss\nfever\ndiarrhoea\ncough. Without treatment, people living with HIV infection can also develop severe illnesses:\ntuberculosis (TB)\ncryptococcal meningitis\nsevere bacterial infections\ncancers such as lymphomas and Kaposi's sarcoma. HIV can make other infections, such as hepatitis C, hepatitis B and mpox, get worse. Transmission\nHIV can be transmitted via the exchange of body fluids from people living with HIV, including blood, breast milk, semen, and vaginal secretions.",
+      "HIV can also be transmitted to a child during pregnancy and delivery. People cannot become infected with HIV through ordinary day-to-day contact such as kissing, hugging, shaking hands, or sharing personal objects, food or water. People living with HIV who are taking ART and have an undetectable viral load will not transmit HIV to their sexual partners. Early access to ART and support to remain on treatment is therefore critical not only to improve the health of people living with HIV but also to prevent HIV transmission.",
+      "However, no single test can provide a full HIV positive diagnosis; confirmatory testing is required, conducted by a qualified and trained health worker or community worker. HIV infection can be detected with great accuracy using WHO prequalified tests within a nationally approved testing strategy and algorithm. Most widely used HIV diagnostic tests detect antibodies produced by a person as part of their immune response to fight HIV. In most cases, people develop antibodies to HIV within 28 days of infection. During this time, people are in the so-called “window period” when they have low levels of antibodies which cannot be detected by many rapid tests, but they may still transmit HIV to others. People who have had a recent high-risk exposure and test negative can have a further test after 28 days. Following a positive diagnosis, people should be retested before they are enrolled in treatment and care to rule out any potential testing or reporting error."
+    ],
+    "answer": "It's understandable to be curious about the treatments available for HIV/AIDS.\n\nBased on the information provided, here's what we know about managing HIV infection:\n\n*   **No Cure, but Effective Treatment:** There is currently no cure for HIV infection. However, it is treated with antiretroviral drugs, which collectively form **antiretroviral therapy (ART)**. With access to effective prevention, diagnosis, treatment, and care, HIV infection has become a manageable chronic health condition, allowing people living with HIV to lead long and healthy lives.\n*   **How ART Works:**\n    *   ART stops the virus from replicating in the body.\n    *   This allows a person's immune system to get stronger, helping them to fight other infections.\n    *   ART lowers the amount of the virus in a person’s body (viral load), which stops symptoms.\n    *   People living with HIV who are taking ART and have no evidence of the virus in their blood (an undetectable viral load) will not pass HIV to their sexual partners.\n*   **Taking ART:** Current ART must be taken every day for the rest of a person's life. Newer HIV medicines and short-course treatments for opportunistic infections like cryptococcal meningitis are being developed that may change the way people take ART.\n*   **Treating Opportunistic Infections:** ART helps the immune system, but the context also mentions that short-course treatments for opportunistic infections (like tuberculosis, cryptococcal meningitis, severe bacterial infections, and certain cancers) are an important part of care, especially for those with advanced HIV disease. The WHO supports countries in implementing a package of care for advanced HIV disease to reduce illness and death.\n*   **Prevention with Medications:** Antiretroviral drugs can also be used to prevent HIV infection in people who are HIV-negative. This is called **pre-exposure prophylaxis (PrEP)** when taken before potential exposure, or **post-exposure prophylaxis (PEP)** when taken after a potential exposure. These are important for prevention but are different from treatment for an established HIV infection.\n\nIf you have concerns about HIV or your health, it is always best to speak with a qualified healthcare professional. They can provide personalized advice and guidance.",
+    "judge_scores": {
+      "context_relevance": {
+        "score": 0.9,
+        "reason": "The majority of the retrieved context chunks are highly relevant, directly discussing antiretroviral therapy (ART), antiretroviral drugs, and specific medications like lenacapavir as treatments for HIV/AIDS. They explain what ART does, how it's taken, and its role in managing the condition and preventing transmission. Some chunks also mention PrEP and PEP, which are prevention methods using antiretroviral drugs. A few chunks discuss diagnosis, symptoms, or risk factors, which are less directly about treatment but do not significantly detract from the overall relevance."
+      },
+      "correctness": {
+        "score": 1.0,
+        "reason": "The generated answer is factually correct and consistent with the ground truth. It covers all points mentioned in the ground truth and provides additional, accurate, and relevant details about HIV treatment and prevention."
+      }
+    }
+  },
+  {
+    "question": "What is the recommended diet for someone with cardiovascular disease?",
+    "ground_truth": "A heart-healthy diet includes fruits, vegetables, whole grains, lean proteins, and healthy fats, while limiting salt, sugar, saturated fat, and trans fat intake.",
+    "expected_sources": [
+      "cardiovascular_diseases_(cvds)"
+    ],
+    "retrieved_sources": [
+      "trans_fat",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "trans_fat",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "cardiovascular_diseases_(cvds)",
+      "sodium_reduction",
+      "healthy_diet"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of cholera?",
+    "ground_truth": "Cholera can cause profuse watery diarrhoea (rice-water stools), vomiting, and rapid dehydration. Severe cases can lead to death within hours if untreated.",
+    "expected_sources": [
+      "cholera"
+    ],
+    "retrieved_sources": [
+      "cholera",
+      "cholera",
+      "cholera",
+      "food_safety",
+      "cholera",
+      "malaria",
+      "hepatitis_a",
+      "hepatitis_c",
+      "yellow_fever",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    },
+    "context_chunks": [
+      "Most people with cholera have mild or moderate diarrhoea and can be treated with oral rehydration solution (ORS). However, the disease can progress rapidly, so starting treatment quickly is vital to save lives. Patients with severe disease need intravenous fluids, ORS and antibiotics. Countries need strong epidemiological and laboratory surveillance to swiftly detect and monitor outbreaks and guide responses. Symptoms\nCholera can cause severe acute watery diarrhoea, which can be fatal within hours if untreated. Most people infected with\nV. cholerae\ndo not develop symptoms but can spread the bacteria through their faeces for 1–10 days. Symptoms appear 12 hours to 5 days after infection\n(2)\n. Most people with the disease have mild or moderate symptoms. A minority of patients develop severe acute watery diarrhoea and life-threatening dehydration. History\nCholera has been known for many centuries. The first pandemic, or global epidemic, was recorded in the 19th century.",
+      "Key facts\nCholera is a severe diarrheal disease that can be fatal within hours if not treated. Quick access to treatment is crucial. Researchers estimate that there are 1.3 to 4.0 million cases and 21 000 to 143 000 deaths from cholera worldwide each year\n(1)\n. Most people with cholera have no or mild symptoms and can be treated with oral rehydration solution. Severe cases need intravenous fluids, oral rehydration solution and antibiotics. Population’s access to safe water, basic sanitation and hygiene (WASH) is essential to prevent cholera. The oral cholera vaccine (OCV) can help prevent and control cholera. Overview\nCholera is an acute diarrheal infection caused by consuming food or water contaminated with the bacterium\nVibrio cholerae\n. It is a global public health threat and indicates inequity and lack of social and economic development. Access to safe water, basic sanitation and hygiene is essential to prevent cholera and other waterborne diseases.",
+      "Treatment\nCholera is an easily treatable disease. Most people can be treated successfully with prompt ORS administration. Severely dehydrated patients are at risk of dying from dehydration and need rapid intravenous fluids. They also receive oral rehydration solution and antibiotics. Patients with underlying conditions or comorbidities may require additional care in specific treatment centres. The case fatality rate in treatment centres should remain below 1%. Community access to ORS is essential during a cholera outbreak. Mass administration of antibiotics to prevent cholera (chemoprophylaxis) is not recommended, as it has no proven effect on the spread of cholera and may contribute to antimicrobial resistance. Community engagement\nCommunity engagement involves collaborating with people and communities to develop and implement programmes designed to address their needs.",
+      "Symptoms may include abdominal pain, vomiting and profuse watery diarrhoea, which quickly lead to severe dehydration and possibly death. Raw vegetablesand various types of raw or undercooked seafood have been implicated in cholera outbreaks. Antimicrobials, such as antibiotics, are essential to treat infections caused by bacteria, including foodborne pathogens. However, their overuse and misuse in veterinary and human medicine has been linked to the emergence and spread of resistant bacteria, rendering the treatment of infectious diseases ineffective in animals and humans. Viruses\nSome viruses can be transmitted by food consumption. Norovirus is a common cause of foodborne infections that is characterized by nausea, explosive vomiting, watery diarrhoea and abdominal pain. Hepatitis A virus can also be transmitted by food and can cause long-lasting liver disease and typically spreads through raw or undercooked seafood or contaminated raw produce.",
+      "It aims to reduce cholera deaths by 90% and eliminate cholera in as many as 20 countries by 2030 through:\nearly detection and containment of outbreaks through rapid multisectoral response;\na focus on cholera priority areas for multisectoral interventions (PAMIs) – the relatively small areas most heavily affected by cholera; and\nan effective coordination mechanism for technical support, advocacy, resource mobilization, and partnership at local and global levels. The strategy was endorsed at the Seventy-first World Health Assembly in 2018. More about the strategy\nWHO response\nThe WHO cholera programme works to increase awareness of cholera and advocate for its control globally.",
+      "Symptoms\nThe most common early symptoms of malaria are fever, headache and chills. Symptoms usually start within 10–15 days of getting bitten by an infected mosquito. Symptoms may be mild for some people, especially for those who have had a malaria infection before. Because some malaria symptoms are not specific, getting tested early is important. Some types of malaria can cause severe illness and death. Infants, children under 5 years, pregnant women, travellers and people with HIV or AIDS are at higher risk. Severe symptoms include:\nextreme tiredness and fatigue\nimpaired consciousness\nmultiple convulsions\ndifficulty breathing\ndark or bloody urine\njaundice (yellowing of the eyes and skin)\nabnormal bleeding. People with severe symptoms should get emergency care right away. Getting treatment early for mild malaria can stop the infection from becoming severe. Malaria infection during pregnancy can also cause premature delivery or delivery of a baby with low birth weight.",
+      "Symptoms\nThe incubation period of hepatitis A is usually 14–28 days. Symptoms of hepatitis A range from mild to severe and can include fever, malaise, loss of appetite, diarrhoea, nausea, abdominal discomfort, dark-coloured urine and jaundice (a yellowing of the eyes and skin). Not everyone who is infected will have all the symptoms. Adults have signs and symptoms of illness more often than children. The severity of disease and fatal outcomes are higher in older age groups. Infected children under 6 years of age do not usually experience noticeable symptoms, and only 10% develop jaundice. Hepatitis A sometimes relapses, meaning the person who just recovered falls sick again with another acute episode. This is normally followed by recovery. Who is at risk? Anyone who has not been vaccinated or previously infected can get infected with the hepatitis A virus. In areas where the virus is widespread (high endemicity), most hepatitis A infections occur during early childhood.",
+      "Symptoms\nSymptomatic acute HCV infection is uncommon; if is occurs, most people do not have symptoms in the first weeks after infection. It can take between two weeks and six months to have symptoms. When symptoms do appear, they may include:\nfever\nfeeling very tired\nloss of appetite\nnausea and vomiting\nabdominal pain\ndark urine\npale faeces\njoint pain\njaundice (yellowing of the skin or eyes). Testing and diagnosis\nBecause new HCV infections are usually asymptomatic, few people are diagnosed when the infection is recent. In those people who develop chronic HCV infection, the infection is often undiagnosed because it remains asymptomatic until decades after infection when symptoms develop secondary to serious liver damage. HCV infection is diagnosed in 2 steps:\nTesting for anti-HCV antibodies with a serological test identifies people who have been infected with the virus.",
+      "Symptoms\nThe initial symptoms of yellow fever are fever, headache, general body aches, nausea, vomiting and weakness. These symptoms typically disappear within 3–4 days. About 15% of people infected with yellow fever will have severe infection. Symptoms are the recurrence of high fever, jaundice (yellowing of the skin and eyes), vomiting, bleeding (of the mouth, nose, eyes and stomach), organ failure and shock. About 50% of patients in this phase die within 7–10 days. The incubation period for yellow fever is 3–6 days. Treatment\nThere is no specific anti-viral treatment. Clinical care remains mostly supportive, with the 2025 clinical management guidelines providing a protocolized approach. The two anti-virals that can be given , sofosbuvir and monoclonal antibody TY014, are recommended exclusively in research settings(3). Supportive care includes rest and hydration; management of liver and kidney failure, and fever; and antibiotics for secondary bacterial infections.",
+      "Disease: flu. Common symptoms (present in ≥20% of cases): ache all over, chills, coryza, cough, diarrhea, fever, headache, nausea, sore throat, vomiting."
+    ],
+    "answer": "It sounds like you're looking for information about the symptoms of cholera. I can certainly help you with that based on the information provided.\n\nCholera can cause a range of symptoms, and it's important to know that most people infected with the bacteria do not develop symptoms or have only mild ones.\n\nHowever, when symptoms do appear, which is typically 12 hours to 5 days after infection, they can include:\n\n*   **Severe acute watery diarrhoea**\n*   **Abdominal pain**\n*   **Vomiting**\n*   **Profuse watery diarrhoea**, which can quickly lead to severe dehydration.\n\nA minority of individuals may develop severe acute watery diarrhoea and life-threatening dehydration. It's crucial to seek prompt treatment if cholera is suspected, as the disease can progress rapidly.\n\nPlease remember, this information is for general knowledge and is not a substitute for professional medical advice. If you or someone you know is experiencing these symptoms, it's always best to speak with a qualified healthcare professional right away for proper evaluation and care.",
+    "judge_scores": {
+      "context_relevance": {
+        "score": 0.4,
+        "reason": "While some chunks (1, 2, 4) directly and accurately describe the symptoms of cholera, a significant portion of the retrieved context (chunks 3, 5, 6, 7, 8, 9, 10) is irrelevant, discussing treatment, prevention strategies, or symptoms of other diseases like malaria, hepatitis, yellow fever, and flu. The presence of many irrelevant chunks lowers the overall relevance score of the entire context."
+      },
+      "correctness": {
+        "score": 1.0,
+        "reason": "The generated answer is factually correct and consistent with the ground truth. It covers all the key symptoms (profuse watery diarrhoea, vomiting, rapid/severe dehydration) and the rapid progression/life-threatening nature of the disease. It also adds accurate, relevant context without contradicting the ground truth."
+      }
+    }
+  },
+  {
+    "question": "How is dengue fever transmitted?",
+    "ground_truth": "Dengue is transmitted through the bites of infected female Aedes mosquitoes, primarily Aedes aegypti. The mosquitoes become infected when they bite a person with dengue virus in their blood.",
+    "expected_sources": [
+      "dengue_and_severe_dengue"
+    ],
+    "retrieved_sources": [
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "chikungunya",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue",
+      "dengue_and_severe_dengue"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What is COPD and what causes it?",
+    "ground_truth": "Chronic obstructive pulmonary disease (COPD) is a chronic lung disease that causes obstructed airflow. The main cause is tobacco smoking, with other risk factors including air pollution and occupational dusts.",
+    "expected_sources": [
+      "chronic_obstructive_pulmonary_disease_(copd)"
+    ],
+    "retrieved_sources": [
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "mendeley_diseases",
+      "chronic_obstructive_pulmonary_disease_(copd)",
+      "asthma",
+      "household_air_pollution_and_health"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    },
+    "context_chunks": [
+      "Key facts\nChronic obstructive pulmonary disease (COPD) is the fourth leading cause of death worldwide, causing 3.5 million deaths in 2021, approximately 5% of all global deaths. Nearly 90% of COPD deaths in those under 70 years of age occur in low- and middle-income countries (LMIC). COPD is the eighth leading cause of poor health worldwide (measured by disability-adjusted life years)\nTobacco smoking accounts for over 70% of COPD cases in high-income countries. In LMIC tobacco smoking accounts for 30–40% of COPD cases, and household air pollution is a major risk factor. Overview\nChronic obstructive pulmonary disease (COPD) is a common lung disease causing restricted airflow and breathing problems. It is sometimes called emphysema or chronic bronchitis. In people with COPD, the lungs can get damaged or clogged with phlegm. Symptoms include cough, sometimes with phlegm, difficulty breathing, wheezing and tiredness. Smoking and air pollution are the most common causes of COPD.",
+      "COPD develops gradually over time, often resulting from a combination of risk factors:\ntobacco exposure from active smoking or passive exposure to second-hand smoke;\noccupational exposure to dusts, fumes or chemicals;\nindoor air pollution: biomass fuel (wood, animal dung, crop residue) or coal is frequently used for cooking and heating in low- and middle-income countries with high levels of smoke exposure;\nearly life events such as poor growth in utero, prematurity, and frequent or severe respiratory infections in childhood that prevent maximum lung growth;\nasthma in childhood; and\na rare genetic condition called alpha-1 antitrypsin deficiency, which can cause COPD at a young age. COPD should be suspected if a person has typical symptoms, and the diagnosis confirmed by a breathing test called spirometry, which measures how the lungs are working. In low- and middle-income countries, spirometry is often not available and so the diagnosis may be missed.",
+      "There may be a considerable financial burden due to limitation of workplace and home productivity, and costs of medical treatment. COPD is sometimes called emphysema or chronic bronchitis. Emphysema usually refers to destruction of the tiny air sacs at the end of the airways in the lungs. Chronic bronchitis refers to a chronic cough with the production of phlegm resulting from inflammation in the airways. COPD and asthma share common symptoms (cough, wheeze and difficulty breathing) and people may have both conditions. Causes\nSeveral processes can cause the airways to become narrow and lead to COPD. There may be destruction of parts of the lung, mucus blocking the airways, and inflammation and swelling of the airway lining.",
+      "People with COPD are at higher risk of other health problems. COPD is not curable but symptoms can improve if one avoids smoking and exposure to air pollution and gets vaccines to prevent infections. It can also be treated with medicines, oxygen and pulmonary rehabilitation. Symptoms\nThe most common symptoms of COPD are difficulty breathing, chronic cough (sometimes with phlegm) and feeling tired. COPD symptoms can get worse quickly. These are called flare-ups. These usually last for a few days and often require additional medicine. People with COPD also have a higher risk for other health problems. These include:\nlung infections, like the flu or pneumonia\nlung cancer\nheart problems\nweak muscles and brittle bones\ndepression and anxiety. Common symptoms of COPD develop from mid-life onwards. As COPD progresses, people find it more difficult to carry out their normal daily activities, often due to breathlessness.",
+      "Treatment\nCOPD isn’t curable, but it can get better by not smoking, avoiding air pollution and getting vaccines. It can be treated with medicines, oxygen and pulmonary rehabilitation. There are several treatments available for COPD. Inhaled medicines that open and reduce swelling in the airways are the main treatments. Bronchodilator inhalers are the most important medicines for treating COPD. They relax the airways to keep them open. Short-acting bronchodilators start to work in seconds and can last for 4–6 hours. These are often used during flare-ups. Long-acting bronchodilators take longer to start working but last longer. These are taken daily and can be combined with inhaled steroids. Other treatments may also be used:\nSteroid pills and antibiotics are often used to treat flare-ups. Oxygen is used for people who have had COPD for a long time or have severe COPD. Pulmonary rehabilitation teaches exercises to improve your breathing and ability to exercise.",
+      "Even if you have been smoking for many years, quitting can still help. Avoid second-hand smoke or smoke from indoor cooking fires. Stay physically active. Protect yourself from lung infections:\nGet a flu vaccine every year. Get the pneumonia vaccine. Get all available COVID-19 vaccines and make sure you have had the latest boosters. People living with COPD must be given information about their condition, treatment and self-care to help them to stay as active and healthy as possible. WHO response\nCOPD is included in the WHO Global Action Plan for the Prevention and Control of Noncommunicable Diseases (NCDs) and the United Nations 2030 Agenda for Sustainable Development. WHO is taking action to extend diagnosis of and treatment for COPD in a number of ways. The WHO Package of Essential Noncommunicable Disease Interventions (PEN) was developed to help improve NCD management in primary health care in low-resource settings.",
+      "Disease: chronic obstructive pulmonary disease (copd). Common symptoms (present in ≥20% of cases): chest tightness, congestion in chest, coryza, cough, coughing up sputum, fever, nasal congestion, sharp chest pain, shortness of breath, sore throat, wheezing.",
+      "Surgery may improve symptoms for some people with severe COPD. Some inhalers open the airways and may be given regularly to prevent or reduce symptoms, and to relieve symptoms during acute flare-ups. Inhaled corticosteroids are sometimes given in combination with these to reduce inflammation in the lungs. Inhalers must be taken using the correct technique, and in some cases with a spacer device to help deliver the medication into the airways more effectively. Access to inhalers is limited in many low- and middle-income countries; in 2021 salbutamol inhalers were generally available in public primary health care facilities in half of low- and low-middle income countries. Flare-ups are often caused by a respiratory infection, and people may be given an antibiotic or steroid tablets in addition to inhaled or nebulised treatment as needed. Living with COPD\nLifestyle changes can help improve symptoms of COPD. Quit smoking or vaping. This is the most important thing to do.",
+      "Overview\nAsthma is a chronic lung disease affecting people of all ages. It is caused by inflammation and muscle tightening around the airways, which makes it harder to breathe. Symptoms can include coughing, wheezing, shortness of breath and chest tightness. These symptoms can be mild or severe and can come and go over time. Although asthma can be a serious condition, it can be managed with the right treatment. People with symptoms of asthma should speak to a health professional. Impact\nAsthma is often under-diagnosed and under-treated, particularly in low- and middle-income countries. People with under-treated asthma can suffer sleep disturbance, tiredness during the day, and poor concentration. Asthma sufferers and their families may miss school and work, with financial impact on the family and wider community. If symptoms are severe, people with asthma may need to receive emergency health care and they may be admitted to hospital for treatment and monitoring.",
+      "Household air pollution is a risk for acute lower respiratory infections in adults and contributes to 22% of all adult deaths due to pneumonia;\n19% are from\nchronic obstructive pulmonary disease (COPD):\n23% of all deaths from chronic obstructive pulmonary disease (COPD) in adults in low- and middle-income countries are due to exposure to household air pollution; and\n6% are from\nlung cancer\n: approximately 11% of lung cancer deaths in adults are attributable to exposure to carcinogens from household air pollution caused by using kerosene or solid fuels like wood, charcoal or coal for household energy needs. Household air pollution accounted for the loss of an estimated 86 million healthy life years in 2019, with the largest burden falling on women living in low- and middle-income countries. Almost half of all deaths due to lower respiratory infection among children under 5 years of age are caused by inhaling particulate matter (soot) from household air pollution."
+    ],
+    "answer": "Chronic obstructive pulmonary disease (COPD) is a common lung condition that causes restricted airflow and breathing difficulties. It is sometimes referred to as emphysema or chronic bronchitis. In people with COPD, the lungs can become damaged or clogged with phlegm, which makes breathing challenging.\n\nThe most common symptoms of COPD include:\n*   Difficulty breathing\n*   Chronic cough, sometimes with phlegm\n*   Wheezing\n*   Tiredness\n*   Chest tightness and congestion (as listed in common symptoms)\n\nCOPD typically develops gradually over time, often due to a combination of risk factors. The main causes and risk factors include:\n*   **Tobacco exposure:** This includes active smoking and passive exposure to second-hand smoke. In high-income countries, tobacco smoking accounts for over 70% of cases.\n*   **Air pollution:** This is a significant factor, especially household air pollution from biomass fuels (like wood, animal dung, or coal) used for cooking and heating, particularly in low- and middle-income countries.\n*   **Occupational exposure:** Breathing in dusts, fumes, or chemicals in the workplace can also contribute.\n*   **Early life events:** Factors such as poor growth in the womb, prematurity, or frequent and severe respiratory infections during childhood that prevent full lung development.\n*   **Childhood asthma:** Having asthma in childhood is another risk factor.\n*   **Genetic condition:** A rare genetic condition called alpha-1 antitrypsin deficiency can also cause COPD, sometimes at a younger age.\n\nIf you are experiencing symptoms like these, it's always a good idea to speak with a qualified healthcare professional. They can properly evaluate your condition and provide personalized advice.",
+    "judge_scores": {
+      "context_relevance": {
+        "score": 1,
+        "reason": "The context provides a clear definition of COPD, explaining what it is and what it is sometimes called. It also extensively details various causes and risk factors for COPD, directly addressing both parts of the question."
+      },
+      "correctness": {
+        "score": 1.0,
+        "reason": "The generated answer is factually correct and consistent with the ground truth. It accurately covers all points from the ground truth and provides additional, relevant, and correct information about COPD, its symptoms, and other risk factors."
+      }
+    }
+  },
+  {
+    "question": "What are the warning signs of a stroke?",
+    "ground_truth": "Warning signs of stroke include sudden numbness or weakness of the face, arm, or leg (especially on one side), confusion, trouble speaking, vision problems, difficulty walking, and severe headache.",
+    "expected_sources": [
+      "stroke"
+    ],
+    "retrieved_sources": [
+      "cardiovascular_diseases_(cvds)",
+      "mendeley_diseases",
+      "stroke",
+      "stroke",
+      "stroke",
+      "mendeley_diseases",
+      "stroke",
+      "stroke",
+      "mendeley_diseases",
+      "stroke"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.3333333333333333,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "How is hepatitis B transmitted?",
+    "ground_truth": "Hepatitis B is transmitted through contact with infected blood and body fluids, including from mother to child at birth, through unsafe injections, sexual contact, and needle sharing.",
+    "expected_sources": [
+      "hepatitis_b"
+    ],
+    "retrieved_sources": [
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_d",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_b",
+      "hepatitis_c",
+      "hepatitis_b"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the symptoms of measles?",
+    "ground_truth": "Measles symptoms include high fever, cough, runny nose, red watery eyes, and a rash of flat red spots that appears on the face and spreads to the rest of the body.",
+    "expected_sources": [
+      "measles"
+    ],
+    "retrieved_sources": [
+      "measles",
+      "measles",
+      "measles",
+      "measles",
+      "measles",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "rubella",
+      "mendeley_diseases",
+      "mpox"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "How can obesity be prevented?",
+    "ground_truth": "Obesity can be prevented by limiting energy intake from fats and sugars, increasing consumption of fruits, vegetables, and whole grains, and engaging in regular physical activity.",
+    "expected_sources": [
+      "obesity_and_overweight"
+    ],
+    "retrieved_sources": [
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "obesity_and_overweight",
+      "diabetes",
+      "obesity_and_overweight",
+      "hypertension"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What is epilepsy and how is it treated?",
+    "ground_truth": "Epilepsy is a chronic brain disorder characterized by recurrent seizures. It can be treated with anti-seizure medications, and up to 70% of people with epilepsy could become seizure-free with appropriate treatment.",
+    "expected_sources": [
+      "epilepsy"
+    ],
+    "retrieved_sources": [
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "mendeley_diseases",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy",
+      "epilepsy"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What causes rabies and how can it be prevented?",
+    "ground_truth": "Rabies is caused by a virus transmitted through the saliva of infected animals, usually via bites. It can be prevented through vaccination of dogs and post-exposure prophylaxis after animal bites.",
+    "expected_sources": [
+      "rabies"
+    ],
+    "retrieved_sources": [
+      "rabies",
+      "rabies",
+      "rabies",
+      "rabies",
+      "animal_bites",
+      "rabies",
+      "rabies",
+      "rabies",
+      "rabies",
+      "rabies"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What is dementia and what are its early signs?",
+    "ground_truth": "Dementia is a syndrome involving deterioration of memory, thinking, behaviour, and the ability to perform everyday activities. Early signs include forgetfulness, losing track of time, and becoming lost in familiar places.",
+    "expected_sources": [
+      "dementia"
+    ],
+    "retrieved_sources": [
+      "dementia",
+      "dementia",
+      "dementia",
+      "dementia",
+      "mendeley_diseases",
+      "dementia",
+      "dementia",
+      "dementia",
+      "dementia",
+      "dementia"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "How does influenza spread?",
+    "ground_truth": "Seasonal influenza spreads easily through respiratory droplets and small particles when infected people cough, sneeze, or talk. It can also spread by touching contaminated surfaces.",
+    "expected_sources": [
+      "influenza_(seasonal)"
+    ],
+    "retrieved_sources": [
+      "influenza_(seasonal)",
+      "influenza_(seasonal)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(seasonal)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(avian_and_other_zoonotic)",
+      "influenza_(seasonal)",
+      "influenza_(seasonal)",
+      "coronavirus_disease_(covid_19)"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What are the health effects of lead poisoning?",
+    "ground_truth": "Lead poisoning can affect nearly every organ system. In children it causes developmental delays, learning difficulties, and behavioural problems. In adults it can cause hypertension, kidney damage, and reproductive problems.",
+    "expected_sources": [
+      "lead_poisoning_and_health"
+    ],
+    "retrieved_sources": [
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "mercury_and_health",
+      "lead_poisoning_and_health",
+      "lead_poisoning_and_health",
+      "electronic_waste_(e_waste)",
+      "arsenic",
+      "lead_poisoning_and_health"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "What is cervical cancer and how can it be prevented?",
+    "ground_truth": "Cervical cancer develops in the cervix and is almost always caused by human papillomavirus (HPV) infection. It can be prevented through HPV vaccination, regular screening, and treatment of pre-cancerous lesions.",
+    "expected_sources": [
+      "cervical_cancer"
+    ],
+    "retrieved_sources": [
+      "human_papilloma_virus_and_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
+      "cervical_cancer",
+      "human_papilloma_virus_and_cancer",
+      "cervical_cancer",
+      "human_papilloma_virus_and_cancer",
+      "cervical_cancer",
+      "human_papilloma_virus_and_cancer"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of hepatitis C?",
+    "ground_truth": "Most people with hepatitis C are asymptomatic for years. When symptoms appear they may include fever, fatigue, decreased appetite, nausea, abdominal pain, dark urine, and jaundice.",
+    "expected_sources": [
+      "hepatitis_c"
+    ],
+    "retrieved_sources": [
+      "hepatitis_c",
+      "hepatitis_c",
+      "hepatitis_e",
+      "hepatitis_a",
+      "hepatitis_c",
+      "hepatitis_c",
+      "hepatitis_d",
+      "yellow_fever",
+      "hepatitis_b",
+      "hepatitis_c"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "How is meningitis treated?",
+    "ground_truth": "Bacterial meningitis is treated with antibiotics, which should be started as soon as possible. Supportive care and corticosteroids may also be used. Viral meningitis is usually self-limiting.",
+    "expected_sources": [
+      "meningitis"
+    ],
+    "retrieved_sources": [
+      "meningitis",
+      "meningitis",
+      "meningitis",
+      "meningitis",
+      "meningitis",
+      "mendeley_diseases",
+      "meningitis",
+      "listeriosis",
+      "meningitis",
+      "meningitis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What is schizophrenia?",
+    "ground_truth": "Schizophrenia is a severe mental disorder affecting thinking, perception, emotions, language, sense of self, and behaviour. Common symptoms include hallucinations, delusions, and disorganized thinking.",
+    "expected_sources": [
+      "schizophrenia"
+    ],
+    "retrieved_sources": [
+      "schizophrenia",
+      "schizophrenia",
+      "schizophrenia",
+      "schizophrenia",
+      "mendeley_diseases",
+      "schizophrenia",
+      "schizophrenia",
+      "mental_disorders",
+      "schizophrenia",
+      "schizophrenia"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the complications of diabetes?",
+    "ground_truth": "Diabetes complications include cardiovascular disease, nerve damage (neuropathy), kidney damage (nephropathy), eye damage (retinopathy), foot damage, and increased risk of infections.",
+    "expected_sources": [
+      "diabetes"
+    ],
+    "retrieved_sources": [
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "diabetes",
+      "syphilis",
+      "mendeley_diseases",
+      "diabetes"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How is tetanus prevented?",
+    "ground_truth": "Tetanus is prevented through vaccination with tetanus toxoid-containing vaccines. Proper wound care and cleaning also reduces the risk of tetanus infection.",
+    "expected_sources": [
+      "tetanus"
+    ],
+    "retrieved_sources": [
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "tetanus",
+      "diphtheria",
+      "tetanus",
+      "tetanus",
+      "botulism"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "What are the effects of air pollution on health?",
+    "ground_truth": "Air pollution increases the risk of respiratory infections, heart disease, stroke, lung cancer, and COPD. Fine particulate matter (PM2.5) penetrates deep into the lungs and bloodstream.",
+    "expected_sources": [
+      "ambient_(outdoor)_air_quality_and_health"
+    ],
+    "retrieved_sources": [
+      "ambient_(outdoor)_air_quality_and_health",
+      "sand_and_dust_storms",
+      "household_air_pollution_and_health",
+      "household_air_pollution_and_health",
+      "household_air_pollution_and_health",
+      "ambient_(outdoor)_air_quality_and_health",
+      "ambient_(outdoor)_air_quality_and_health",
+      "ambient_(outdoor)_air_quality_and_health",
+      "el_nino_southern_oscillation_(enso)",
+      "ambient_(outdoor)_air_quality_and_health"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is bipolar disorder?",
+    "ground_truth": "Bipolar disorder is a mental health condition characterized by extreme mood swings including emotional highs (mania or hypomania) and lows (depression). Episodes can affect sleep, energy, activity, and judgement.",
+    "expected_sources": [
+      "bipolar_disorder"
+    ],
+    "retrieved_sources": [
+      "bipolar_disorder",
+      "bipolar_disorder",
+      "mental_disorders",
+      "mental_disorders",
+      "bipolar_disorder",
+      "depression",
+      "bipolar_disorder",
+      "bipolar_disorder",
+      "bipolar_disorder",
+      "bipolar_disorder"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "How can drowning be prevented?",
+    "ground_truth": "Drowning prevention strategies include installing barriers to control access to water, teaching swimming and water safety, providing safe places for children, and training bystanders in rescue and resuscitation.",
+    "expected_sources": [
+      "drowning"
+    ],
+    "retrieved_sources": [
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning",
+      "drowning"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 1.0
+    }
+  },
+  {
+    "question": "What are the risk factors for breast cancer?",
+    "ground_truth": "Risk factors for breast cancer include increasing age, family history, genetic mutations (BRCA1/BRCA2), early menarche, late menopause, obesity, alcohol consumption, and hormone replacement therapy.",
+    "expected_sources": [
+      "breast_cancer"
+    ],
+    "retrieved_sources": [
+      "breast_cancer",
+      "breast_cancer",
+      "breast_cancer",
+      "breast_cancer",
+      "breast_cancer",
+      "mendeley_diseases",
+      "cancer",
+      "cancer",
+      "colorectal_cancer",
+      "lung_cancer"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is sepsis and what causes it?",
+    "ground_truth": "Sepsis is a life-threatening organ dysfunction caused by a dysregulated host response to infection. It can be caused by bacterial, viral, fungal, or parasitic infections and requires urgent medical treatment.",
+    "expected_sources": [
+      "sepsis"
+    ],
+    "retrieved_sources": [
+      "sepsis",
+      "sepsis",
+      "sepsis",
+      "sepsis",
+      "mendeley_diseases",
+      "sepsis",
+      "sepsis",
+      "sepsis",
+      "patient_safety",
+      "sepsis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How is polio transmitted?",
+    "ground_truth": "Polio (poliomyelitis) is transmitted person to person mainly through the faecal-oral route or, less frequently, through contaminated water or food. The virus multiplies in the intestine.",
+    "expected_sources": [
+      "poliomyelitis"
+    ],
+    "retrieved_sources": [
+      "poliomyelitis",
+      "poliomyelitis",
+      "poliomyelitis",
+      "poliomyelitis",
+      "poliomyelitis",
+      "hepatitis_a",
+      "lassa_fever",
+      "hepatitis_b",
+      "poliomyelitis",
+      "oropouche_virus_disease"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of Parkinson disease?",
+    "ground_truth": "Parkinson disease symptoms include tremor, slowness of movement (bradykinesia), limb rigidity, and gait and balance problems. Non-motor symptoms include cognitive impairment, sleep disorders, and depression.",
+    "expected_sources": [
+      "parkinson_disease"
+    ],
+    "retrieved_sources": [
+      "mendeley_diseases",
+      "parkinson_disease",
+      "parkinson_disease",
+      "parkinson_disease",
+      "parkinson_disease",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "mendeley_diseases",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "What is endometriosis?",
+    "ground_truth": "Endometriosis is a condition where tissue similar to the uterine lining grows outside the uterus. It causes chronic pelvic pain, painful periods, pain during intercourse, and can lead to infertility.",
+    "expected_sources": [
+      "endometriosis"
+    ],
+    "retrieved_sources": [
+      "endometriosis",
+      "endometriosis",
+      "mendeley_diseases",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis",
+      "endometriosis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "How do snakebites affect the body?",
+    "ground_truth": "Venomous snakebites can cause paralysis, bleeding disorders, kidney failure, tissue destruction, and death. Effects depend on the species and amount of venom injected.",
+    "expected_sources": [
+      "snakebite_envenoming"
+    ],
+    "retrieved_sources": [
+      "snakebite_envenoming",
+      "animal_bites",
+      "animal_bites",
+      "animal_bites",
+      "snakebite_envenoming",
+      "mendeley_diseases",
+      "snakebite_envenoming",
+      "snakebite_envenoming",
+      "snakebite_envenoming",
+      "animal_bites"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is leishmaniasis?",
+    "ground_truth": "Leishmaniasis is a parasitic disease transmitted by the bite of infected sandflies. The three main forms are visceral (kala-azar), cutaneous, and mucocutaneous leishmaniasis.",
+    "expected_sources": [
+      "leishmaniasis"
+    ],
+    "retrieved_sources": [
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leishmaniasis",
+      "leprosy"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What causes food poisoning from salmonella?",
+    "ground_truth": "Salmonella food poisoning is caused by eating food contaminated with Salmonella bacteria, commonly found in raw eggs, undercooked poultry, meat, and unpasteurized milk.",
+    "expected_sources": [
+      "salmonella_(non_typhoidal)"
+    ],
+    "retrieved_sources": [
+      "salmonella_(non_typhoidal)",
+      "salmonella_(non_typhoidal)",
+      "salmonella_(non_typhoidal)",
+      "salmonella_(non_typhoidal)",
+      "food_safety",
+      "salmonella_(non_typhoidal)",
+      "food_safety",
+      "typhoid",
+      "typhoid",
+      "listeriosis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.5
+    }
+  },
+  {
+    "question": "What is the treatment for leprosy?",
+    "ground_truth": "Leprosy is treated with multidrug therapy (MDT), a combination of dapsone, rifampicin, and clofazimine. MDT cures the disease and prevents disability when started early.",
+    "expected_sources": [
+      "leprosy"
+    ],
+    "retrieved_sources": [
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leprosy",
+      "leishmaniasis",
+      "buruli_ulcer_(mycobacterium_ulcerans_infection)",
+      "yaws",
+      "buruli_ulcer_(mycobacterium_ulcerans_infection)"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the health risks of tobacco use?",
+    "ground_truth": "Tobacco use causes lung cancer, COPD, cardiovascular disease, stroke, and many other cancers. It is one of the leading preventable causes of death worldwide.",
+    "expected_sources": [
+      "tobacco"
+    ],
+    "retrieved_sources": [
+      "oral_health",
+      "tobacco",
+      "mendeley_diseases",
+      "adolescents_health_risks_and_solutions",
+      "tobacco",
+      "cancer",
+      "stroke",
+      "arsenic",
+      "tobacco",
+      "noncommunicable_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "source_precision": 0.3
+    }
+  },
+  {
+    "question": "What is preterm birth and what are its risk factors?",
+    "ground_truth": "Preterm birth is birth before 37 completed weeks of gestation. Risk factors include previous preterm birth, multiple pregnancies, infections, chronic conditions like diabetes and hypertension, and maternal age.",
+    "expected_sources": [
+      "preterm_birth"
+    ],
+    "retrieved_sources": [
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "preterm_birth",
+      "newborn_mortality",
+      "newborns_reducing_mortality",
+      "pre_eclampsia",
+      "newborns_reducing_mortality"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "How is yellow fever prevented?",
+    "ground_truth": "Yellow fever is prevented by vaccination. A single dose of the yellow fever vaccine provides lifelong immunity. Mosquito control measures also help reduce transmission.",
+    "expected_sources": [
+      "yellow_fever"
+    ],
+    "retrieved_sources": [
+      "yellow_fever",
+      "japanese_encephalitis",
+      "yellow_fever",
+      "yellow_fever",
+      "yellow_fever",
+      "yellow_fever",
+      "dengue_and_severe_dengue",
+      "yellow_fever",
+      "west_nile_virus",
+      "yellow_fever"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.7
+    }
+  },
+  {
+    "question": "What is osteoarthritis?",
+    "ground_truth": "Osteoarthritis is the most common form of arthritis, causing joint pain, stiffness, and reduced mobility. It occurs when the protective cartilage that cushions the ends of bones wears down over time.",
+    "expected_sources": [
+      "osteoarthritis"
+    ],
+    "retrieved_sources": [
+      "osteoarthritis",
+      "osteoarthritis",
+      "mendeley_diseases",
+      "osteoarthritis",
+      "osteoarthritis",
+      "osteoarthritis",
+      "osteoarthritis",
+      "mendeley_diseases",
+      "rheumatoid_arthritis",
+      "rheumatoid_arthritis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What are the symptoms of Ebola?",
+    "ground_truth": "Ebola symptoms include sudden onset of fever, fatigue, muscle pain, headache, and sore throat, followed by vomiting, diarrhoea, rash, and in some cases internal and external bleeding.",
+    "expected_sources": [
+      "ebola_disease"
+    ],
+    "retrieved_sources": [
+      "ebola_disease",
+      "ebola_disease",
+      "marburg_virus_disease",
+      "yellow_fever",
+      "ebola_disease",
+      "lassa_fever",
+      "crimean_congo_haemorrhagic_fever",
+      "ebola_disease",
+      "hepatitis_c",
+      "malaria"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.4
+    }
+  },
+  {
+    "question": "What is the impact of alcohol on health?",
+    "ground_truth": "Harmful alcohol use causes liver disease, cardiovascular disease, cancers, mental health problems, and injuries. It is a leading risk factor for premature death and disability worldwide.",
+    "expected_sources": [
+      "alcohol"
+    ],
+    "retrieved_sources": [
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "alcohol",
+      "violence_against_women",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How does schistosomiasis spread?",
+    "ground_truth": "Schistosomiasis is spread through contact with freshwater contaminated with parasitic worms. People become infected when larval forms of the parasite penetrate the skin during contact with infested water.",
+    "expected_sources": [
+      "schistosomiasis"
+    ],
+    "retrieved_sources": [
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis",
+      "soil_transmitted_helminth_infections",
+      "schistosomiasis",
+      "schistosomiasis",
+      "schistosomiasis"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.9
+    }
+  },
+  {
+    "question": "What are the signs of anxiety disorders?",
+    "ground_truth": "Anxiety disorders involve excessive fear and worry that is out of proportion to the situation. Symptoms include restlessness, fatigue, difficulty concentrating, irritability, muscle tension, and sleep problems.",
+    "expected_sources": [
+      "anxiety_disorders"
+    ],
+    "retrieved_sources": [
+      "anxiety_disorders",
+      "anxiety_disorders",
+      "anxiety_disorders",
+      "anxiety_disorders",
+      "mendeley_diseases",
+      "mental_disorders",
+      "anxiety_disorders",
+      "mental_disorders",
+      "anxiety_disorders",
+      "mendeley_diseases"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.6
+    }
+  },
+  {
+    "question": "What is palliative care?",
+    "ground_truth": "Palliative care is an approach that improves quality of life of patients and families facing life-threatening illness, through prevention and relief of suffering by means of early identification, assessment, and treatment of pain and other problems.",
+    "expected_sources": [
+      "palliative_care"
+    ],
+    "retrieved_sources": [
+      "palliative_care",
+      "cancer",
+      "palliative_care",
+      "palliative_care",
+      "cancer_in_children",
+      "palliative_care",
+      "palliative_care",
+      "palliative_care",
+      "palliative_care",
+      "palliative_care"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  },
+  {
+    "question": "How are burns treated?",
+    "ground_truth": "Burns treatment depends on severity. First aid includes cooling the burn with running water. Severe burns require medical care including wound cleaning, dressings, pain management, fluid resuscitation, and sometimes skin grafting.",
+    "expected_sources": [
+      "burns"
+    ],
+    "retrieved_sources": [
+      "burns",
+      "burns",
+      "burns",
+      "burns",
+      "burns",
+      "burns",
+      "white_phosphorus",
+      "burns",
+      "burns",
+      "white_phosphorus"
+    ],
+    "retrieval_scores": {
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "source_precision": 0.8
+    }
+  }
+]

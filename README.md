@@ -31,6 +31,7 @@ MediChat is a Retrieval-Augmented Generation (RAG) chatbot designed to provide w
 -   **AI/ML**: Google Gemini API (`gemini-2.5-flash`); Groq API (`llama-3.3-70b-versatile`); OpenRouter API (`google/gemma-4-31b-it:free` or any free model); all use `sentence_transformers` for local embeddings.
 -   **Vector Store**: ChromaDB.
 -   **Data Processing**: BeautifulSoup4, PyPDF, Pandas.
+-   **Statistics**: NumPy, SciPy (`evaluation/statistical_analysis.py`).
 
 ## 📋 Prerequisites
 
@@ -107,7 +108,7 @@ npm run dev
 
 ## 📊 Evaluation
 
-The RAG pipeline is evaluated using retrieval quality metrics over a test dataset of 50 medical questions covering diseases, mental health, injuries, and more.
+The RAG pipeline is evaluated using retrieval quality metrics over a test dataset of 50 medical questions covering diseases, mental health, injuries, and more. Automatic retrieval scores can be compared with optional LLM-as-a-Judge scores using Spearman correlation (see [Statistical comparison](#statistical-comparison-automatic-metrics-vs-llm-as-a-judge)).
 
 ### Running the Evaluation
 ```bash
@@ -126,6 +127,18 @@ python -m evaluation.evaluate_open_router --retrieval-only
 # OpenRouter — full LLM-as-judge
 python -m evaluation.evaluate_open_router --limit 5
 ```
+
+To add judge scores onto an existing retrieval JSON (resume-safe; recommended when quota is limited):
+
+```bash
+python -m evaluation.evaluate \
+  --augment-results evaluation/results_with_judge.json \
+  --judge-sample 25 \
+  --judge-metrics context_relevance,correctness \
+  --output evaluation/results_with_judge.json
+```
+
+`--judge-sample` selects evenly spaced questions. Re-running the same command skips questions that already have the requested judge metrics.
 
 ### Retrieval Metrics (Gemini)
 
@@ -162,6 +175,59 @@ python -m evaluation.evaluate_open_router --limit 5
 | **Answer Relevance** | Does the answer address the user's question? |
 | **Context Relevance** | Are the retrieved chunks relevant to the question? |
 | **Correctness** | Is the answer factually consistent with the ground truth? |
+
+### Statistical comparison (automatic metrics vs LLM-as-a-Judge)
+
+Automatic retrieval metrics and LLM-as-a-Judge scores measure related but different constructs on the **same questions**. The analysis therefore tests **monotonic association** (Spearman’s ρ), not equality of means.
+
+- **Primary test:** Spearman rank correlation with a 95% bootstrap CI.
+- **Hypotheses:** H₀: ρ = 0 vs H₁: ρ ≠ 0, α = 0.05.
+- **Multiple comparisons:** Holm–Bonferroni across metric pairs.
+- **Hit Rate** is excluded when it is constant (currently 1.0 on the saved results); correlation is undefined without variance.
+- **Pearson r** is reported only as a secondary check; paired *t* / Wilcoxon / Mann–Whitney U are not used for auto ↔ judge comparison.
+
+```bash
+# Primary analysis (needs judge_scores in the JSON)
+python -m evaluation.statistical_analysis auto-vs-judge \
+  evaluation/results_with_judge.json \
+  --report-mk evaluation/statistical_report_mk.md \
+  --json-out evaluation/statistical_report.json
+
+# Single pair
+python -m evaluation.statistical_analysis correlate \
+  evaluation/results_with_judge.json --retrieval mrr --judge correctness
+
+# Same metric across two backends (assumption-aware paired t or Wilcoxon)
+python -m evaluation.statistical_analysis compare \
+  evaluation/results.json evaluation/results_open_router.json \
+  --metric source_precision
+```
+
+Macedonian methods/results text is written to `evaluation/statistical_report_mk.md` (for the final report).
+
+#### Current auto ↔ judge results
+
+From `evaluation/results_with_judge.json`: **50** retrieval questions, **7** with Gemini judge scores (`context_relevance`, `correctness`). This sample is underpowered; treat significance cautiously until n ≥ 20–30 (ideally 50).
+
+| Pair | n | Spearman ρ | p | p (Holm) | 95% CI | After Holm |
+|---|---|---|---|---|---|---|
+| source_precision ↔ context_relevance | 7 | 0.134 | 0.77 | 1.00 | [−0.72, 0.84] | not significant |
+| mrr ↔ context_relevance | 7 | 0.450 | 0.31 | 0.97 | [0.00, 1.00] | not significant |
+| source_precision ↔ correctness | 7 | 0.093 | 0.84 | 1.00 | [−0.88, 0.75] | not significant |
+| mrr ↔ correctness | 7 | 0.509 | 0.24 | 0.97 | [0.00, 1.00] | not significant |
+
+Point estimates for the MRR pairs are moderately positive, but the intervals are too wide to claim agreement or disagreement. Statistical significance is not the same as practical significance: a small |ρ| can be significant at large n and still imply limited agreement.
+
+#### Backend comparison (Gemini vs OpenRouter, n = 50)
+
+Same automatic metric, paired by question. Shapiro–Wilk on paired differences chooses the test.
+
+| Metric | Test | Mean difference | p | Effect size | 95% CI (mean diff) |
+|---|---|---|---|---|---|
+| source_precision | paired *t* | 0.088 | 0.0008 | Cohen’s *d* = 0.50 | [0.04, 0.14] |
+| mrr | Wilcoxon signed-rank | 0.061 | 0.075 | rank-biserial = 0.60 | [0.00, 0.12] |
+
+Gemini source precision is significantly higher (medium effect). The MRR difference is not significant at α = 0.05.
 
 ## 🛡️ Medical Disclaimer
 This application is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment.

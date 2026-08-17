@@ -1,0 +1,249 @@
+{
+  "analysis": "auto_vs_judge",
+  "file": "evaluation/results_with_judge.json",
+  "n_total": 50,
+  "n_judged_max": 7,
+  "judge_metrics_present": [
+    "context_relevance",
+    "correctness"
+  ],
+  "alpha": 0.05,
+  "multiple_comparison_correction": "Holm–Bonferroni",
+  "primary_test": "Spearman rank correlation (ρ) with bootstrap 95% CI",
+  "secondary_test": "Pearson r (reported only; not used for primary inference)",
+  "pairs": [
+    {
+      "n": 7,
+      "descriptives_retrieval": {
+        "n": 7,
+        "mean": 0.6428571428571429,
+        "median": 0.7,
+        "std": 0.2507132682112035,
+        "min": 0.4,
+        "max": 1.0,
+        "n_unique": 4
+      },
+      "descriptives_judge": {
+        "n": 7,
+        "mean": 0.8142857142857143,
+        "median": 0.9,
+        "std": 0.20354009783964297,
+        "min": 0.4,
+        "max": 1.0,
+        "n_unique": 4
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": 0.13419902258999175,
+      "spearman_p": 0.774222587864456,
+      "spearman_ci_95": {
+        "low": -0.7222222222222221,
+        "high": 0.8366600265340757
+      },
+      "effect_size_interpretation": "слаба позитивна",
+      "significant_uncorrected": false,
+      "pearson_r": 0.24728585900550215,
+      "pearson_p": 0.5929114949518465,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": 0.8545768385363678,
+        "p": 0.135279026981591
+      },
+      "shapiro_judge": {
+        "W": 0.759388803851502,
+        "p": 0.015886565701430606
+      },
+      "note": "Sample size n=7 is small; bootstrap CI and p-values are directionally informative but under-powered. Prefer n≥20–30 (ideally 50).",
+      "message": null,
+      "retrieval_metric": "source_precision",
+      "judge_metric": "context_relevance",
+      "n_total_in_file": 50,
+      "n_with_judge": 7,
+      "holm": {
+        "p_adjusted": 1.0,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 1.0
+    },
+    {
+      "n": 7,
+      "descriptives_retrieval": {
+        "n": 7,
+        "mean": 0.9285714285714286,
+        "median": 1.0,
+        "std": 0.18898223650461363,
+        "min": 0.5,
+        "max": 1.0,
+        "n_unique": 2
+      },
+      "descriptives_judge": {
+        "n": 7,
+        "mean": 0.8142857142857143,
+        "median": 0.9,
+        "std": 0.20354009783964297,
+        "min": 0.4,
+        "max": 1.0,
+        "n_unique": 4
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": 0.45044261646145073,
+      "spearman_p": 0.31046085173622795,
+      "spearman_ci_95": {
+        "low": 0.0,
+        "high": 1.0
+      },
+      "effect_size_interpretation": "умерена позитивна",
+      "significant_uncorrected": false,
+      "pearson_r": 0.24759378423606931,
+      "pearson_p": 0.592436011527224,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": null,
+        "p": null
+      },
+      "shapiro_judge": {
+        "W": 0.759388803851502,
+        "p": 0.015886565701430606
+      },
+      "note": "Sample size n=7 is small; bootstrap CI and p-values are directionally informative but under-powered. Prefer n≥20–30 (ideally 50).",
+      "message": null,
+      "retrieval_metric": "mrr",
+      "judge_metric": "context_relevance",
+      "n_total_in_file": 50,
+      "n_with_judge": 7,
+      "holm": {
+        "p_adjusted": 0.9725848972681017,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 0.9725848972681017
+    },
+    {
+      "n": 7,
+      "descriptives_retrieval": {
+        "n": 7,
+        "mean": 0.6428571428571429,
+        "median": 0.7,
+        "std": 0.2507132682112035,
+        "min": 0.4,
+        "max": 1.0,
+        "n_unique": 4
+      },
+      "descriptives_judge": {
+        "n": 7,
+        "mean": 0.9285714285714286,
+        "median": 1.0,
+        "std": 0.14960264830861913,
+        "min": 0.6,
+        "max": 1.0,
+        "n_unique": 3
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": 0.09335200560186732,
+      "spearman_p": 0.8422103511303465,
+      "spearman_ci_95": {
+        "low": -0.8819171036881968,
+        "high": 0.75
+      },
+      "effect_size_interpretation": "занемарлива позитивна",
+      "significant_uncorrected": false,
+      "pearson_r": 0.3173979475743909,
+      "pearson_p": 0.48789463550277007,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": 0.8545768385363678,
+        "p": 0.135279026981591
+      },
+      "shapiro_judge": {
+        "W": 0.5819319371111262,
+        "p": 0.0001664046837153405
+      },
+      "note": "Sample size n=7 is small; bootstrap CI and p-values are directionally informative but under-powered. Prefer n≥20–30 (ideally 50).",
+      "message": null,
+      "retrieval_metric": "source_precision",
+      "judge_metric": "correctness",
+      "n_total_in_file": 50,
+      "n_with_judge": 7,
+      "holm": {
+        "p_adjusted": 1.0,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 1.0
+    },
+    {
+      "n": 7,
+      "descriptives_retrieval": {
+        "n": 7,
+        "mean": 0.9285714285714286,
+        "median": 1.0,
+        "std": 0.18898223650461363,
+        "min": 0.5,
+        "max": 1.0,
+        "n_unique": 2
+      },
+      "descriptives_judge": {
+        "n": 7,
+        "mean": 0.9285714285714286,
+        "median": 1.0,
+        "std": 0.14960264830861913,
+        "min": 0.6,
+        "max": 1.0,
+        "n_unique": 3
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": 0.5091750772173156,
+      "spearman_p": 0.24314622431702543,
+      "spearman_ci_95": {
+        "low": 0.0,
+        "high": 1.0
+      },
+      "effect_size_interpretation": "силна позитивна",
+      "significant_uncorrected": false,
+      "pearson_r": 0.08421519210665183,
+      "pearson_p": 0.857538288984184,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": null,
+        "p": null
+      },
+      "shapiro_judge": {
+        "W": 0.5819319371111262,
+        "p": 0.0001664046837153405
+      },
+      "note": "Sample size n=7 is small; bootstrap CI and p-values are directionally informative but under-powered. Prefer n≥20–30 (ideally 50).",
+      "message": null,
+      "retrieval_metric": "mrr",
+      "judge_metric": "correctness",
+      "n_total_in_file": 50,
+      "n_with_judge": 7,
+      "holm": {
+        "p_adjusted": 0.9725848972681017,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 0.9725848972681017
+    }
+  ],
+  "practical_vs_statistical": "Statistical significance (p < α after Holm) indicates evidence against ρ = 0. Practical significance is judged from |ρ| and the CI: weak |ρ| may be statistically significant at large n but still imply limited agreement for replacing human/LLM judgment with automatic metrics alone."
+}

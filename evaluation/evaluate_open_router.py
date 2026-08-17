@@ -14,9 +14,9 @@ Metrics:
     7. Correctness      — Is the answer factually consistent with the ground truth?
 
 Usage:
-    python3 -m evaluation.evaluate                  # full eval (all 10 questions)
-    python3 -m evaluation.evaluate --limit 3        # first 3 only
-    python3 -m evaluation.evaluate --retrieval-only  # skip LLM judge (no API cost)
+    python3 -m evaluation.evaluate_open_router --retrieval-only
+    python3 -m evaluation.evaluate_open_router --augment-results evaluation/results_open_router.json \\
+        --judge-sample 5 --judge-metrics correctness
 """
 
 import sys
@@ -38,6 +38,11 @@ from openai import APIStatusError
 from app.rag_open_router import retrieve_with_metadata
 from app.prompts import SYSTEM_PROMPT
 from evaluation.test_dataset import TEST_QUESTIONS
+from evaluation.eval_common import (
+    estimate_judge_api_calls,
+    evenly_spaced_indices,
+    resolve_judge_metrics,
+)
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
@@ -45,8 +50,8 @@ client = OpenAI(
 )
 JUDGE_MODEL = "google/gemma-4-31b-it:free"
 
-REQUEST_DELAY = 2
-MAX_RETRIES = 3
+REQUEST_DELAY = 3
+MAX_RETRIES = 6
 
 
 def _call_with_retry(messages: list, temperature: float = 1.0) -> str:
@@ -156,19 +161,129 @@ def judge_score(metric: str, **kwargs) -> dict:
     except json.JSONDecodeError:
         return {"score": 0.0, "reason": f"Failed to parse judge response: {text[:200]}"}
 
-# ---------------------------------------------------------------------------
-# Main evaluation loop
-# ---------------------------------------------------------------------------
-def run_evaluation(limit: int | None = None, retrieval_only: bool = False):
+def _judge_entry(entry: dict, metrics: list[str]) -> dict:
+    """Generate answer (if needed) and LLM-judge scores for one result entry."""
+    question = entry["question"]
+    ground_truth = entry["ground_truth"]
+    expected_sources = entry.get("expected_sources", [])
+
+    if entry.get("context_chunks"):
+        context_chunks = entry["context_chunks"]
+    else:
+        # Re-retrieve and keep retrieval_scores consistent with the context used for judging.
+        context_chunks, source_ids, _ = retrieve_with_metadata(question)
+        entry["retrieved_sources"] = source_ids
+        entry["context_chunks"] = context_chunks
+        entry["retrieval_scores"] = {
+            "hit_rate": compute_hit_rate(source_ids, expected_sources),
+            "mrr": compute_mrr(source_ids, expected_sources),
+            "source_precision": compute_source_precision(source_ids, expected_sources),
+        }
+
+    context = "\n---\n".join(context_chunks)
+    needs_answer = any(
+        m in ("faithfulness", "answer_relevance", "correctness") for m in metrics
+    )
+    if needs_answer:
+        answer = entry.get("answer") or generate_answer(question, context_chunks)
+        entry["answer"] = answer
+        print(f"  Answer: {answer[:120]}...")
+    else:
+        answer = entry.get("answer") or ""
+
+    judge_scores = dict(entry.get("judge_scores") or {})
+    for metric in metrics:
+        result = judge_score(
+            metric,
+            question=question,
+            answer=answer,
+            context=context,
+            ground_truth=ground_truth,
+        )
+        judge_scores[metric] = result
+        reason = result.get("reason", "")
+        print(f"  {metric:20s}: {result['score']:.2f}  ({str(reason)[:80]})")
+    entry["judge_scores"] = judge_scores
+    return entry
+
+
+def augment_results_with_judge(
+    results_path: Path,
+    judge_sample: int = 5,
+    judge_metrics: list[str] | None = None,
+    output_path: Path | None = None,
+):
+    """Add LLM-as-judge scores to a subset of an existing results JSON."""
+    metrics = judge_metrics or resolve_judge_metrics(None)
+    results = json.loads(Path(results_path).read_text(encoding="utf-8"))
+    indices = evenly_spaced_indices(len(results), judge_sample)
+    needs_answer = any(
+        m in ("faithfulness", "answer_relevance", "correctness") for m in metrics
+    )
+    est = estimate_judge_api_calls(
+        len(indices), len(metrics), include_answer=needs_answer
+    )
+
+    print(f"\n{'='*70}")
+    print(f"  MediChat LLM-as-judge sample — {len(indices)}/{len(results)} questions")
+    print(f"  metrics: {', '.join(metrics)}")
+    print(f"  estimated LLM calls (answer+judge): ~{est}")
+    print(f"{'='*70}\n")
+
+    out = Path(output_path) if output_path else Path(results_path)
+
+    def _save():
+        out.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    for rank, idx in enumerate(indices):
+        entry = results[idx]
+        already = entry.get("judge_scores") or {}
+        missing = [m for m in metrics if m not in already]
+        if not missing:
+            print(f"[{rank+1}/{len(indices)}] (row {idx}) SKIP (already judged) {entry['question']}")
+            continue
+        print(f"[{rank+1}/{len(indices)}] (row {idx}) {entry['question']}")
+        try:
+            _judge_entry(entry, missing)
+        finally:
+            _save()  # keep answer/partial scores even if a later judge call fails
+        print()
+
+    _save()
+    print(f"Updated results saved to {out}")
+    print(
+        "Statistical analysis:\n"
+        f"  python -m evaluation.statistical_analysis auto-vs-judge {out} "
+        f"--report-mk evaluation/statistical_report_mk.md "
+        f"--json-out evaluation/statistical_report.json"
+    )
+    return results
+
+
+def run_evaluation(
+    limit: int | None = None,
+    retrieval_only: bool = False,
+    judge_metrics: list[str] | None = None,
+    judge_sample: int | None = None,
+    output_path: Path | None = None,
+):
     questions = TEST_QUESTIONS[:limit] if limit else TEST_QUESTIONS
     results = []
+    metrics = judge_metrics or resolve_judge_metrics(None)
 
-    # Retrieval metric accumulators
     retrieval_metrics = {"hit_rate": 0.0, "mrr": 0.0, "source_precision": 0.0}
-    # LLM judge accumulators
-    judge_metrics = {m: 0.0 for m in SCORING_PROMPTS}
+    judge_metric_totals = {m: 0.0 for m in metrics}
+    judge_count = 0
 
-    mode = "retrieval-only" if retrieval_only else "full (retrieval + LLM judge)"
+    judge_indices = set()
+    if not retrieval_only:
+        n_judge = judge_sample if judge_sample is not None else len(questions)
+        judge_indices = set(evenly_spaced_indices(len(questions), n_judge))
+        est = estimate_judge_api_calls(len(judge_indices), len(metrics))
+        mode = f"retrieval + LLM judge on {len(judge_indices)}/{len(questions)} (~{est} calls)"
+    else:
+        mode = "retrieval-only"
+
     print(f"\n{'='*70}")
     print(f"  MediChat RAG Evaluation — {len(questions)} questions [{mode}]")
     print(f"{'='*70}\n")
@@ -180,11 +295,8 @@ def run_evaluation(limit: int | None = None, retrieval_only: bool = False):
 
         print(f"[{i+1}/{len(questions)}] {question}")
 
-        # Step 1: Retrieve context with metadata (1 API call for embedding)
         context_chunks, source_ids, distances = retrieve_with_metadata(question)
-        context = "\n---\n".join(context_chunks)
 
-        # Step 2: Retrieval metrics (free)
         hit = compute_hit_rate(source_ids, expected_sources)
         mrr = compute_mrr(source_ids, expected_sources)
         precision = compute_source_precision(source_ids, expected_sources)
@@ -205,76 +317,94 @@ def run_evaluation(limit: int | None = None, retrieval_only: bool = False):
             "expected_sources": expected_sources,
             "retrieved_sources": source_ids,
             "retrieval_scores": {"hit_rate": hit, "mrr": mrr, "source_precision": precision},
+            "context_chunks": context_chunks,
         }
 
-        # Step 3: LLM judge (optional — costs API calls)
-        if not retrieval_only:
-            answer = generate_answer(question, context_chunks)
-            print(f"  Answer: {answer[:120]}...")
-
-            judge_scores = {}
-            for metric in SCORING_PROMPTS:
-                result = judge_score(
-                    metric,
-                    question=question,
-                    answer=answer,
-                    context=context,
-                    ground_truth=ground_truth,
-                )
-                judge_scores[metric] = result
-                judge_metrics[metric] += result["score"]
-                print(f"  {metric:20s}: {result['score']:.2f}  ({result['reason'][:80]})")
-
-            entry["answer"] = answer
-            entry["context_chunks"] = context_chunks
-            entry["judge_scores"] = judge_scores
+        if i in judge_indices:
+            _judge_entry(entry, metrics)
+            judge_count += 1
+            for metric in metrics:
+                judge_metric_totals[metric] += entry["judge_scores"][metric]["score"]
 
         results.append(entry)
         print()
 
-    # -----------------------------------------------------------------------
-    # Summary
-    # -----------------------------------------------------------------------
     n = len(questions)
     print(f"{'='*70}")
     print(f"  RETRIEVAL SCORES (averaged over {n} questions)")
     print(f"{'='*70}")
     for metric, total in retrieval_metrics.items():
-        avg = total / n
-        print(f"  {metric:20s}: {avg:.2f}")
+        print(f"  {metric:20s}: {total / n:.2f}")
 
-    if not retrieval_only:
+    if judge_count:
         print(f"\n{'='*70}")
-        print(f"  LLM JUDGE SCORES (averaged over {n} questions)")
+        print(f"  LLM JUDGE SCORES (averaged over {judge_count} judged questions)")
         print(f"{'='*70}")
-        for metric, total in judge_metrics.items():
-            avg = total / n
-            print(f"  {metric:20s}: {avg:.2f}")
+        for metric, total in judge_metric_totals.items():
+            print(f"  {metric:20s}: {total / judge_count:.2f}")
 
-        all_totals = list(retrieval_metrics.values()) + list(judge_metrics.values())
-        all_count = len(retrieval_metrics) + len(judge_metrics)
+        all_count = len(retrieval_metrics) + len(judge_metric_totals)
+        overall = (
+            sum(t / n for t in retrieval_metrics.values())
+            + sum(t / judge_count for t in judge_metric_totals.values())
+        ) / all_count
     else:
-        all_totals = list(retrieval_metrics.values())
-        all_count = len(retrieval_metrics)
+        overall = sum(retrieval_metrics.values()) / (n * len(retrieval_metrics))
 
-    overall = sum(all_totals) / (n * all_count)
     print(f"\n{'='*70}")
     print(f"  OVERALL SCORE     : {overall:.2f}")
     print(f"{'='*70}\n")
 
-    # Save detailed results
-    output_path = _root / "evaluation" / "results_open_router.json"
-    with open(output_path, "w") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-    print(f"Detailed results saved to {output_path}")
+    out = Path(output_path) if output_path else (_root / "evaluation" / "results_open_router.json")
+    out.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Detailed results saved to {out}")
 
     return results
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Evaluate MediChat RAG pipeline")
+    parser = argparse.ArgumentParser(description="Evaluate MediChat RAG pipeline (OpenRouter)")
     parser.add_argument("--limit", type=int, default=None, help="Number of questions to evaluate")
-    parser.add_argument("--retrieval-only", action="store_true",
-                        help="Only evaluate retrieval metrics (no LLM judge, saves API quota)")
+    parser.add_argument(
+        "--retrieval-only",
+        action="store_true",
+        help="Only evaluate retrieval metrics (no LLM judge, saves API quota)",
+    )
+    parser.add_argument(
+        "--judge-metrics",
+        default=None,
+        help="Comma-separated judge metrics (default: all). Example: correctness",
+    )
+    parser.add_argument(
+        "--judge-sample",
+        type=int,
+        default=None,
+        help="Only LLM-judge this many evenly spaced questions",
+    )
+    parser.add_argument(
+        "--augment-results",
+        type=Path,
+        default=None,
+        help="Add judge scores onto an existing results JSON",
+    )
+    parser.add_argument("--output", type=Path, default=None, help="Optional output path")
     args = parser.parse_args()
-    run_evaluation(limit=args.limit, retrieval_only=args.retrieval_only)
+
+    if args.augment_results:
+        metrics = resolve_judge_metrics(args.judge_metrics or "correctness")
+        sample = args.judge_sample if args.judge_sample is not None else 5
+        augment_results_with_judge(
+            args.augment_results,
+            judge_sample=sample,
+            judge_metrics=metrics,
+            output_path=args.output,
+        )
+    else:
+        metrics = resolve_judge_metrics(args.judge_metrics)
+        run_evaluation(
+            limit=args.limit,
+            retrieval_only=args.retrieval_only,
+            judge_metrics=metrics,
+            judge_sample=args.judge_sample,
+            output_path=args.output,
+        )
