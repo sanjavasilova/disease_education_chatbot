@@ -57,7 +57,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 JUDGE_MODEL = "gemini-2.5-flash"
 
 # Free-tier limit: 5 requests/min. We pace calls and retry on 429.
-REQUEST_DELAY = 20  # seconds between API calls to stay under limit
+REQUEST_DELAY = 2  # seconds between API calls to stay under limit
 MAX_RETRIES = 8
 
 

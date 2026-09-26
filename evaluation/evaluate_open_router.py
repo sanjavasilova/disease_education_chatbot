@@ -1,5 +1,5 @@
 """
-RAG Evaluation for MediChat
+RAG Evaluation for MediChat (OpenRouter answers, Gemini judge)
 
 Metrics:
   RETRIEVAL (no LLM calls needed — free):
@@ -15,8 +15,17 @@ Metrics:
 
 Usage:
     python3 -m evaluation.evaluate_open_router --retrieval-only
+    python3 -m evaluation.evaluate_open_router --limit 3
+    # OpenRouter answers + Gemini judge on existing retrieval results:
     python3 -m evaluation.evaluate_open_router --augment-results evaluation/results_open_router.json \\
         --judge-sample 5 --judge-metrics correctness
+    # Recommended for statistical auto↔judge comparison (resume-safe):
+    python3 -m evaluation.evaluate_open_router --augment-results evaluation/results_open_router_with_judge.json \\
+        --judge-sample 25 --judge-metrics context_relevance,correctness \\
+        --output evaluation/results_open_router_with_judge.json
+    python3 -m evaluation.statistical_analysis auto-vs-judge evaluation/results_open_router_with_judge.json \\
+        --report-mk evaluation/statistical_report_mk.md \\
+        --json-out evaluation/statistical_report.json
 """
 
 import sys
@@ -31,10 +40,11 @@ if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
 from dotenv import load_dotenv
-load_dotenv(_root / ".env", override=True)
+load_dotenv(_root / ".env")
 
-from openai import OpenAI
-from openai import APIStatusError
+from openai import OpenAI, APIStatusError
+from google import genai
+from google.genai import types
 from app.rag_open_router import retrieve_with_metadata
 from app.prompts import SYSTEM_PROMPT
 from evaluation.test_dataset import TEST_QUESTIONS
@@ -44,34 +54,32 @@ from evaluation.eval_common import (
     resolve_judge_metrics,
 )
 
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
-)
-JUDGE_MODEL = "google/gemma-4-31b-it:free"
+gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+openrouter_client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=os.getenv("OPENROUTER_API_KEY"))
+ANSWER_MODEL = "google/gemma-4-31b-it:free"
+JUDGE_MODEL = "gemini-2.5-flash"
 
-REQUEST_DELAY = 3
-MAX_RETRIES = 6
+# Pacing can be adjusted to the active project rate limits.
+REQUEST_DELAY = 4
+MAX_RETRIES = 8
 
 
-def _call_with_retry(messages: list, temperature: float = 1.0) -> str:
+def _call_with_retry(fn, *args, **kwargs):
+    """Call a Gemini API function with automatic retry on rate-limit (429)."""
+    from google.genai.errors import ClientError
     for attempt in range(MAX_RETRIES):
         try:
             time.sleep(REQUEST_DELAY)
-            response = client.chat.completions.create(
-                model=JUDGE_MODEL,
-                messages=messages,
-                temperature=temperature,
-            )
-            return response.choices[0].message.content
-        except APIStatusError as e:
-            if e.status_code == 429:
-                wait = 65 * (attempt + 1)
+            return fn(*args, **kwargs)
+        except ClientError as e:
+            if e.code == 429:
+                wait = 90 * (attempt + 1)
                 print(f"    Rate limited. Waiting {wait}s before retry ({attempt+1}/{MAX_RETRIES})...")
                 time.sleep(wait)
             else:
                 raise
-    raise RuntimeError("Max retries exceeded for OpenRouter API call")
+    raise RuntimeError("Max retries exceeded for Gemini API call")
+
 
 # ---------------------------------------------------------------------------
 # 1. Retrieval metrics (FREE — no API calls)
@@ -106,11 +114,27 @@ def compute_source_precision(retrieved_sources: list[str], expected_sources: lis
 def generate_answer(question: str, context_chunks: list[str]) -> str:
     context = "\n".join(context_chunks)
     user_content = f"Context:\n{context}\n\nQuestion:\n{question}"
-    messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": user_content},
-    ]
-    return _call_with_retry(messages)
+    for attempt in range(MAX_RETRIES):
+        try:
+            time.sleep(REQUEST_DELAY)
+            response = openrouter_client.chat.completions.create(
+                model=ANSWER_MODEL,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_content},
+                ],
+            )
+            answer = response.choices[0].message.content
+            if not answer:
+                raise ValueError("OpenRouter returned an empty answer")
+            return answer
+        except APIStatusError as e:
+            if e.status_code != 429:
+                raise
+            wait = 65 * (attempt + 1)
+            print(f"    OpenRouter rate limited. Waiting {wait}s ({attempt+1}/{MAX_RETRIES})...")
+            time.sleep(wait)
+    raise RuntimeError("OpenRouter answer generation exceeded retry limit")
 
 
 # ---------------------------------------------------------------------------
@@ -154,14 +178,22 @@ SCORING_PROMPTS = {
 
 def judge_score(metric: str, **kwargs) -> dict:
     prompt = SCORING_PROMPTS[metric].format(**kwargs)
-    messages = [{"role": "user", "content": prompt}]
-    text = _call_with_retry(messages, temperature=0.0)
+    response = _call_with_retry(
+        gemini_client.models.generate_content,
+        model=JUDGE_MODEL,
+        contents=[types.Content(role="user", parts=[types.Part(text=prompt)])],
+        config=types.GenerateContentConfig(
+            temperature=0.0,
+            response_mime_type="application/json",
+        ),
+    )
     try:
-        return json.loads(text)
+        return json.loads(response.text)
     except json.JSONDecodeError:
-        return {"score": 0.0, "reason": f"Failed to parse judge response: {text[:200]}"}
+        return {"score": 0.0, "reason": f"Failed to parse judge response: {response.text[:200]}"}
 
-def _judge_entry(entry: dict, metrics: list[str]) -> dict:
+
+def _judge_entry(entry: dict, metrics: list[str], save_progress=None) -> dict:
     """Generate answer (if needed) and LLM-judge scores for one result entry."""
     question = entry["question"]
     ground_truth = entry["ground_truth"]
@@ -201,6 +233,9 @@ def _judge_entry(entry: dict, metrics: list[str]) -> dict:
             ground_truth=ground_truth,
         )
         judge_scores[metric] = result
+        entry["judge_scores"] = judge_scores
+        if save_progress is not None:
+            save_progress()
         reason = result.get("reason", "")
         print(f"  {metric:20s}: {result['score']:.2f}  ({str(reason)[:80]})")
     entry["judge_scores"] = judge_scores
@@ -213,7 +248,10 @@ def augment_results_with_judge(
     judge_metrics: list[str] | None = None,
     output_path: Path | None = None,
 ):
-    """Add LLM-as-judge scores to a subset of an existing results JSON."""
+    """
+    Add LLM-as-judge scores to a subset of an existing results JSON.
+    Keeps full retrieval results; only spends API quota on the sample.
+    """
     metrics = judge_metrics or resolve_judge_metrics(None)
     results = json.loads(Path(results_path).read_text(encoding="utf-8"))
     indices = evenly_spaced_indices(len(results), judge_sample)
@@ -225,7 +263,7 @@ def augment_results_with_judge(
     )
 
     print(f"\n{'='*70}")
-    print(f"  MediChat LLM-as-judge sample — {len(indices)}/{len(results)} questions")
+    print(f"  MediChat OpenRouter answers / Gemini judge — {len(indices)}/{len(results)} questions")
     print(f"  metrics: {', '.join(metrics)}")
     print(f"  estimated LLM calls (answer+judge): ~{est}")
     print(f"{'='*70}\n")
@@ -244,7 +282,7 @@ def augment_results_with_judge(
             continue
         print(f"[{rank+1}/{len(indices)}] (row {idx}) {entry['question']}")
         try:
-            _judge_entry(entry, missing)
+            _judge_entry(entry, missing, save_progress=_save)
         finally:
             _save()  # keep answer/partial scores even if a later judge call fails
         print()
@@ -260,6 +298,9 @@ def augment_results_with_judge(
     return results
 
 
+# ---------------------------------------------------------------------------
+# Main evaluation loop
+# ---------------------------------------------------------------------------
 def run_evaluation(
     limit: int | None = None,
     retrieval_only: bool = False,
@@ -285,7 +326,7 @@ def run_evaluation(
         mode = "retrieval-only"
 
     print(f"\n{'='*70}")
-    print(f"  MediChat RAG Evaluation — {len(questions)} questions [{mode}]")
+    print(f"  MediChat OpenRouter RAG Evaluation — {len(questions)} questions [{mode}]")
     print(f"{'='*70}\n")
 
     for i, item in enumerate(questions):
@@ -343,6 +384,7 @@ def run_evaluation(
         for metric, total in judge_metric_totals.items():
             print(f"  {metric:20s}: {total / judge_count:.2f}")
 
+        all_totals = list(retrieval_metrics.values()) + list(judge_metric_totals.values())
         all_count = len(retrieval_metrics) + len(judge_metric_totals)
         overall = (
             sum(t / n for t in retrieval_metrics.values())
@@ -363,7 +405,7 @@ def run_evaluation(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Evaluate MediChat RAG pipeline (OpenRouter)")
+    parser = argparse.ArgumentParser(description="Evaluate MediChat OpenRouter answers with Gemini as judge")
     parser.add_argument("--limit", type=int, default=None, help="Number of questions to evaluate")
     parser.add_argument(
         "--retrieval-only",
@@ -373,21 +415,27 @@ if __name__ == "__main__":
     parser.add_argument(
         "--judge-metrics",
         default=None,
-        help="Comma-separated judge metrics (default: all). Example: correctness",
+        help="Comma-separated judge metrics (default: all). "
+        "Example for cheap runs: correctness",
     )
     parser.add_argument(
         "--judge-sample",
         type=int,
         default=None,
-        help="Only LLM-judge this many evenly spaced questions",
+        help="Only LLM-judge this many evenly spaced questions (rest stay retrieval-only)",
     )
     parser.add_argument(
         "--augment-results",
         type=Path,
         default=None,
-        help="Add judge scores onto an existing results JSON",
+        help="Add judge scores onto an existing results JSON (recommended when quota is low)",
     )
-    parser.add_argument("--output", type=Path, default=None, help="Optional output path")
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="Optional output path (default: results.json or overwrite --augment-results)",
+    )
     args = parser.parse_args()
 
     if args.augment_results:
