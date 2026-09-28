@@ -511,4 +511,322 @@ TEST_QUESTIONS = [
         ),
         "expected_sources": ["burns"],
     },
+    
+    # ============================================================
+    # EXTENDED / CHALLENGING EVALUATION SET
+    # Questions 51-70
+    # ============================================================
+
+    # 51
+    {
+        "question": (
+            "How do the early symptoms of malaria differ from the symptoms "
+            "of severe malaria?"
+        ),
+        "ground_truth": (
+            "Early malaria commonly causes fever, headache, and chills. "
+            "Severe malaria can cause extreme fatigue, impaired consciousness, "
+            "multiple convulsions, difficulty breathing, dark or bloody urine, "
+            "jaundice, and abnormal bleeding."
+        ),
+        "expected_sources": ["malaria"],
+    },
+
+    # 52
+    {
+        "question": (
+            "Which groups are at higher risk of developing sepsis, and what "
+            "warning signs may indicate that urgent medical care is needed?"
+        ),
+        "ground_truth": (
+            "People at higher risk of sepsis include older people, pregnant or "
+            "recently pregnant women, newborns, hospitalized or intensive-care "
+            "patients, people with weakened immune systems, and people with "
+            "chronic medical conditions. Warning signs include fever or low "
+            "temperature with shivering, confusion, difficulty breathing, "
+            "clammy or sweaty skin, extreme pain or discomfort, a high heart "
+            "rate, weak pulse or low blood pressure, and low urine output."
+        ),
+        "expected_sources": ["sepsis"],
+    },
+
+    # 53
+    {
+        "question": (
+            "Why can antimicrobial resistance make infections more difficult "
+            "to treat, and what factors contribute to its development and spread?"
+        ),
+        "ground_truth": (
+            "Antimicrobial resistance occurs when bacteria, viruses, fungi, "
+            "or parasites no longer respond to antimicrobial medicines, making "
+            "infections difficult or sometimes impossible to treat. Important "
+            "drivers include inappropriate use and overuse of antimicrobials, "
+            "poor infection prevention and control, inadequate water, sanitation "
+            "and hygiene, limited access to vaccines, diagnostics and medicines, "
+            "and lack of awareness or enforcement of relevant measures."
+        ),
+        "expected_sources": ["antimicrobial_resistance"],
+    },
+
+    # 54
+    {
+        "question": (
+            "What causes sickle-cell disease, and how does the genetic change "
+            "affect red blood cells and blood flow?"
+        ),
+        "ground_truth": (
+            "Sickle-cell disease is an inherited blood disorder caused by a "
+            "mutation in the HBB gene that leads to abnormal haemoglobin. "
+            "Red blood cells can become rigid and sickle-shaped, which can "
+            "block blood flow and lead to pain, anaemia, organ damage, and "
+            "other complications."
+        ),
+        "expected_sources": ["sickle_cell_disease"],
+    },
+
+    # 55
+    {
+        "question": (
+            "Why can repeated trachoma infections eventually cause blindness?"
+        ),
+        "ground_truth": (
+            "Repeated trachoma infections can cause scarring inside the eyelid. "
+            "The eyelid may turn inward so that the eyelashes rub against the "
+            "eye, damaging and scarring the cornea. If untreated, this can lead "
+            "to irreversible visual impairment or blindness."
+        ),
+        "expected_sources": ["trachoma"],
+    },
+
+    # 56
+    {
+        "question": (
+            "How can Chagas disease be transmitted, and why is early treatment "
+            "important?"
+        ),
+        "ground_truth": (
+            "Chagas disease is caused by Trypanosoma cruzi and can be transmitted "
+            "by infected triatomine bugs, during pregnancy or birth, through "
+            "contaminated food, blood transfusion, organ transplantation, or "
+            "laboratory accidents. Antiparasitic treatment is most effective "
+            "when given early in the acute phase; later chronic infection can "
+            "lead to cardiac, digestive, or neurological complications."
+        ),
+        "expected_sources": ["chagas_disease_(american_trypanosomiasis)"],    
+    },
+
+    # 57
+    {
+        "question": (
+            "Why can lymphatic filariasis cause long-term disability even when "
+            "an infected person initially has no visible symptoms?"
+        ),
+        "ground_truth": (
+            "Many lymphatic filariasis infections are initially asymptomatic, "
+            "but they can still damage the lymphatic system and kidneys. Chronic "
+            "disease can later cause lymphoedema, elephantiasis, and hydrocele, "
+            "which can result in pain, disability, and social and economic burdens."
+        ),
+        "expected_sources": ["lymphatic_filariasis"],
+    },
+
+    # 58
+    {
+        "question": (
+            "What is the difference between the acute and chronic phases of "
+            "Chagas disease?"
+        ),
+        "ground_truth": (
+            "The acute phase of Chagas disease occurs shortly after infection "
+            "and usually lasts about two months; symptoms are often absent, mild, "
+            "or non-specific. During the chronic phase, parasites persist mainly "
+            "in heart and digestive muscle, and years or decades later some "
+            "patients develop cardiac, digestive, neurological, or mixed disorders."
+        ),
+        "expected_sources": ["chagas_disease_(american_trypanosomiasis)"],
+    },
+
+    # 59
+    {
+        "question": (
+            "How is lymphatic filariasis transmitted from one person to another "
+            "through mosquitoes?"
+        ),
+        "ground_truth": (
+            "Mosquitoes ingest microfilariae when they bite an infected person. "
+            "The parasites develop into infective larvae inside the mosquito. "
+            "When the infected mosquito bites another person, the larvae are "
+            "deposited on the skin, enter the body, migrate to the lymphatic "
+            "vessels, and develop into adult worms."
+        ),
+        "expected_sources": ["lymphatic_filariasis"],
+    },
+
+    # 60
+    {
+        "question": (
+            "What is the WHO SAFE strategy for controlling and eliminating trachoma?"
+        ),
+        "ground_truth": (
+            "The WHO SAFE strategy consists of Surgery for the blinding stage "
+            "of trachoma, Antibiotics to clear Chlamydia trachomatis infection, "
+            "Facial cleanliness, and Environmental improvement, particularly "
+            "better access to water and sanitation."
+        ),
+        "expected_sources": ["trachoma"],
+    },
+
+    # 61
+    {
+        "question": (
+            "Why are young children, pregnant women, travellers, and people "
+            "with HIV or AIDS at particular concern for malaria?"
+        ),
+        "ground_truth": (
+            "Infants, children under five years of age, pregnant women and girls, "
+            "travellers, and people with HIV or AIDS are among the groups at "
+            "higher risk of developing severe malaria. Severe malaria can progress "
+            "rapidly and requires prompt medical care."
+        ),
+        "expected_sources": ["malaria"],
+    },
+
+    # 62
+    {
+        "question": (
+            "How does hydroxyurea help people with sickle-cell disease?"
+        ),
+        "ground_truth": (
+            "Hydroxyurea is a disease-modifying treatment for sickle-cell disease. "
+            "It increases fetal haemoglobin, which reduces sickling of red blood "
+            "cells and can decrease the frequency of painful crises and the need "
+            "for blood transfusions."
+        ),
+        "expected_sources": ["sickle_cell_disease"],
+    },
+
+    # 63
+    {
+        "question": (
+            "How can infection prevention measures reduce the risk of sepsis?"
+        ),
+        "ground_truth": (
+            "Reducing infections lowers the risk of sepsis. Important measures "
+            "include good personal hygiene and handwashing, safe food preparation, "
+            "access to clean water and sanitation, recommended vaccination, and "
+            "effective infection prevention and control in health-care settings. "
+            "Treating infections early is also important."
+        ),
+        "expected_sources": ["sepsis"],
+    },
+
+    # 64
+    {
+        "question": (
+            "Why does inappropriate antibiotic use contribute to antimicrobial "
+            "resistance?"
+        ),
+        "ground_truth": (
+            "Inappropriate use and overuse of antibiotics accelerate antimicrobial "
+            "resistance by creating selective pressure that favours resistant "
+            "microorganisms. Using antibiotics when they are not needed or using "
+            "the wrong antibiotic contributes to the development and spread of "
+            "drug-resistant pathogens."
+        ),
+        "expected_sources": ["antimicrobial_resistance"],
+    },
+
+    # 65
+    {
+        "question": (
+            "What complications can occur when sickle-shaped red blood cells "
+            "block blood flow?"
+        ),
+        "ground_truth": (
+            "Blocked blood flow in sickle-cell disease can cause severe pain "
+            "crises and damage organs. Complications can include anaemia, stroke, "
+            "serious infections, acute chest syndrome, kidney or other organ "
+            "damage, leg ulcers, and other serious health problems."
+        ),
+        "expected_sources": ["sickle_cell_disease"],
+    },
+
+    # 66
+    {
+        "question": (
+            "Why is mass drug administration used to control lymphatic filariasis?"
+        ),
+        "ground_truth": (
+            "Mass drug administration gives preventive medicines to eligible "
+            "people in at-risk populations. Although the medicines have limited "
+            "effect on adult worms, they reduce microfilariae in the blood and "
+            "therefore help prevent mosquitoes from acquiring and spreading "
+            "the parasites, interrupting transmission."
+        ),
+        "expected_sources": ["lymphatic_filariasis"],
+    },
+
+    # 67
+    {
+        "question": (
+            "How can trachoma spread between people, and which environmental "
+            "conditions increase transmission?"
+        ),
+        "ground_truth": (
+            "Trachoma spreads through direct or indirect contact with eye and "
+            "nose discharges from infected people, including through hands, "
+            "clothing, bedding, surfaces, and certain flies. Transmission is "
+            "associated with inadequate hygiene, crowded households, and poor "
+            "access to water and sanitation."
+        ),
+        "expected_sources": ["trachoma"],
+    },
+
+    # 68
+    {
+        "question": (
+            "Why can Chagas disease remain unnoticed for years and later cause "
+            "serious health problems?"
+        ),
+        "ground_truth": (
+            "The acute phase of Chagas disease is often asymptomatic or causes "
+            "only mild and non-specific symptoms. During chronic infection, "
+            "Trypanosoma cruzi can persist in tissues for years or decades. "
+            "Some patients later develop serious cardiac, digestive, neurological, "
+            "or mixed complications."
+        ),
+        "expected_sources": ["chagas_disease_(american_trypanosomiasis)"],
+    },
+
+    # 69
+    {
+        "question": (
+            "Why can antimicrobial resistance affect medical care beyond the "
+            "treatment of ordinary infections?"
+        ),
+        "ground_truth": (
+            "Effective antimicrobials are important for preventing and treating "
+            "infections associated with medical care. Antimicrobial resistance "
+            "reduces treatment options and increases the risk of complications, "
+            "making procedures and treatments such as surgery and other medical "
+            "interventions more difficult and risky."
+        ),
+        "expected_sources": ["antimicrobial_resistance"],
+    },
+
+    # 70
+    {
+        "question": (
+            "Why is early diagnosis important in sickle-cell disease, and how "
+            "can complications be reduced?"
+        ),
+        "ground_truth": (
+            "Early diagnosis of sickle-cell disease allows care to begin before "
+            "severe complications develop. Complications can be reduced through "
+            "regular medical care, vaccination, appropriate treatment such as "
+            "hydroxyurea when indicated, adequate hydration and healthy lifestyle "
+            "measures, and recognition and treatment of complications."
+        ),
+        "expected_sources": ["sickle_cell_disease"],
+    },
 ]
