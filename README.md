@@ -214,6 +214,7 @@ Generated answers are evaluated using four metrics:
 | **Hit Rate** | 1.00 | At least one expected source was retrieved for every evaluated question |
 | **MRR** | 0.95 | Expected sources were generally ranked at or near the top |
 | **Source Precision** | 0.70 | 70% of retrieved chunks came from the expected sources |
+| **Retrieval Average** | 0.88 | Unweighted mean of the three retrieval metrics |
 
 The results show that the retrieval component successfully identified at least one expected source for every question in the final 70-question evaluation set.
 
