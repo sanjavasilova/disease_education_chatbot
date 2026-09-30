@@ -1,8 +1,8 @@
 {
   "analysis": "auto_vs_judge",
   "file": "evaluation/results.json",
-  "n_total": 50,
-  "n_judged_max": 50,
+  "n_total": 70,
+  "n_judged_max": 70,
   "judge_metrics_present": [
     "answer_relevance",
     "context_relevance",
@@ -15,345 +15,113 @@
   "secondary_test": "Pearson r (reported only; not used for primary inference)",
   "pairs": [
     {
-      "n": 50,
+      "n": 70,
       "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.6779999999999998,
-        "median": 0.7,
-        "std": 0.1843798209331676,
-        "min": 0.3,
-        "max": 1.0,
-        "n_unique": 8
-      },
-      "descriptives_judge": {
-        "n": 50,
-        "mean": 0.804,
-        "median": 0.9,
-        "std": 0.1973911479933243,
+        "n": 70,
+        "mean": 0.7028571428571428,
+        "median": 0.75,
+        "std": 0.18175587112214728,
         "min": 0.2,
         "max": 1.0,
-        "n_unique": 10
+        "n_unique": 9
+      },
+      "descriptives_judge": {
+        "n": 70,
+        "mean": 0.8264285714285714,
+        "median": 0.9,
+        "std": 0.1959224611065448,
+        "min": 0.2,
+        "max": 1.0,
+        "n_unique": 12
       },
       "alpha": 0.05,
       "status": "ok",
       "test_primary": "Spearman rank correlation",
       "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
       "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": 0.2530759786868163,
-      "spearman_p": 0.07618776711253258,
+      "spearman_rho": 0.44565243189297044,
+      "spearman_p": 0.00011056600696313585,
       "spearman_ci_95": {
-        "low": -0.026945314462862604,
-        "high": 0.5011103127797838
+        "low": 0.2381896744346855,
+        "high": 0.6198866735470574
       },
-      "effect_size_interpretation": "слаба позитивна",
-      "significant_uncorrected": false,
-      "pearson_r": 0.2912492418814259,
-      "pearson_p": 0.04016223998841821,
+      "effect_size_interpretation": "умерена позитивна",
+      "significant_uncorrected": true,
+      "pearson_r": 0.4557067404296242,
+      "pearson_p": 7.363637421441195e-05,
       "pearson_assumptions_plausible": false,
       "shapiro_retrieval": {
-        "W": 0.938177948467706,
-        "p": 0.011419746095577934
+        "W": 0.9336265806145854,
+        "p": 0.0011044206442767848
       },
       "shapiro_judge": {
-        "W": 0.7921353036917629,
-        "p": 5.804545282859133e-07
+        "W": 0.7950661264055139,
+        "p": 1.771267974332121e-08
       },
       "note": null,
       "message": null,
       "retrieval_metric": "source_precision",
       "judge_metric": "context_relevance",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
       "holm": {
-        "p_adjusted": 0.6095021369002607,
-        "significant_holm": false,
+        "p_adjusted": 0.0008845280557050868,
+        "significant_holm": true,
         "eligible": true
       },
-      "significant_holm": false,
-      "spearman_p_adjusted": 0.6095021369002607
+      "significant_holm": true,
+      "spearman_p_adjusted": 0.0008845280557050868
     },
     {
-      "n": 50,
+      "n": 70,
       "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.9366666666666665,
+        "n": 70,
+        "mean": 0.9547619047619047,
         "median": 1.0,
-        "std": 0.1746067820695153,
+        "std": 0.14993672463430988,
         "min": 0.3333333333333333,
         "max": 1.0,
         "n_unique": 3
       },
       "descriptives_judge": {
-        "n": 50,
-        "mean": 0.804,
+        "n": 70,
+        "mean": 0.8264285714285714,
         "median": 0.9,
-        "std": 0.1973911479933243,
+        "std": 0.1959224611065448,
         "min": 0.2,
         "max": 1.0,
-        "n_unique": 10
+        "n_unique": 12
       },
       "alpha": 0.05,
       "status": "ok",
       "test_primary": "Spearman rank correlation",
       "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
       "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": 0.0378850349757516,
-      "spearman_p": 0.7939338482027191,
+      "spearman_rho": -0.037620036271091596,
+      "spearman_p": 0.7571739921941779,
       "spearman_ci_95": {
-        "low": -0.24667398889894282,
-        "high": 0.31593118515221835
-      },
-      "effect_size_interpretation": "занемарлива позитивна",
-      "significant_uncorrected": false,
-      "pearson_r": -0.002368509494082881,
-      "pearson_p": 0.9869756713931948,
-      "pearson_assumptions_plausible": false,
-      "shapiro_retrieval": {
-        "W": 0.3936319322921962,
-        "p": 4.487040884216561e-13
-      },
-      "shapiro_judge": {
-        "W": 0.7921353036917629,
-        "p": 5.804545282859133e-07
-      },
-      "note": null,
-      "message": null,
-      "retrieval_metric": "mrr",
-      "judge_metric": "context_relevance",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
-      "holm": {
-        "p_adjusted": 1.0,
-        "significant_holm": false,
-        "eligible": true
-      },
-      "significant_holm": false,
-      "spearman_p_adjusted": 1.0
-    },
-    {
-      "n": 50,
-      "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.6779999999999998,
-        "median": 0.7,
-        "std": 0.1843798209331676,
-        "min": 0.3,
-        "max": 1.0,
-        "n_unique": 8
-      },
-      "descriptives_judge": {
-        "n": 50,
-        "mean": 0.9586000000000001,
-        "median": 1.0,
-        "std": 0.09337241650115577,
-        "min": 0.5,
-        "max": 1.0,
-        "n_unique": 7
-      },
-      "alpha": 0.05,
-      "status": "ok",
-      "test_primary": "Spearman rank correlation",
-      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
-      "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": -0.14038368174387617,
-      "spearman_p": 0.33086071766667347,
-      "spearman_ci_95": {
-        "low": -0.4054422094816311,
-        "high": 0.15930693815357527
-      },
-      "effect_size_interpretation": "слаба негативна",
-      "significant_uncorrected": false,
-      "pearson_r": -0.25906149727541017,
-      "pearson_p": 0.06926897533685095,
-      "pearson_assumptions_plausible": false,
-      "shapiro_retrieval": {
-        "W": 0.938177948467706,
-        "p": 0.011419746095577934
-      },
-      "shapiro_judge": {
-        "W": 0.5144481816870052,
-        "p": 1.2658651136077141e-11
-      },
-      "note": null,
-      "message": null,
-      "retrieval_metric": "source_precision",
-      "judge_metric": "correctness",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
-      "holm": {
-        "p_adjusted": 1.0,
-        "significant_holm": false,
-        "eligible": true
-      },
-      "significant_holm": false,
-      "spearman_p_adjusted": 1.0
-    },
-    {
-      "n": 50,
-      "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.9366666666666665,
-        "median": 1.0,
-        "std": 0.1746067820695153,
-        "min": 0.3333333333333333,
-        "max": 1.0,
-        "n_unique": 3
-      },
-      "descriptives_judge": {
-        "n": 50,
-        "mean": 0.9586000000000001,
-        "median": 1.0,
-        "std": 0.09337241650115577,
-        "min": 0.5,
-        "max": 1.0,
-        "n_unique": 7
-      },
-      "alpha": 0.05,
-      "status": "ok",
-      "test_primary": "Spearman rank correlation",
-      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
-      "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": 0.026203070751917506,
-      "spearman_p": 0.8566593653364242,
-      "spearman_ci_95": {
-        "low": -0.2263106548132408,
-        "high": 0.3286388374028229
-      },
-      "effect_size_interpretation": "занемарлива позитивна",
-      "significant_uncorrected": false,
-      "pearson_r": -0.0389300177606528,
-      "pearson_p": 0.7883791370566451,
-      "pearson_assumptions_plausible": false,
-      "shapiro_retrieval": {
-        "W": 0.3936319322921962,
-        "p": 4.487040884216561e-13
-      },
-      "shapiro_judge": {
-        "W": 0.5144481816870052,
-        "p": 1.2658651136077141e-11
-      },
-      "note": null,
-      "message": null,
-      "retrieval_metric": "mrr",
-      "judge_metric": "correctness",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
-      "holm": {
-        "p_adjusted": 1.0,
-        "significant_holm": false,
-        "eligible": true
-      },
-      "significant_holm": false,
-      "spearman_p_adjusted": 1.0
-    },
-    {
-      "n": 50,
-      "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.6779999999999998,
-        "median": 0.7,
-        "std": 0.1843798209331676,
-        "min": 0.3,
-        "max": 1.0,
-        "n_unique": 8
-      },
-      "descriptives_judge": {
-        "n": 50,
-        "mean": 0.9922,
-        "median": 1.0,
-        "std": 0.017646182451228405,
-        "min": 0.95,
-        "max": 1.0,
-        "n_unique": 3
-      },
-      "alpha": 0.05,
-      "status": "ok",
-      "test_primary": "Spearman rank correlation",
-      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
-      "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": 0.1869734664189094,
-      "spearman_p": 0.19354521619807386,
-      "spearman_ci_95": {
-        "low": -0.08545456213644942,
-        "high": 0.4379011817977357
-      },
-      "effect_size_interpretation": "слаба позитивна",
-      "significant_uncorrected": false,
-      "pearson_r": 0.19708153970321296,
-      "pearson_p": 0.17011731759684784,
-      "pearson_assumptions_plausible": false,
-      "shapiro_retrieval": {
-        "W": 0.938177948467706,
-        "p": 0.011419746095577934
-      },
-      "shapiro_judge": {
-        "W": 0.46690260111510473,
-        "p": 3.1934144041774692e-12
-      },
-      "note": null,
-      "message": null,
-      "retrieval_metric": "source_precision",
-      "judge_metric": "answer_relevance",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
-      "holm": {
-        "p_adjusted": 1.0,
-        "significant_holm": false,
-        "eligible": true
-      },
-      "significant_holm": false,
-      "spearman_p_adjusted": 1.0
-    },
-    {
-      "n": 50,
-      "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.9366666666666665,
-        "median": 1.0,
-        "std": 0.1746067820695153,
-        "min": 0.3333333333333333,
-        "max": 1.0,
-        "n_unique": 3
-      },
-      "descriptives_judge": {
-        "n": 50,
-        "mean": 0.9922,
-        "median": 1.0,
-        "std": 0.017646182451228405,
-        "min": 0.95,
-        "max": 1.0,
-        "n_unique": 3
-      },
-      "alpha": 0.05,
-      "status": "ok",
-      "test_primary": "Spearman rank correlation",
-      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
-      "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": -0.009695887429881301,
-      "spearman_p": 0.946718858120508,
-      "spearman_ci_95": {
-        "low": -0.21272089491264412,
-        "high": 0.3133355031025691
+        "low": -0.2639793938413944,
+        "high": 0.20588478995331114
       },
       "effect_size_interpretation": "занемарлива негативна",
       "significant_uncorrected": false,
-      "pearson_r": 0.0019870706144045763,
-      "pearson_p": 0.9890730476910732,
+      "pearson_r": -0.032714069449380885,
+      "pearson_p": 0.788045703022766,
       "pearson_assumptions_plausible": false,
       "shapiro_retrieval": {
-        "W": 0.3936319322921962,
-        "p": 4.487040884216561e-13
+        "W": 0.323069877937452,
+        "p": 2.5170023262820605e-16
       },
       "shapiro_judge": {
-        "W": 0.46690260111510473,
-        "p": 3.1934144041774692e-12
+        "W": 0.7950661264055139,
+        "p": 1.771267974332121e-08
       },
       "note": null,
       "message": null,
       "retrieval_metric": "mrr",
-      "judge_metric": "answer_relevance",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
+      "judge_metric": "context_relevance",
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
       "holm": {
         "p_adjusted": 1.0,
         "significant_holm": false,
@@ -363,55 +131,55 @@
       "spearman_p_adjusted": 1.0
     },
     {
-      "n": 50,
+      "n": 70,
       "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.6779999999999998,
-        "median": 0.7,
-        "std": 0.1843798209331676,
-        "min": 0.3,
+        "n": 70,
+        "mean": 0.7028571428571428,
+        "median": 0.75,
+        "std": 0.18175587112214728,
+        "min": 0.2,
         "max": 1.0,
-        "n_unique": 8
+        "n_unique": 9
       },
       "descriptives_judge": {
-        "n": 50,
-        "mean": 0.9830000000000001,
+        "n": 70,
+        "mean": 0.971142857142857,
         "median": 1.0,
-        "std": 0.046958514039696,
-        "min": 0.75,
+        "std": 0.07913559922172951,
+        "min": 0.5,
         "max": 1.0,
-        "n_unique": 4
+        "n_unique": 7
       },
       "alpha": 0.05,
       "status": "ok",
       "test_primary": "Spearman rank correlation",
       "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
       "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": 0.019365135375186308,
-      "spearman_p": 0.8938128167056839,
+      "spearman_rho": -0.02119035051932202,
+      "spearman_p": 0.8617723694354189,
       "spearman_ci_95": {
-        "low": -0.301388904519467,
-        "high": 0.33387038780070055
+        "low": -0.23698378564310296,
+        "high": 0.1987068598847349
       },
-      "effect_size_interpretation": "занемарлива позитивна",
+      "effect_size_interpretation": "занемарлива негативна",
       "significant_uncorrected": false,
-      "pearson_r": 0.014849667688990442,
-      "pearson_p": 0.9184766797297257,
+      "pearson_r": -0.08486917889739808,
+      "pearson_p": 0.48483761985315216,
       "pearson_assumptions_plausible": false,
       "shapiro_retrieval": {
-        "W": 0.938177948467706,
-        "p": 0.011419746095577934
+        "W": 0.9336265806145854,
+        "p": 0.0011044206442767848
       },
       "shapiro_judge": {
-        "W": 0.40459514476669545,
-        "p": 5.952046889470616e-13
+        "W": 0.4155146411452806,
+        "p": 3.3145884126618163e-15
       },
       "note": null,
       "message": null,
       "retrieval_metric": "source_precision",
-      "judge_metric": "faithfulness",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
+      "judge_metric": "correctness",
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
       "holm": {
         "p_adjusted": 1.0,
         "significant_holm": false,
@@ -421,55 +189,287 @@
       "spearman_p_adjusted": 1.0
     },
     {
-      "n": 50,
+      "n": 70,
       "descriptives_retrieval": {
-        "n": 50,
-        "mean": 0.9366666666666665,
+        "n": 70,
+        "mean": 0.9547619047619047,
         "median": 1.0,
-        "std": 0.1746067820695153,
+        "std": 0.14993672463430988,
         "min": 0.3333333333333333,
         "max": 1.0,
         "n_unique": 3
       },
       "descriptives_judge": {
-        "n": 50,
-        "mean": 0.9830000000000001,
+        "n": 70,
+        "mean": 0.971142857142857,
         "median": 1.0,
-        "std": 0.046958514039696,
-        "min": 0.75,
+        "std": 0.07913559922172951,
+        "min": 0.5,
         "max": 1.0,
-        "n_unique": 4
+        "n_unique": 7
       },
       "alpha": 0.05,
       "status": "ok",
       "test_primary": "Spearman rank correlation",
       "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
       "alternative_hypothesis": "H1: ρ ≠ 0",
-      "spearman_rho": 0.10433328055506867,
-      "spearman_p": 0.47087296602690837,
+      "spearman_rho": -0.06703068209322172,
+      "spearman_p": 0.5813994634380479,
       "spearman_ci_95": {
-        "low": -0.1742281710455517,
-        "high": 0.4364470171315201
+        "low": -0.20706896213192238,
+        "high": 0.1591875228312787
       },
-      "effect_size_interpretation": "слаба позитивна",
+      "effect_size_interpretation": "занемарлива негативна",
       "significant_uncorrected": false,
-      "pearson_r": -0.009541245080464656,
-      "pearson_p": 0.947567458341137,
+      "pearson_r": -0.08108013695647812,
+      "pearson_p": 0.5046121219401583,
       "pearson_assumptions_plausible": false,
       "shapiro_retrieval": {
-        "W": 0.3936319322921962,
-        "p": 4.487040884216561e-13
+        "W": 0.323069877937452,
+        "p": 2.5170023262820605e-16
       },
       "shapiro_judge": {
-        "W": 0.40459514476669545,
-        "p": 5.952046889470616e-13
+        "W": 0.4155146411452806,
+        "p": 3.3145884126618163e-15
+      },
+      "note": null,
+      "message": null,
+      "retrieval_metric": "mrr",
+      "judge_metric": "correctness",
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
+      "holm": {
+        "p_adjusted": 1.0,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 1.0
+    },
+    {
+      "n": 70,
+      "descriptives_retrieval": {
+        "n": 70,
+        "mean": 0.7028571428571428,
+        "median": 0.75,
+        "std": 0.18175587112214728,
+        "min": 0.2,
+        "max": 1.0,
+        "n_unique": 9
+      },
+      "descriptives_judge": {
+        "n": 70,
+        "mean": 0.9917142857142858,
+        "median": 1.0,
+        "std": 0.017772428456756216,
+        "min": 0.95,
+        "max": 1.0,
+        "n_unique": 3
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": -0.10486977576849796,
+      "spearman_p": 0.38759282285172325,
+      "spearman_ci_95": {
+        "low": -0.3356949652818371,
+        "high": 0.14482054761220567
+      },
+      "effect_size_interpretation": "слаба негативна",
+      "significant_uncorrected": false,
+      "pearson_r": -0.11370282672428772,
+      "pearson_p": 0.348644741116209,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": 0.9336265806145854,
+        "p": 0.0011044206442767848
+      },
+      "shapiro_judge": {
+        "W": 0.49153705164567374,
+        "p": 3.487252184790561e-14
+      },
+      "note": null,
+      "message": null,
+      "retrieval_metric": "source_precision",
+      "judge_metric": "answer_relevance",
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
+      "holm": {
+        "p_adjusted": 1.0,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 1.0
+    },
+    {
+      "n": 70,
+      "descriptives_retrieval": {
+        "n": 70,
+        "mean": 0.9547619047619047,
+        "median": 1.0,
+        "std": 0.14993672463430988,
+        "min": 0.3333333333333333,
+        "max": 1.0,
+        "n_unique": 3
+      },
+      "descriptives_judge": {
+        "n": 70,
+        "mean": 0.9917142857142858,
+        "median": 1.0,
+        "std": 0.017772428456756216,
+        "min": 0.95,
+        "max": 1.0,
+        "n_unique": 3
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": -0.02003883646253839,
+      "spearman_p": 0.8692158127412666,
+      "spearman_ci_95": {
+        "low": -0.1790746705076007,
+        "high": 0.2410767211267134
+      },
+      "effect_size_interpretation": "занемарлива негативна",
+      "significant_uncorrected": false,
+      "pearson_r": -0.006733644254116947,
+      "pearson_p": 0.9558804063619828,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": 0.323069877937452,
+        "p": 2.5170023262820605e-16
+      },
+      "shapiro_judge": {
+        "W": 0.49153705164567374,
+        "p": 3.487252184790561e-14
+      },
+      "note": null,
+      "message": null,
+      "retrieval_metric": "mrr",
+      "judge_metric": "answer_relevance",
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
+      "holm": {
+        "p_adjusted": 1.0,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 1.0
+    },
+    {
+      "n": 70,
+      "descriptives_retrieval": {
+        "n": 70,
+        "mean": 0.7028571428571428,
+        "median": 0.75,
+        "std": 0.18175587112214728,
+        "min": 0.2,
+        "max": 1.0,
+        "n_unique": 9
+      },
+      "descriptives_judge": {
+        "n": 70,
+        "mean": 0.976857142857143,
+        "median": 1.0,
+        "std": 0.058098937532824683,
+        "min": 0.7,
+        "max": 1.0,
+        "n_unique": 6
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": -0.0730153861716342,
+      "spearman_p": 0.5480440238073321,
+      "spearman_ci_95": {
+        "low": -0.2868706455856157,
+        "high": 0.1554390672791211
+      },
+      "effect_size_interpretation": "занемарлива негативна",
+      "significant_uncorrected": false,
+      "pearson_r": -0.060897250080739276,
+      "pearson_p": 0.6165159692417239,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": 0.9336265806145854,
+        "p": 0.0011044206442767848
+      },
+      "shapiro_judge": {
+        "W": 0.4522461096946835,
+        "p": 1.003219679666095e-14
+      },
+      "note": null,
+      "message": null,
+      "retrieval_metric": "source_precision",
+      "judge_metric": "faithfulness",
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
+      "holm": {
+        "p_adjusted": 1.0,
+        "significant_holm": false,
+        "eligible": true
+      },
+      "significant_holm": false,
+      "spearman_p_adjusted": 1.0
+    },
+    {
+      "n": 70,
+      "descriptives_retrieval": {
+        "n": 70,
+        "mean": 0.9547619047619047,
+        "median": 1.0,
+        "std": 0.14993672463430988,
+        "min": 0.3333333333333333,
+        "max": 1.0,
+        "n_unique": 3
+      },
+      "descriptives_judge": {
+        "n": 70,
+        "mean": 0.976857142857143,
+        "median": 1.0,
+        "std": 0.058098937532824683,
+        "min": 0.7,
+        "max": 1.0,
+        "n_unique": 6
+      },
+      "alpha": 0.05,
+      "status": "ok",
+      "test_primary": "Spearman rank correlation",
+      "null_hypothesis": "H0: ρ = 0 (no monotonic association)",
+      "alternative_hypothesis": "H1: ρ ≠ 0",
+      "spearman_rho": -0.17156417151390704,
+      "spearman_p": 0.15557361858313962,
+      "spearman_ci_95": {
+        "low": -0.2534507054632841,
+        "high": -0.08901167854623697
+      },
+      "effect_size_interpretation": "слаба негативна",
+      "significant_uncorrected": false,
+      "pearson_r": -0.12192535379503275,
+      "pearson_p": 0.3146606954683703,
+      "pearson_assumptions_plausible": false,
+      "shapiro_retrieval": {
+        "W": 0.323069877937452,
+        "p": 2.5170023262820605e-16
+      },
+      "shapiro_judge": {
+        "W": 0.4522461096946835,
+        "p": 1.003219679666095e-14
       },
       "note": null,
       "message": null,
       "retrieval_metric": "mrr",
       "judge_metric": "faithfulness",
-      "n_total_in_file": 50,
-      "n_with_judge": 50,
+      "n_total_in_file": 70,
+      "n_with_judge": 70,
       "holm": {
         "p_adjusted": 1.0,
         "significant_holm": false,

@@ -293,7 +293,7 @@ def spearman_pair_analysis(x, y, alpha=0.05, n_boot=5000):
     if len(x) < 20:
         note = (
             f"Sample size n={len(x)} is small; bootstrap CI and p-values are "
-            "directionally informative but under-powered. Prefer n≥20–30 (ideally 50)."
+            "directionally informative but under-powered. Prefer n≥20–30 (ideally 70)."
         )
 
     return {
@@ -669,7 +669,7 @@ p-вредностите се коригираат со постапката н�
             f"**Ограничување.** Големината на примерокот со judge-оценки "
             f"(n = {report.get('n_judged_max')}) е релативно мала; заклучоците за "
             "значајност треба да се третираат претпазливо. Препорачливо е "
-            "проширување кон ≥20–30 (идеално сите 50) прашања."
+            "проширување кон ≥20–30 (идеално сите 70) прашања."
         )
     return methods + "\n".join(lines)
 
